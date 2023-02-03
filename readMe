@@ -1,0 +1,27 @@
+-Gemshin Impact Wishing Pool
+
+1.figure out the probability
+
+-how to set up a probability to determine how often certain cards are drawn.
+
+Step#1: Define an object(function) to control the probability of each card.
+
+Step#2: We need a total weight.(ex: weight#1 + weight#2 = totalWeight)
+
+Step#3: Create a array to store each card with a specified weight(odds)
+
+Step#4: Define a function to add cards into the pool (the array list), and count the new weight to the totalWeight.
+
+Step#5: Define a function to show the wishing result (display cards).
+
+In detail: we need a random number to represent the range (like: 0-9, 0-99, …) using totalWeight , scan through the array to see if the random number is within the specified weight range. If yes, display the card. If no, subtract the new range (move to the weight range of next card in the list), for example: 109-100=9, which means if the random#(0-109) equals 101 (out of the range:0-99), then we move the weight range from (0-99) to weight range (0-9).
+
+Step#6: Create the object of Step#1 and add new cards with specified weight(probability)
+
+Step#7: Using the function from Step#5 to display the wishing result using a for loop (the loop range means how many cards will be drawn once, the ideal value is 10).
+
+2.
+
+on-going problem:
+
+figure out setting the correct rate for gold card(need to dive deep into pickCard function()).
