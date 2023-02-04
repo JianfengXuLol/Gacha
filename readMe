@@ -22,6 +22,14 @@ Step#7: Using the function from Step#5 to display the wishing result using a for
 
 2.
 
+==============================================
+plans:
+
+-implementing different characters and items in "gold","purple" and "blue" rarity.
+
+-Adding "50 50 feature"(50% chance of getting a standard character when getting a gold card)
+
+===============================================
 on-going problem:
 
 figure out setting the correct rate for gold card(need to dive deep into pickCard function()).
