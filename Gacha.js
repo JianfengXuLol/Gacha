@@ -1,4 +1,5 @@
 // Define an object(function) to control the probability of each card.
+
 function probability() {
 	/* We need a total weight.(ex: weight#1 + weight#2 = totalWeight)*/
 	this.totalWeight = 0;
@@ -12,10 +13,18 @@ function probability() {
 		this.totalWeight += weight;
 	};
 
+	//define a function to set the weight
 	this.setWeight = function (card, weight) {
-		for (i = 0; i < cardArray.length; i++) {
-			if (cardArray[i] == card) {
-				this.totalWeight += weight;
+		for (let i = 0; i < cardArray.length; i++) {
+			if (cardArray[i].card == card) {
+				if (cardArray[i].weight > weight) {
+					this.totalWeight -= cardArray[i].weight - weight;
+
+					cardArray[i].weight = weight;
+				} else if (cardArray[i].weight < weight) {
+					this.totalWeight += weight - cardArray[i].weight;
+					cardArray[i].weight = weight;
+				}
 			}
 		}
 	};
@@ -23,6 +32,7 @@ function probability() {
 	/* Define a function to show the wishing result (display cards). */
 	this.pickCard = function () {
 		/*we need a random number to represent the range (like: 0~9, 0~99, …) using totalWeight*/
+
 		var weight_range = Math.floor(Math.random() * this.totalWeight);
 
 		/* scan through the array to see if the random number is within the specified weight range*/
@@ -34,12 +44,16 @@ function probability() {
 			weight_range -= cardArray[i].weight;
 		}
 	};
-}
+} //End of function probability()
+
 /* add new cards with specified weight(probability)*/
 var controller = new probability();
 controller.addCard("gold", 1);
 controller.addCard("purple", 6.5);
-controller.addCard("blue", 158.5);
+controller.addCard("blue", 159.5);
+
+/*setting the droprate for cards*/
+// controller.addCard("gold", 159.5);
 
 /*card containers, pulling 10 cards at the maximum for each pull*/
 var cardContainer = [
@@ -61,6 +75,7 @@ var fiveStar_pity_count = 0;
 
 function one_pull() {
 	/*when switch back from 10 pull to 1 pull, reset the number of card container that displays to 1*/
+
 	for (let i = 0; i < cardContainer.length; i++) {
 		cardContainer[i].style.display = "none";
 	}
@@ -117,8 +132,6 @@ function fourStar_pity(i) {
 	} else {
 		fourStar_pity_count++;
 	}
-
-	document.getElementById("debug").innerHTML = fourStar_pity_count;
 }
 
 function fiveStar_pity(i) {
@@ -130,6 +143,23 @@ function fiveStar_pity(i) {
 	} else {
 		fiveStar_pity_count++;
 	}
+	bonusRate(i);
+}
 
-	document.getElementById("debug").innerHTML = fiveStar_pity_count;
+/*A bonus increasing rate that starts at pull 72,ends at pull 79*/
+var bonus = 0;
+function bonusRate(i) {
+	if (fiveStar_pity_count >= 72 && fiveStar_pity_count <= 79) {
+		controller.setWeight("gold", 1 + bonus);
+		bonus += 10; //additional 6% each pull (10/167).
+	} else if (
+		fiveStar_pity_count == 80 ||
+		cardContainer[i].innerHTML == "gold"
+	) {
+		//reset the bonus and weight
+		bonus = 0;
+		controller.setWeight("gold", 1);
+	}
+	document.getElementById("debug1").innerHTML =
+		fiveStar_pity_count + " |" + bonus;
 }
