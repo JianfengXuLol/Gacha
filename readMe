@@ -25,6 +25,8 @@ Step#7: Using the function from Step#5 to display the wishing result using a for
 ==============================================
 plans:
 
+(need to figure out how to use the branch in git before working on tasks below!)
+
 -implementing different characters and items in "gold","purple" and "blue" rarity.
 
 -Adding "50 50 feature"(50% chance of getting a standard character when getting a gold card)
