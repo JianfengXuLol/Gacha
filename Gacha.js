@@ -47,9 +47,11 @@ function probability() {
 } //End of function probability()
 
 /* add new cards with specified weight(probability)*/
+var gold_rate = 1; /* 1/169=0.0059=0.59% */
+var purple_rate = 8.5; /* 8.5/168=0.05059=5.1% */
 var controller = new probability();
-controller.addCard("gold", 1);
-controller.addCard("purple", 8.5);
+controller.addCard("gold", gold_rate);
+controller.addCard("purple", purple_rate);
 controller.addCard("blue", 159.5);
 
 /*setting the droprate for cards*/
@@ -87,7 +89,7 @@ function one_pull() {
 	cardContainer[0].style.display = "inline";
 
 	if (cardContainer[0].innerHTML == "gold") {
-		let num = flip_50_50[flip()];
+		let num = flip_50_50_5Star[flip()];
 		cardContainer[0].style.backgroundColor = "gold";
 
 		if (num == "standard fivestarChar") {
@@ -96,11 +98,9 @@ function one_pull() {
 				_50_50_pitty_5_star++;
 			} else {
 				/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
-				do {
-					num = flip_50_50[flip()];
-				} while (num == "standard fivestarChar");
-				cardContainer[0].innerHTML = num;
+				cardContainer[0].innerHTML = limitedEdition_fivestarChar;
 				_50_50_pitty_5_star = 0;
+				upCharCount++;
 			}
 		} else {
 			cardContainer[0].innerHTML = num;
@@ -188,7 +188,7 @@ x.addEventListener("click", ten_pull);
 
 //Extra functions
 var wishCount = 0;
-var upCharCount = 0;
+var upCharCount = -1;
 var fourStar_pity_count = 0;
 var fiveStar_pity_count = 0;
 
@@ -219,21 +219,25 @@ function fiveStar_pity(i) {
 var bonus = 0;
 function bonusRate(i) {
 	if (fiveStar_pity_count >= 72 && fiveStar_pity_count <= 90) {
-		controller.setWeight("gold", 1 + bonus);
+		controller.setWeight("gold", gold_rate + bonus);
 		bonus += 10; //additional 6% each pull (10/167).
 	} else if (
-		fiveStar_pity_count == 80 ||
+		fiveStar_pity_count == 90 ||
 		cardContainer[i].innerHTML == "gold"
 	) {
 		//reset the bonus and weight
 		bonus = 0;
-		controller.setWeight("gold", 1);
+		controller.setWeight("gold", gold_rate);
 	}
 	document.getElementById("debug").innerHTML =
-		wishCount + " |" + "Constellation: " + upCharCount;
+		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
 
 	document.getElementById("debug1").innerHTML =
-		fiveStar_pity_count + " |" + bonus;
+		"保底水位: " +
+		fiveStar_pity_count +
+		" | 增加几率：" +
+		(bonus / 167).toFixed(2) * 100 +
+		"%";
 }
 
 // different characters
