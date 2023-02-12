@@ -84,6 +84,8 @@ var imageContainer = [
 var _50_50_pitty_5_star = 0;
 var _50_50_pitty_4_star = 0;
 var boder_size = 4;
+var wishCount = 0;
+var upCharCount = -1;
 
 function one_pull() {
 	wishCount++;
@@ -110,15 +112,15 @@ function one_pull() {
 					standard_fivestarChar[radomFivestarChar()].image;
 				_50_50_pitty_5_star++;
 			} else {
+				upCharCount++;
 				/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
 				imageContainer[0].src = limitedEdition_fivestarChar.image;
 				_50_50_pitty_5_star = 0;
-				upCharCount++;
 			}
 		} else {
+			upCharCount++;
 			imageContainer[0].src = num.image;
 			_50_50_pitty_5_star = 0;
-			upCharCount++;
 		}
 	} else if (cardContainer[0].innerHTML == "blue") {
 		imageContainer[0].style.border = boder_size + "px solid blue";
@@ -139,6 +141,8 @@ function one_pull() {
 			_50_50_pitty_4_star = 0;
 		}
 	}
+	document.getElementById("debug").innerHTML =
+		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
 }
 
 function ten_pull() {
@@ -165,15 +169,15 @@ function ten_pull() {
 						standard_fivestarChar[radomFivestarChar()].image;
 					_50_50_pitty_5_star++;
 				} else {
+					upCharCount++;
 					/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
 					imageContainer[i].src = limitedEdition_fivestarChar.image;
 					_50_50_pitty_5_star = 0;
-					upCharCount++;
 				}
 			} else {
+				upCharCount++;
 				imageContainer[i].src = num.image;
 				_50_50_pitty_5_star = 0;
-				upCharCount++;
 			}
 		} else if (cardContainer[i].innerHTML == "blue") {
 			imageContainer[i].style.border = boder_size + "px solid blue";
@@ -196,6 +200,8 @@ function ten_pull() {
 			}
 		}
 	}
+	document.getElementById("debug").innerHTML =
+		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
 }
 
 //Adding events here:
@@ -205,8 +211,6 @@ var x = document.getElementById("pull_10");
 x.addEventListener("click", ten_pull);
 
 //pitty functions
-var wishCount = 0;
-var upCharCount = -1;
 var fourStar_pity_count = 0;
 var fiveStar_pity_count = 0;
 
@@ -247,8 +251,6 @@ function bonusRate(i) {
 		bonus = 0;
 		controller.setWeight("gold", gold_rate);
 	}
-	document.getElementById("debug").innerHTML =
-		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
 
 	document.getElementById("debug1").innerHTML =
 		"保底水位: " +
