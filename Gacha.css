@@ -5,3 +5,11 @@
 .card_container {
 	display: none;
 }
+
+.image_container {
+	max-height: 130px;
+	min-height: 130px;
+	width: 10%;
+	height: auto;
+	display: none;
+}

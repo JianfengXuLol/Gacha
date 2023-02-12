@@ -8,15 +8,15 @@ function probability() {
 	var cardArray = [];
 
 	/*Define a function to add cards into the pool (the array list), and count the new weight to the totalWeight.*/
-	this.addCard = function (card, weight) {
-		cardArray.push({ card, weight });
+	this.addCard = function (color, weight, image) {
+		cardArray.push({ color, weight, image });
 		this.totalWeight += weight;
 	};
 
 	//define a function to set the weight
-	this.setWeight = function (card, weight) {
+	this.setWeight = function (color, weight) {
 		for (let i = 0; i < cardArray.length; i++) {
-			if (cardArray[i].card == card) {
+			if (cardArray[i].color == color) {
 				if (cardArray[i].weight > weight) {
 					this.totalWeight -= cardArray[i].weight - weight;
 
@@ -30,7 +30,7 @@ function probability() {
 	};
 
 	/* Define a function to show the wishing result (display cards). */
-	this.pickCard = function () {
+	this.pickCardColor = function () {
 		/*we need a random number to represent the range (like: 0~9, 0~99, …) using totalWeight*/
 
 		var weight_range = Math.floor(Math.random() * this.totalWeight);
@@ -38,7 +38,7 @@ function probability() {
 		/* scan through the array to see if the random number is within the specified weight range*/
 		for (let i = 0; i < cardArray.length; i++) {
 			if (weight_range <= cardArray[i].weight) {
-				return cardArray[i].card; //display the card.
+				return cardArray[i].color; //display the card.
 			}
 			/*subtract the new range (move to the weight range of next card in the list), for example: 109-100=9, which means if the random#(0-109) equals 101 (out of the range:0-99), then we move the weight range from (0-99) to weight range (0-9).*/
 			weight_range -= cardArray[i].weight;
@@ -54,9 +54,6 @@ controller.addCard("gold", gold_rate);
 controller.addCard("purple", purple_rate);
 controller.addCard("blue", 159.5);
 
-/*setting the droprate for cards*/
-// controller.addCard("gold", 159.5);
-
 /*card containers, pulling 10 cards at the maximum for each pull*/
 var cardContainer = [
 	document.getElementById("text1"),
@@ -71,56 +68,74 @@ var cardContainer = [
 	document.getElementById("text10"),
 ];
 
+var imageContainer = [
+	document.getElementById("image1"),
+	document.getElementById("image2"),
+	document.getElementById("image3"),
+	document.getElementById("image4"),
+	document.getElementById("image5"),
+	document.getElementById("image6"),
+	document.getElementById("image7"),
+	document.getElementById("image8"),
+	document.getElementById("image9"),
+	document.getElementById("image10"),
+];
+
 var _50_50_pitty_5_star = 0;
 var _50_50_pitty_4_star = 0;
+var boder_size = 4;
 
 function one_pull() {
 	wishCount++;
 	/*when switch back from 10 pull to 1 pull, reset the number of card container that displays to 1*/
 
 	for (let i = 0; i < cardContainer.length; i++) {
-		cardContainer[i].style.display = "none";
+		imageContainer[i].style.display = "none";
 	}
-	let card = controller.pickCard();
+	let color = controller.pickCardColor();
 
-	cardContainer[0].innerHTML = card;
+	cardContainer[0].innerHTML = color;
+	imageContainer[0].src = color;
 	fourStar_pity(0);
 	fiveStar_pity(0);
-	cardContainer[0].style.display = "inline";
+	imageContainer[0].style.display = "inline";
 
 	if (cardContainer[0].innerHTML == "gold") {
 		let num = flip_50_50_5Star[flip()];
-		cardContainer[0].style.backgroundColor = "gold";
+		imageContainer[0].style.border = boder_size + "px solid gold";
 
 		if (num == "standard fivestarChar") {
 			if (_50_50_pitty_5_star == 0) {
-				cardContainer[0].innerHTML = standard_fivestarChar[radomFivestarChar()];
+				imageContainer[0].src =
+					standard_fivestarChar[radomFivestarChar()].image;
 				_50_50_pitty_5_star++;
 			} else {
 				/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
-				cardContainer[0].innerHTML = limitedEdition_fivestarChar;
+				imageContainer[0].src = limitedEdition_fivestarChar.image;
 				_50_50_pitty_5_star = 0;
 				upCharCount++;
 			}
 		} else {
-			cardContainer[0].innerHTML = num;
+			imageContainer[0].src = num.image;
+			_50_50_pitty_5_star = 0;
+			upCharCount++;
 		}
 	} else if (cardContainer[0].innerHTML == "blue") {
-		cardContainer[0].style.backgroundColor = "cyan";
-		cardContainer[0].innerHTML = standard_3_star[random_up_3Star()];
+		imageContainer[0].style.border = boder_size + "px solid blue";
+		imageContainer[0].src = standard_3_star[random_up_3Star()].image;
 	} else if (cardContainer[0].innerHTML == "purple") {
 		let num = flip_50_50_4Star[flip()];
-		cardContainer[0].style.backgroundColor = "purple";
+		imageContainer[0].style.border = boder_size + "px solid purple";
 		if (num == "standard 4 starChar") {
 			if (_50_50_pitty_4_star == 0) {
-				cardContainer[0].innerHTML = standard_4_star[random_standard_4Star()];
+				imageContainer[0].src = standard_4_star[random_standard_4Star()].image;
 				_50_50_pitty_4_star++;
 			} else {
-				cardContainer[0].innerHTML = up_4_star[random_up_4Star()];
+				imageContainer[0].src = up_4_star[random_up_4Star()].image;
 				_50_50_pitty_4_star = 0;
 			}
 		} else {
-			cardContainer[0].innerHTML = up_4_star[random_up_4Star()];
+			imageContainer[0].src = up_4_star[random_up_4Star()].image;
 			_50_50_pitty_4_star = 0;
 		}
 	}
@@ -128,52 +143,55 @@ function one_pull() {
 
 function ten_pull() {
 	wishCount += 10;
-	var resultList = [];
+	var colorList = [];
 
-	for (let i = 0; i < cardContainer.length; i++) {
-		let card = controller.pickCard();
+	for (let i = 0; i < imageContainer.length; i++) {
+		let color = controller.pickCardColor();
 
-		resultList.push(card);
-		cardContainer[i].innerHTML = resultList[i];
+		colorList.push(color);
+		cardContainer[i].innerHTML = colorList[i];
+		imageContainer[i].src = colorList[i];
 		fourStar_pity(i);
 		fiveStar_pity(i);
-		cardContainer[i].style.display = "inline";
+		imageContainer[i].style.display = "inline";
 
 		if (cardContainer[i].innerHTML == "gold") {
 			let num = flip_50_50_5Star[flip()];
-			cardContainer[i].style.backgroundColor = "gold";
+			imageContainer[i].style.border = boder_size + "px solid gold";
 
 			if (num == "standard fivestarChar") {
 				if (_50_50_pitty_5_star == 0) {
-					cardContainer[i].innerHTML =
-						standard_fivestarChar[radomFivestarChar()];
+					imageContainer[i].src =
+						standard_fivestarChar[radomFivestarChar()].image;
 					_50_50_pitty_5_star++;
 				} else {
-					cardContainer[i].innerHTML = limitedEdition_fivestarChar;
+					/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
+					imageContainer[i].src = limitedEdition_fivestarChar.image;
 					_50_50_pitty_5_star = 0;
 					upCharCount++;
 				}
 			} else {
-				cardContainer[i].innerHTML = num;
+				imageContainer[i].src = num.image;
 				_50_50_pitty_5_star = 0;
 				upCharCount++;
 			}
 		} else if (cardContainer[i].innerHTML == "blue") {
-			cardContainer[i].style.backgroundColor = "cyan";
-			cardContainer[i].innerHTML = standard_3_star[random_up_3Star()];
+			imageContainer[i].style.border = boder_size + "px solid blue";
+			imageContainer[i].src = standard_3_star[random_up_3Star()].image;
 		} else if (cardContainer[i].innerHTML == "purple") {
 			let num = flip_50_50_4Star[flip()];
-			cardContainer[i].style.backgroundColor = "purple";
+			imageContainer[i].style.border = boder_size + "px solid purple";
 			if (num == "standard 4 starChar") {
 				if (_50_50_pitty_4_star == 0) {
-					cardContainer[i].innerHTML = standard_4_star[random_standard_4Star()];
+					imageContainer[i].src =
+						standard_4_star[random_standard_4Star()].image;
 					_50_50_pitty_4_star++;
 				} else {
-					cardContainer[i].innerHTML = up_4_star[random_up_4Star()];
+					imageContainer[i].src = up_4_star[random_up_4Star()].image;
 					_50_50_pitty_4_star = 0;
 				}
 			} else {
-				cardContainer[i].innerHTML = up_4_star[random_up_4Star()];
+				imageContainer[i].src = up_4_star[random_up_4Star()].image;
 				_50_50_pitty_4_star = 0;
 			}
 		}
@@ -186,7 +204,7 @@ y.addEventListener("click", one_pull);
 var x = document.getElementById("pull_10");
 x.addEventListener("click", ten_pull);
 
-//Extra functions
+//pitty functions
 var wishCount = 0;
 var upCharCount = -1;
 var fourStar_pity_count = 0;
@@ -240,14 +258,143 @@ function bonusRate(i) {
 		"%";
 }
 
-// different characters
-//Current Banner
-const limitedEdition_fivestarChar = "Yelan";
-const up_4_star = ["Xingqiu", "Ningguang", "Beidou"];
+/************************Characters Section*********************/
 
 //5-stars
+
+//up banner
+
+var Yelan = { color: "gold", image: "limitedEdition_5_Star/Yelan.webp" };
+
+//standard banner
+var Diluc = { color: "gold", image: "standard_5star/Diluc.webp" };
+var Jean = { color: "gold", image: "standard_5star/Jean.webp" };
+var Keqing = { color: "gold", image: "standard_5star/Keqing.webp" };
+var Mona = { color: "gold", image: "standard_5star/Mona.webp" };
+var Qiqi = { color: "gold", image: "standard_5star/Qiqi.webp" };
+
+//4-stars
+
+//up banner
+var Ningguang = { color: "purple", image: "upEdition_4_Star/Ningguang.webp" };
+var Beidou = { color: "purple", image: "upEdition_4_Star/Beidou.webp" };
+var Xingqiu = { color: "purple", image: "upEdition_4_Star/Xingqiu.webp" };
+
+//standard banner
+var Yaoyao = { color: "purple", image: "standard_4_star/Yaoyao.webp" };
+var Amber = { color: "purple", image: "standard_4_star/Amber.webp" };
+var Barbara = { color: "purple", image: "standard_4_star/Barbara.webp" };
+
+const standard_4_star = [
+	Yaoyao,
+	Amber,
+	Barbara,
+	// "Beidou",
+	// "Bennett",
+	// "Candace",
+	// "Chongyun",
+	// "Collei",
+	// "Diona",
+	// "Dori",
+	// "Faruzan",
+	// "Fischl",
+	// "Gorou",
+	// "Kaeya",
+	// "Kujou Sara",
+	// "Kuki Shinobu",
+	// "Layla",
+	// "Lisa",
+	// "Ningguang",
+	// "Noelle",
+	// "Razor",
+	// "Rosaria",
+	// "Sayu",
+	// "Shikanoin Heizou",
+	// "Sucrose",
+	// "Thoma",
+	// "Xiangling",
+	// "Xingqiu",
+	// "Xinyan",
+	// "Yanfei",
+	// "Yaoyao",
+	// "Yun Jin",
+	// "Rust",
+	// "The Stringless",
+	// "The Widsith",
+	// "Eye of Perception",
+	// "Rainslasher",
+	// "The Bell",
+	// "Lion's Roar",
+	// "The Flute",
+	// "Dragon's Bane",
+	// "Favonius Lance",
+	// "Favonius Sword",
+	// "Favonius Greatsword",
+	// "Favonius Codex",
+	// "Favonius Warbow",
+	// "Sacrificial Bow",
+	// "Sacrificial Sword",
+	// "Sacrificial Greatsword",
+	// "Sacrificial Fragments",
+];
+
+const flip_50_50_4Star = ["upFourStar", "standard 4 starChar"];
+
+function random_standard_4Star() {
+	let num = Math.floor(Math.random() * 3); //50 four-stars
+	return num;
+}
+
+function random_up_4Star() {
+	let num = Math.floor(Math.random() * 3);
+	return num;
+}
+
+//3 stars
+var Black_Tassel = { color: "purple", image: "Weapons/Black Tassel.webp" };
+
+const standard_3_star = [
+	Black_Tassel,
+	// "Bloodtainted Greatsword",
+	// "Cool Steel",
+	// "Dark Iron Sword",
+	// "Debate Club",
+	// "Ebony Bow",
+	// "Emerald Orb",
+	// "Ferrous Shadow",
+	// "Fillet Blade",
+	// "Halberd",
+	// "Harbinger of Dawn",
+	// "Magic Guide",
+	// "Messenger",
+	// "Otherworldly Story",
+	// "Quartz",
+	// "Raven Bow",
+	// "Recurve Bow",
+	// "Sharpshooter's Oath",
+	// "Skyrider Greatsword",
+	// "Skyrider Sword",
+	// "Slingshot",
+	// "Thrilling Tales of Dragon Slayers",
+	// "Traveler's Handy Sword",
+	// "Twin Nephrite",
+	// "White Iron Greatsword",
+	// "White Tassel",
+];
+console.log(standard_3_star.length);
+
+function random_up_3Star() {
+	let num = Math.floor(Math.random() * 1);
+	return num;
+}
+
+/************************Current Banner*********************/
+const limitedEdition_fivestarChar = Yelan;
+const up_4_star = [Beidou, Ningguang, Xingqiu];
+/***********************************************************/
+
 const flip_50_50_5Star = [limitedEdition_fivestarChar, "standard fivestarChar"];
-const standard_fivestarChar = ["Keqing", "Mona", "Qiqi", "Diluc", "Jean"];
+const standard_fivestarChar = [Keqing, Mona, Qiqi, Diluc, Jean];
 
 //create 50 50 feature by using number between 0 and 1.
 function flip() {
@@ -261,105 +408,4 @@ function radomFivestarChar() {
 	return num;
 }
 
-//4-stars
-const standard_4_star = [
-	"Yaoyao",
-	"Amber",
-	"Barbara",
-	"Beidou",
-	"Bennett",
-	"Candace",
-	"Chongyun",
-	"Collei",
-	"Diona",
-	"Dori",
-	"Faruzan",
-	"Fischl",
-	"Gorou",
-	"Kaeya",
-	"Kujou Sara",
-	"Kuki Shinobu",
-	"Layla",
-	"Lisa",
-	"Ningguang",
-	"Noelle",
-	"Razor",
-	"Rosaria",
-	"Sayu",
-	"Shikanoin Heizou",
-	"Sucrose",
-	"Thoma",
-	"Xiangling",
-	"Xingqiu",
-	"Xinyan",
-	"Yanfei",
-	"Yaoyao",
-	"Yun Jin",
-	"Rust",
-	"The Stringless",
-	"The Widsith",
-	"Eye of Perception",
-	"Rainslasher",
-	"The Bell",
-	"Lion's Roar",
-	"The Flute",
-	"Dragon's Bane",
-	"Favonius Lance",
-	"Favonius Sword",
-	"Favonius Greatsword",
-	"Favonius Codex",
-	"Favonius Warbow",
-	"Sacrificial Bow",
-	"Sacrificial Sword",
-	"Sacrificial Greatsword",
-	"Sacrificial Fragments",
-];
-
-const flip_50_50_4Star = ["upFourStar", "standard 4 starChar"];
-
-function random_standard_4Star() {
-	let num = Math.floor(Math.random() * 50);
-	return num;
-}
-
-function random_up_4Star() {
-	let num = Math.floor(Math.random() * 3);
-	return num;
-}
-
-//3 stars
-const standard_3_star = [
-	"Amber Catalyst",
-	"Black Tassel",
-	"Bloodtainted Greatsword",
-	"Cool Steel",
-	"Dark Iron Sword",
-	"Debate Club",
-	"Ebony Bow",
-	"Emerald Orb",
-	"Ferrous Shadow",
-	"Fillet Blade",
-	"Halberd",
-	"Harbinger of Dawn",
-	"Magic Guide",
-	"Messenger",
-	"Otherworldly Story",
-	"Quartz",
-	"Raven Bow",
-	"Recurve Bow",
-	"Sharpshooter's Oath",
-	"Skyrider Greatsword",
-	"Skyrider Sword",
-	"Slingshot",
-	"Thrilling Tales of Dragon Slayers",
-	"Traveler's Handy Sword",
-	"Twin Nephrite",
-	"White Iron Greatsword",
-	"White Tassel",
-];
-console.log(standard_3_star.length);
-
-function random_up_3Star() {
-	let num = Math.floor(Math.random() * 27);
-	return num;
-}
+// imageContainer[10].src = limitedEdition_fivestarChar.image;
