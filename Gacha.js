@@ -85,7 +85,24 @@ var _50_50_pitty_5_star = 0;
 var _50_50_pitty_4_star = 0;
 var boder_size = 4;
 var wishCount = 0;
-var upCharCount = -1;
+var upCharCount = -1; //constellations
+var fourStar_pity_count = 0;
+var fiveStar_pity_count = 0;
+
+function reset() {
+	wishCount = 0;
+	upCharCount = -1;
+	fiveStar_pity_count = 0;
+	bonusUp = 0;
+	document.getElementById("debug").innerHTML =
+		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
+	document.getElementById("debug1").innerHTML =
+		"Pitty level: " +
+		fiveStar_pity_count +
+		" | increase rate：" +
+		bonusUp +
+		"%";
+}
 
 function one_pull() {
 	wishCount++;
@@ -142,7 +159,7 @@ function one_pull() {
 		}
 	}
 	document.getElementById("debug").innerHTML =
-		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
+		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 }
 
 function ten_pull() {
@@ -209,10 +226,10 @@ var y = document.getElementById("pull_1");
 y.addEventListener("click", one_pull);
 var x = document.getElementById("pull_10");
 x.addEventListener("click", ten_pull);
+var z = document.getElementById("restart");
+z.addEventListener("click", reset);
 
 //pitty functions
-var fourStar_pity_count = 0;
-var fiveStar_pity_count = 0;
 
 function fourStar_pity(i) {
 	if (cardContainer[i].innerHTML == "purple") {
@@ -239,6 +256,7 @@ function fiveStar_pity(i) {
 
 /*A bonus increasing rate that starts at pull 72,ends at pull 79*/
 var bonus = 0;
+var bonusUp = 0;
 function bonusRate(i) {
 	if (fiveStar_pity_count >= 72 && fiveStar_pity_count <= 90) {
 		controller.setWeight("gold", gold_rate + bonus);
@@ -251,12 +269,12 @@ function bonusRate(i) {
 		bonus = 0;
 		controller.setWeight("gold", gold_rate);
 	}
-
+	bonusUp = (bonus / 167).toFixed(2) * 100;
 	document.getElementById("debug1").innerHTML =
 		"Pitty level: " +
 		fiveStar_pity_count +
 		" | increase rate：" +
-		(bonus / 167).toFixed(2) * 100 +
+		bonusUp +
 		"%";
 }
 
@@ -560,5 +578,3 @@ function radomFivestarChar() {
 	let num = Math.floor(Math.random() * 5);
 	return num;
 }
-
-// imageContainer[10].src = limitedEdition_fivestarChar.image;
