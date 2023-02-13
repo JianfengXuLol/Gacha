@@ -6,39 +6,113 @@
 		<meta name="description" content="learning project" />
 		<meta name="author" content="Jess" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+		<!-- Bootstrap CSS v5.2.1 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous" />
 		<link rel="stylesheet" href="Gacha.css" />
-		<title>javascript testing</title>
+		<title>Gemshin Impact Page</title>
 	</head>
 
 	<body>
-		<p id="debug">Debug:</p>
-		<p id="debug1">Debug:</p>
-		<hr />
-		<button id="pull_1">1 pull</button>
-		<button id="pull_10">10 pull</button>
-		<button id="restart">Restart</button><br />
-		<hr />
-		<button id="text1" class="card_container"></button>
-		<button id="text2" class="card_container"></button>
-		<button id="text3" class="card_container"></button>
-		<button id="text4" class="card_container"></button>
-		<button id="text5" class="card_container"></button>
-		<button id="text6" class="card_container"></button>
-		<button id="text7" class="card_container"></button>
-		<button id="text8" class="card_container"></button>
-		<button id="text9" class="card_container"></button>
-		<button id="text10" class="card_container"></button>
-		<img id="image1" class="image_container" />
-		<img id="image2" class="image_container" />
-		<img id="image3" class="image_container" />
-		<img id="image4" class="image_container" />
-		<img id="image5" class="image_container" />
-		<img id="image6" class="image_container" />
-		<img id="image7" class="image_container" />
-		<img id="image8" class="image_container" />
-		<img id="image9" class="image_container" />
-		<img id="image10" class="image_container" />
+		<header>
+			<div class="container ms-3">
+				<div class="col-12">
+					<div class="row">
+						<h2>Gemshin Impact</h2>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs border-bottom-0">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">CHARACTERS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Limited 5 Star</a></li>
+									<li><a class="dropdown-item" href="#">4 Star</a></li>
+									<li>
+										<a class="dropdown-item" href="#">Standard Banner 5 Star</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">THE WORLD</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Mondstadt</a></li>
+									<li><a class="dropdown-item" href="#">Liyue</a></li>
+									<li><a class="dropdown-item" href="#">Liyue</a></li>
+									<li><a class="dropdown-item" href="#">Sumeru</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">ITEMS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">5 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">4 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">3 Star Weapon</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">OTHER</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Artifacts</a></li>
+									<li><a class="dropdown-item" href="#">Tutorials</a></li>
+									<li><a class="dropdown-item" href="#">Stories</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-6"></div>
+			</div>
+		</header>
+
+		<main class="container ms-3">
+			<hr />
+			<h4>Wishing Info:</h4>
+			<p id="debug">Total wish count：0 | Constellations: -1</p>
+			<p id="debug1">Pitty level: 10 | increase rate：0%</p>
+			<hr />
+
+			<button id="pull_1">1 pull</button>
+			<button id="pull_10">10 pull</button>
+			<button id="restart">Restart</button><br />
+			<hr />
+			<div class="wishingPool">
+				<button id="text1" class="card_container"></button>
+				<button id="text2" class="card_container"></button>
+				<button id="text3" class="card_container"></button>
+				<button id="text4" class="card_container"></button>
+				<button id="text5" class="card_container"></button>
+				<button id="text6" class="card_container"></button>
+				<button id="text7" class="card_container"></button>
+				<button id="text8" class="card_container"></button>
+				<button id="text9" class="card_container"></button>
+				<button id="text10" class="card_container"></button>
+				<img id="image1" class="image_container" />
+				<img id="image2" class="image_container" />
+				<img id="image3" class="image_container" />
+				<img id="image4" class="image_container" />
+				<img id="image5" class="image_container" />
+				<img id="image6" class="image_container" />
+				<img id="image7" class="image_container" />
+				<img id="image8" class="image_container" />
+				<img id="image9" class="image_container" />
+				<img id="image10" class="image_container" />
+			</div>
+		</main>
+		<footer></footer>
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+			integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+			crossorigin="anonymous"></script>
 
 		<script src="Gacha.js"></script>
 	</body>

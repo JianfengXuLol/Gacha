@@ -94,6 +94,9 @@ function reset() {
 	upCharCount = -1;
 	fiveStar_pity_count = 0;
 	bonusUp = 0;
+	for (let i = 0; i < cardContainer.length; i++) {
+		imageContainer[i].style.display = "none";
+	}
 	document.getElementById("debug").innerHTML =
 		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 	document.getElementById("debug1").innerHTML =
