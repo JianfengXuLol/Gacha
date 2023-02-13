@@ -201,7 +201,7 @@ function ten_pull() {
 		}
 	}
 	document.getElementById("debug").innerHTML =
-		"总抽数：" + wishCount + " | " + "命座数: " + upCharCount;
+		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 }
 
 //Adding events here:
@@ -253,9 +253,9 @@ function bonusRate(i) {
 	}
 
 	document.getElementById("debug1").innerHTML =
-		"保底水位: " +
+		"Pitty level: " +
 		fiveStar_pity_count +
-		" | 增加几率：" +
+		" | increase rate：" +
 		(bonus / 167).toFixed(2) * 100 +
 		"%";
 }
@@ -276,7 +276,7 @@ var Mona = { color: "gold", image: "standard_5star/Mona.webp" };
 var Qiqi = { color: "gold", image: "standard_5star/Qiqi.webp" };
 
 //4-stars
-
+//Characters
 //up banner
 var Ningguang = { color: "purple", image: "upEdition_4_Star/Ningguang.webp" };
 var Beidou = { color: "purple", image: "upEdition_4_Star/Beidou.webp" };
@@ -286,64 +286,150 @@ var Xingqiu = { color: "purple", image: "upEdition_4_Star/Xingqiu.webp" };
 var Yaoyao = { color: "purple", image: "standard_4_star/Yaoyao.webp" };
 var Amber = { color: "purple", image: "standard_4_star/Amber.webp" };
 var Barbara = { color: "purple", image: "standard_4_star/Barbara.webp" };
+var Bennett = { color: "purple", image: "standard_4_star/Bennett.webp" };
+var Candace = { color: "purple", image: "standard_4_star/Candace.webp" };
+var Chongyun = { color: "purple", image: "standard_4_star/Chongyun.webp" };
+var Collei = { color: "purple", image: "standard_4_star/Collei.webp" };
+var Diona = { color: "purple", image: "standard_4_star/Diona.webp" };
+var Dori = { color: "purple", image: "standard_4_star/Dori.webp" };
+var Faruzan = { color: "purple", image: "standard_4_star/Faruzan.webp" };
+var Fischl = { color: "purple", image: "standard_4_star/Fischl.webp" };
+var Gorou = { color: "purple", image: "standard_4_star/Gorou.webp" };
+var Kaeya = { color: "purple", image: "standard_4_star/Kaeya.webp" };
+var KujouSara = { color: "purple", image: "standard_4_star/Kujou Sara.webp" };
+var KukiShinobu = {
+	color: "purple",
+	image: "standard_4_star/Kuki Shinobu.webp",
+};
+var Layla = { color: "purple", image: "standard_4_star/Layla.webp" };
+var Lisa = { color: "purple", image: "standard_4_star/Lisa.webp" };
+var Noelle = { color: "purple", image: "standard_4_star/Noelle.webp" };
+var Razor = { color: "purple", image: "standard_4_star/Razor.webp" };
+var Rosaria = { color: "purple", image: "standard_4_star/Rosaria.webp" };
+var Sayu = { color: "purple", image: "standard_4_star/Sayu.webp" };
+var ShikanoinHeizou = {
+	color: "purple",
+	image: "standard_4_star/Shikanoin Heizou.webp",
+};
+var Sucrose = { color: "purple", image: "standard_4_star/Sucrose.webp" };
+var Thoma = { color: "purple", image: "standard_4_star/Thoma.webp" };
+var Xiangling = { color: "purple", image: "standard_4_star/Xiangling.webp" };
+var Xinyan = { color: "purple", image: "standard_4_star/Xinyan.webp" };
+var Yanfei = { color: "purple", image: "standard_4_star/Yanfei.webp" };
+var YunJin = { color: "purple", image: "standard_4_star/Yun Jin.webp" };
+
+//Weapons
+var Dragons_Bane = {
+	color: "purple",
+	image: "Weapons/4_star/Dragon's Bane.webp",
+};
+var Eye_of_Perception = {
+	color: "purple",
+	image: "Weapons/4_star/Eye of Perception.webp",
+};
+var Favonius_Codex = {
+	color: "purple",
+	image: "Weapons/4_star/Favonius Codex.webp",
+};
+var Favonius_Greatsword = {
+	color: "purple",
+	image: "Weapons/4_star/Favonius Greatsword.webp",
+};
+var Favonius_Lance = {
+	color: "purple",
+	image: "Weapons/4_star/Favonius Lance.webp",
+};
+var Favonius_Sword = {
+	color: "purple",
+	image: "Weapons/4_star/Favonius_Sword.webp",
+};
+var Lions_Roar = { color: "purple", image: "Weapons/4_star/Lion's Roar.webp" };
+var Rainslasher = { color: "purple", image: "Weapons/4_star/Rainslasher.webp" };
+var Rust = { color: "purple", image: "Weapons/4_star/Rust.webp" };
+var Sacrificial_Fragments = {
+	color: "purple",
+	image: "Weapons/4_star/Sacrificial Fragments.webp",
+};
+var Sacrificial_Greatsword = {
+	color: "purple",
+	image: "Weapons/4_star/Sacrificial Greatsword.webp",
+};
+var Sacrificial_Sword = {
+	color: "purple",
+	image: "Weapons/4_star/Sacrificial Sword.webp",
+};
+var The_Flute = { color: "purple", image: "Weapons/4_star/The Flute.webp" };
+var The_Stringless = {
+	color: "purple",
+	image: "Weapons/4_star/The Stringless.webp",
+};
+var Favonius_Warbow = {
+	color: "purple",
+	image: "Weapons/4_star/Favonius Warbow.webp",
+};
+var The_Widsith = { color: "purple", image: "Weapons/4_star/The Widsith.webp" };
+var TheBell = { color: "purple", image: "Weapons/4_star/The Bell.webp" };
+var Sacrificial_Bow = {
+	color: "purple",
+	image: "Weapons/4_star/Sacrificial bow.webp",
+};
 
 const standard_4_star = [
 	Yaoyao,
 	Amber,
 	Barbara,
-	// "Beidou",
-	// "Bennett",
-	// "Candace",
-	// "Chongyun",
-	// "Collei",
-	// "Diona",
-	// "Dori",
-	// "Faruzan",
-	// "Fischl",
-	// "Gorou",
-	// "Kaeya",
-	// "Kujou Sara",
-	// "Kuki Shinobu",
-	// "Layla",
-	// "Lisa",
-	// "Ningguang",
-	// "Noelle",
-	// "Razor",
-	// "Rosaria",
-	// "Sayu",
-	// "Shikanoin Heizou",
-	// "Sucrose",
-	// "Thoma",
-	// "Xiangling",
-	// "Xingqiu",
-	// "Xinyan",
-	// "Yanfei",
-	// "Yaoyao",
-	// "Yun Jin",
-	// "Rust",
-	// "The Stringless",
-	// "The Widsith",
-	// "Eye of Perception",
-	// "Rainslasher",
-	// "The Bell",
-	// "Lion's Roar",
-	// "The Flute",
-	// "Dragon's Bane",
-	// "Favonius Lance",
-	// "Favonius Sword",
-	// "Favonius Greatsword",
-	// "Favonius Codex",
-	// "Favonius Warbow",
-	// "Sacrificial Bow",
-	// "Sacrificial Sword",
-	// "Sacrificial Greatsword",
-	// "Sacrificial Fragments",
+	Beidou,
+	Bennett,
+	Candace,
+	Chongyun,
+	Collei,
+	Diona,
+	Dori,
+	Faruzan,
+	Fischl,
+	Gorou,
+	Kaeya,
+	KujouSara,
+	KukiShinobu,
+	Layla,
+	Lisa,
+	Ningguang,
+	Noelle,
+	Razor,
+	Rosaria,
+	Sayu,
+	ShikanoinHeizou,
+	Sucrose,
+	Thoma,
+	Xiangling,
+	Xingqiu,
+	Xinyan,
+	Yanfei,
+	YunJin,
+	Rust,
+	The_Stringless,
+	The_Widsith,
+	Eye_of_Perception,
+	Rainslasher,
+	TheBell,
+	Lions_Roar,
+	The_Flute,
+	Dragons_Bane,
+	Favonius_Lance,
+	Favonius_Sword,
+	Favonius_Greatsword,
+	Favonius_Codex,
+	Favonius_Warbow,
+	Sacrificial_Bow,
+	Sacrificial_Sword,
+	Sacrificial_Greatsword,
+	Sacrificial_Fragments,
 ];
 
 const flip_50_50_4Star = ["upFourStar", "standard 4 starChar"];
 
 function random_standard_4Star() {
-	let num = Math.floor(Math.random() * 3); //50 four-stars
+	let num = Math.floor(Math.random() * 49); //50 four-stars
 	return num;
 }
 
@@ -353,40 +439,105 @@ function random_up_4Star() {
 }
 
 //3 stars
-var Black_Tassel = { color: "purple", image: "Weapons/Black Tassel.webp" };
+var Black_Tassel = {
+	color: "blue",
+	image: "Weapons/3_star/Black Tassel.webp",
+};
+
+var Bloodtainted_Greatsword = {
+	color: "blue",
+	image: "Weapons/3_star/Bloodtainted_Greatsword.webp",
+};
+
+var Cool_Steel = {
+	color: "blue",
+	image: "Weapons/3_star/Cool_Steel.webp",
+};
+
+var Debate_Club = {
+	color: "blue",
+	image: "Weapons/3_star/Debate_Club.webp",
+};
+var Ebony_Bow = {
+	color: "blue",
+	image: "Weapons/3_star/Ebony_Bow.webp",
+};
+var Emerald_Orb = {
+	color: "blue",
+	image: "Weapons/3_star/Emerald_Orb.webp",
+};
+var Ferrous_Shadow = {
+	color: "blue",
+	image: "Weapons/3_star/Ferrous_Shadow.webp",
+};
+
+var Harbinger_of_Dawn = {
+	color: "blue",
+	image: "Weapons/3_star/Harbinger_of_Dawn.webp",
+};
+var Magic_Guide = {
+	color: "blue",
+	image: "Weapons/3_star/Magic_Guide.webp",
+};
+var Messenger = {
+	color: "blue",
+	image: "Weapons/3_star/Messenger.webp",
+};
+
+var Raven_Bow = {
+	color: "blue",
+	image: "Weapons/3_star/Raven_Bow.webp",
+};
+var Recurve_Bow = {
+	color: "blue",
+	image: "Weapons/3_star/Recurve_Bow.webp",
+};
+var Sharpshooters_Oath = {
+	color: "blue",
+	image: "Weapons/3_star/Sharpshooters_Oath.webp",
+};
+
+var Skyrider_Sword = {
+	color: "blue",
+	image: "Weapons/3_star/Skyrider_Sword.webp",
+};
+var Slingshot = {
+	color: "blue",
+	image: "Weapons/3_star/Slingshot.webp",
+};
+var Thrilling_Tales_of_Dragon_Slayers = {
+	color: "blue",
+	image: "Weapons/3_star/Thrilling_Tales_of_Dragon_Slayers.webp",
+};
+
+var White_Tassel = {
+	color: "blue",
+	image: "Weapons/3_star/White_Tassel.webp",
+};
 
 const standard_3_star = [
 	Black_Tassel,
-	// "Bloodtainted Greatsword",
-	// "Cool Steel",
-	// "Dark Iron Sword",
-	// "Debate Club",
-	// "Ebony Bow",
-	// "Emerald Orb",
-	// "Ferrous Shadow",
-	// "Fillet Blade",
-	// "Halberd",
-	// "Harbinger of Dawn",
-	// "Magic Guide",
-	// "Messenger",
-	// "Otherworldly Story",
-	// "Quartz",
-	// "Raven Bow",
-	// "Recurve Bow",
-	// "Sharpshooter's Oath",
-	// "Skyrider Greatsword",
-	// "Skyrider Sword",
-	// "Slingshot",
-	// "Thrilling Tales of Dragon Slayers",
-	// "Traveler's Handy Sword",
-	// "Twin Nephrite",
-	// "White Iron Greatsword",
-	// "White Tassel",
+	Bloodtainted_Greatsword,
+	Cool_Steel,
+	Debate_Club,
+	Ebony_Bow,
+	Emerald_Orb,
+	Ferrous_Shadow,
+	Harbinger_of_Dawn,
+	Magic_Guide,
+	Messenger,
+	Raven_Bow,
+	Recurve_Bow,
+	Sharpshooters_Oath,
+	Skyrider_Sword,
+	Slingshot,
+	Thrilling_Tales_of_Dragon_Slayers,
+	White_Tassel,
 ];
 console.log(standard_3_star.length);
 
 function random_up_3Star() {
-	let num = Math.floor(Math.random() * 1);
+	let num = Math.floor(Math.random() * 17);
 	return num;
 }
 
