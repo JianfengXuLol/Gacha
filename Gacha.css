@@ -60,6 +60,13 @@ body {
 	flex-wrap: wrap;
 }
 
+.page_title {
+	font-size: 2rem;
+}
+.wish_info {
+	font-size: 1.5rem;
+}
+
 .image1 {
 	background-color: #acc8e5;
 }
@@ -72,5 +79,23 @@ body {
 @media only screen and (max-width: 650px) {
 	.wishingPool {
 		width: 480px;
+	}
+}
+
+@media only screen and (min-width: 650px) {
+	.page_title {
+		font-size: 2.5rem;
+	}
+	.wish_info {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 820px) {
+	.page_title {
+		font-size: 3rem;
+	}
+	.wish_info {
+		font-size: 2.5rem;
 	}
 }
