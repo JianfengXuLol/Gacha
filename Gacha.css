@@ -26,9 +26,9 @@ body {
 .image_container {
 	max-height: 130px;
 	min-height: 130px;
-	max-width: 75px;
+	min-width: 80px;
+	max-width: 80px;
 	width: 10%;
-	height: auto;
 	display: none;
 }
 
@@ -55,8 +55,22 @@ body {
 
 .wishingPool {
 	background-color: #acc8e5;
+	width: 800px;
 	display: flex;
+	flex-wrap: wrap;
 }
 
-@media (max-width: 800px) {
+.image1 {
+	background-color: #acc8e5;
+}
+
+@media only screen and (max-width: 820px) {
+	.wishingPool {
+		width: 560px;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.wishingPool {
+		width: 480px;
+	}
 }

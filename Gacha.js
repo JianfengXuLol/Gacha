@@ -120,6 +120,7 @@ function one_pull() {
 	imageContainer[0].src = color;
 	fourStar_pity(0);
 	fiveStar_pity(0);
+
 	imageContainer[0].style.display = "inline";
 
 	if (cardContainer[0].innerHTML == "gold") {
@@ -220,6 +221,7 @@ function ten_pull() {
 			}
 		}
 	}
+
 	document.getElementById("debug").innerHTML =
 		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 }
