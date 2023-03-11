@@ -24,10 +24,15 @@ Step#7: Using the function from Step#5 to display the wishing result using a for
 
 ==============================================
 plans:
+I need to study PHP + mySQL in order to work on database.
 
-1.think about what kind of website do I want to build based on this project.
+ideas:
+
+1.I want to create a  Gemshin Impact restaurant simulation game, it combines this gacha system.
+2.The core idea of this game will be using the gacha system to hire employees in order to help the restaurant. The income of the restaurant can be used to pull characters.
+3.I want to come up with more features that are related to Gemshin impact, inspirations may come from mobs, element reactions, storyline, characters and etc...
 
 ===============================================
 on-going problem:
 
-figure out setting the correct rate for gold card(need to dive deep into pickCard function()).
+
