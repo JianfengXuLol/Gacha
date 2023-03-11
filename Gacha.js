@@ -85,20 +85,26 @@ var _50_50_pitty_5_star = 0;
 var _50_50_pitty_4_star = 0;
 var boder_size = 4;
 var wishCount = 0;
-var upCharCount = -1; //constellations
 var fourStar_pity_count = 0;
 var fiveStar_pity_count = 0;
+var Limited_5_star_constellations = -1; //constellations
+var character_name = ""; //Character's name
+var character_rarity = ""; //Character's rarity
 
 function reset() {
 	wishCount = 0;
-	upCharCount = -1;
+	Limited_5_star_constellations = -1;
 	fiveStar_pity_count = 0;
 	bonusUp = 0;
 	for (let i = 0; i < cardContainer.length; i++) {
 		imageContainer[i].style.display = "none";
 	}
 	document.getElementById("debug").innerHTML =
-		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
+		"Total wish count：" +
+		wishCount +
+		" | " +
+		"Constellations: " +
+		Limited_5_star_constellations;
 	document.getElementById("debug1").innerHTML =
 		"Pitty level: " +
 		fiveStar_pity_count +
@@ -129,17 +135,18 @@ function one_pull() {
 
 		if (num == "standard fivestarChar") {
 			if (_50_50_pitty_5_star == 0) {
-				imageContainer[0].src =
-					standard_fivestarChar[radomFivestarChar()].image;
+				let radomNum = radomFivestarChar();
+				imageContainer[0].src = standard_fivestarChar[radomNum].image;
+				character_name = standard_fivestarChar[radomNum].name;
 				_50_50_pitty_5_star++;
 			} else {
-				upCharCount++;
+				Limited_5_star_constellations++;
 				/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
 				imageContainer[0].src = limitedEdition_fivestarChar.image;
 				_50_50_pitty_5_star = 0;
 			}
 		} else {
-			upCharCount++;
+			Limited_5_star_constellations++;
 			imageContainer[0].src = num.image;
 			_50_50_pitty_5_star = 0;
 		}
@@ -163,9 +170,14 @@ function one_pull() {
 		}
 	}
 
-	document.getElementById("upCharCount").value = upCharCount;
+	document.getElementById("Limited_5_star_constellations").value =
+		Limited_5_star_constellations;
 	document.getElementById("debug").innerHTML =
-		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
+		"Total wish count：" +
+		wishCount +
+		" | " +
+		"Constellations: " +
+		Limited_5_star_constellations;
 }
 
 function ten_pull() {
@@ -192,13 +204,13 @@ function ten_pull() {
 						standard_fivestarChar[radomFivestarChar()].image;
 					_50_50_pitty_5_star++;
 				} else {
-					upCharCount++;
+					Limited_5_star_constellations++;
 					/*if _50_50_pitty_5_star !=0, which means when there is alread one standard 5 star character be drawn, we keep rolling until num != standard 5 star character*/
 					imageContainer[i].src = limitedEdition_fivestarChar.image;
 					_50_50_pitty_5_star = 0;
 				}
 			} else {
-				upCharCount++;
+				Limited_5_star_constellations++;
 				imageContainer[i].src = num.image;
 				_50_50_pitty_5_star = 0;
 			}
@@ -224,9 +236,14 @@ function ten_pull() {
 		}
 	}
 
-	document.getElementById("upCharCount").value = upCharCount;
+	document.getElementById("Limited_5_star_constellations").value =
+		Limited_5_star_constellations;
 	document.getElementById("debug").innerHTML =
-		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
+		"Total wish count：" +
+		wishCount +
+		" | " +
+		"Constellations: " +
+		Limited_5_star_constellations;
 }
 
 //Adding events here:
@@ -292,57 +309,187 @@ function bonusRate(i) {
 
 //up banner
 
-var Yelan = { color: "gold", image: "limitedEdition_5_Star/Yelan.webp" };
+var Yelan = {
+	name: "Yelan",
+	color: "gold",
+	image: "limitedEdition_5_Star/Yelan.webp",
+};
 
 //standard banner
-var Diluc = { color: "gold", image: "standard_5star/Diluc.webp" };
-var Jean = { color: "gold", image: "standard_5star/Jean.webp" };
-var Keqing = { color: "gold", image: "standard_5star/Keqing.webp" };
-var Mona = { color: "gold", image: "standard_5star/Mona.webp" };
-var Qiqi = { color: "gold", image: "standard_5star/Qiqi.webp" };
+var Diluc = {
+	name: "Diluc",
+	color: "gold",
+	image: "standard_5star/Diluc.webp",
+};
+var Jean = { name: "Jean", color: "gold", image: "standard_5star/Jean.webp" };
+var Keqing = {
+	name: "Keqing",
+	color: "gold",
+	image: "standard_5star/Keqing.webp",
+};
+var Mona = { name: "Mona", color: "gold", image: "standard_5star/Mona.webp" };
+var Qiqi = { name: "Qiqi", color: "gold", image: "standard_5star/Qiqi.webp" };
 
 //4-stars
 //Characters
 //up banner
-var Ningguang = { color: "purple", image: "upEdition_4_Star/Ningguang.webp" };
-var Beidou = { color: "purple", image: "upEdition_4_Star/Beidou.webp" };
-var Xingqiu = { color: "purple", image: "upEdition_4_Star/Xingqiu.webp" };
+var Ningguang = {
+	name: "Ningguang",
+	color: "purple",
+	image: "upEdition_4_Star/Ningguang.webp",
+};
+var Beidou = {
+	name: "Beidou",
+	color: "purple",
+	image: "upEdition_4_Star/Beidou.webp",
+};
+var Xingqiu = {
+	name: "Xingqiu",
+	color: "purple",
+	image: "upEdition_4_Star/Xingqiu.webp",
+};
 
 //standard banner
-var Yaoyao = { color: "purple", image: "standard_4_star/Yaoyao.webp" };
-var Amber = { color: "purple", image: "standard_4_star/Amber.webp" };
-var Barbara = { color: "purple", image: "standard_4_star/Barbara.webp" };
-var Bennett = { color: "purple", image: "standard_4_star/Bennett.webp" };
-var Candace = { color: "purple", image: "standard_4_star/Candace.webp" };
-var Chongyun = { color: "purple", image: "standard_4_star/Chongyun.webp" };
-var Collei = { color: "purple", image: "standard_4_star/Collei.webp" };
-var Diona = { color: "purple", image: "standard_4_star/Diona.webp" };
-var Dori = { color: "purple", image: "standard_4_star/Dori.webp" };
-var Faruzan = { color: "purple", image: "standard_4_star/Faruzan.webp" };
-var Fischl = { color: "purple", image: "standard_4_star/Fischl.webp" };
-var Gorou = { color: "purple", image: "standard_4_star/Gorou.webp" };
-var Kaeya = { color: "purple", image: "standard_4_star/Kaeya.webp" };
-var KujouSara = { color: "purple", image: "standard_4_star/Kujou Sara.webp" };
+var Yaoyao = {
+	name: "Yaoyao",
+	color: "purple",
+	image: "standard_4_star/Yaoyao.webp",
+};
+var Amber = {
+	name: "Amber",
+	color: "purple",
+	image: "standard_4_star/Amber.webp",
+};
+var Barbara = {
+	name: "Barbara",
+	color: "purple",
+	image: "standard_4_star/Barbara.webp",
+};
+var Bennett = {
+	name: "Bennett",
+	color: "purple",
+	image: "standard_4_star/Bennett.webp",
+};
+var Candace = {
+	name: "Candace",
+	color: "purple",
+	image: "standard_4_star/Candace.webp",
+};
+var Chongyun = {
+	name: "Chongyun",
+	color: "purple",
+	image: "standard_4_star/Chongyun.webp",
+};
+var Collei = {
+	name: "Collei",
+	color: "purple",
+	image: "standard_4_star/Collei.webp",
+};
+var Diona = {
+	name: "Diona",
+	color: "purple",
+	image: "standard_4_star/Diona.webp",
+};
+var Dori = {
+	name: "Dori",
+	color: "purple",
+	image: "standard_4_star/Dori.webp",
+};
+var Faruzan = {
+	name: "Faruzan",
+	color: "purple",
+	image: "standard_4_star/Faruzan.webp",
+};
+var Fischl = {
+	name: "Fischl",
+	color: "purple",
+	image: "standard_4_star/Fischl.webp",
+};
+var Gorou = {
+	name: "Gorou",
+	color: "purple",
+	image: "standard_4_star/Gorou.webp",
+};
+var Kaeya = {
+	name: "Kaeya",
+	color: "purple",
+	image: "standard_4_star/Kaeya.webp",
+};
+var KujouSara = {
+	name: "KujouSara",
+	color: "purple",
+	image: "standard_4_star/Kujou Sara.webp",
+};
 var KukiShinobu = {
+	name: "KukiShinobu",
 	color: "purple",
 	image: "standard_4_star/Kuki Shinobu.webp",
 };
-var Layla = { color: "purple", image: "standard_4_star/Layla.webp" };
-var Lisa = { color: "purple", image: "standard_4_star/Lisa.webp" };
-var Noelle = { color: "purple", image: "standard_4_star/Noelle.webp" };
-var Razor = { color: "purple", image: "standard_4_star/Razor.webp" };
-var Rosaria = { color: "purple", image: "standard_4_star/Rosaria.webp" };
-var Sayu = { color: "purple", image: "standard_4_star/Sayu.webp" };
+var Layla = {
+	name: "Layla",
+	color: "purple",
+	image: "standard_4_star/Layla.webp",
+};
+var Lisa = {
+	name: "Lisa",
+	color: "purple",
+	image: "standard_4_star/Lisa.webp",
+};
+var Noelle = {
+	name: "Noelle",
+	color: "purple",
+	image: "standard_4_star/Noelle.webp",
+};
+var Razor = {
+	name: "Razor",
+	color: "purple",
+	image: "standard_4_star/Razor.webp",
+};
+var Rosaria = {
+	name: "Rosaria",
+	color: "purple",
+	image: "standard_4_star/Rosaria.webp",
+};
+var Sayu = {
+	name: "Sayu",
+	color: "purple",
+	image: "standard_4_star/Sayu.webp",
+};
 var ShikanoinHeizou = {
+	name: "ShikanoinHeizou",
 	color: "purple",
 	image: "standard_4_star/Shikanoin Heizou.webp",
 };
-var Sucrose = { color: "purple", image: "standard_4_star/Sucrose.webp" };
-var Thoma = { color: "purple", image: "standard_4_star/Thoma.webp" };
-var Xiangling = { color: "purple", image: "standard_4_star/Xiangling.webp" };
-var Xinyan = { color: "purple", image: "standard_4_star/Xinyan.webp" };
-var Yanfei = { color: "purple", image: "standard_4_star/Yanfei.webp" };
-var YunJin = { color: "purple", image: "standard_4_star/Yun Jin.webp" };
+var Sucrose = {
+	name: "Sucrose",
+	color: "purple",
+	image: "standard_4_star/Sucrose.webp",
+};
+var Thoma = {
+	name: "Thoma",
+	color: "purple",
+	image: "standard_4_star/Thoma.webp",
+};
+var Xiangling = {
+	name: "Xiangling",
+	color: "purple",
+	image: "standard_4_star/Xiangling.webp",
+};
+var Xinyan = {
+	name: "Xinyan",
+	color: "purple",
+	image: "standard_4_star/Xinyan.webp",
+};
+var Yanfei = {
+	name: "Yanfei",
+	color: "purple",
+	image: "standard_4_star/Yanfei.webp",
+};
+var YunJin = {
+	name: "YunJin",
+	color: "purple",
+	image: "standard_4_star/Yun Jin.webp",
+};
 
 //Weapons
 var Dragons_Bane = {

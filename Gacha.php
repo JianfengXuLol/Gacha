@@ -83,7 +83,9 @@
 
 			<!-- transfer javascript variables -->
 			<form id="myForm"  method="post" action="Gacha.php">
-				<input type="hidden" name="upCharCount" id="upCharCount" value="" />
+				<input type="hidden" name="Limited_5_star_constellations" id="Limited_5_star_constellations" value="" /> <!--constellations-->
+				<input type="hidden" name="character" id="character" value="" /> <!--character's name-->
+				<input type="hidden" name="color" id="color" value="" /> <!--character's name-->
 				<input type="submit" value="save">
 			</form>
 
@@ -131,13 +133,24 @@
 
 			//collect the data from another form
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				$sql = "SELECT * FROM characters WHERE Character_name = 'Klee'";
+				$sql = "SELECT Character_name FROM characters WHERE Character_name = 'Klee'";
 				$result = $conn->query($sql);
 
+				$database_constellations = "";
+
 				if($result->num_rows > 0) {
+					$sql = "SELECT Constellations FROM characters";
+					$result = $conn->query($sql);
+					if ($result->num_rows > 0) {
+
+						// Loop through each row and retrieve the id value
+						while ($row = $result->fetch_assoc()) {
+						  $database_constellations = $row['Constellations'];
+						}
+					}
 					$saved_data = $conn->prepare("UPDATE characters SET Constellations=? WHERE Character_name = 'Klee'");
 					$saved_data->bind_param("i", $constellation);
-					$constellation = $_POST['upCharCount'];
+					$constellation = $_POST['Limited_5_star_constellations'];
 					$character_name = "klee";
 					$rarity = 5;
 					echo "Input data: <br><hr>";
@@ -151,11 +164,11 @@
 					$saved_data->bind_param("sss", $constellation, $character_name, $rarity);
 
 					// collect value of input field
-					$constellation = $_POST['upCharCount'];
+					$constellation = $_POST['Limited_5_star_constellations'];
 					$character_name = "klee";
 					$rarity = 5;
 					echo "Input data: <br><hr>";
-					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "Star<br><br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . " Star<br><br><hr>";
 					$saved_data->execute();
 				}
 			}
