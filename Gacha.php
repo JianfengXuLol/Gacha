@@ -17,6 +17,8 @@
 	</head>
 
 	<body>
+		
+
 		<header>
 			<div class="container ms-3">
 				<div class="col-12">
@@ -72,11 +74,20 @@
 			<h4 class="wish_info">Wishing Info:</h4>
 			<p id="debug">Total wish count：0 | Constellations: -1</p>
 			<p id="debug1">Pitty level: 10 | increase rate：0%</p>
+			<p id="debug2"></p>
 			<hr />
 
 			<button id="pull_1">1 pull</button>
 			<button id="pull_10">10 pull</button>
-			<button id="restart">Restart</button><br />
+			<button id="restart">Restart</button>
+
+			<!-- transfer javascript variables -->
+			<form id="myForm"  method="post" action="Gacha.php">
+				<input type="hidden" name="upCharCount" id="upCharCount" value="" />
+				<input type="submit" value="save">
+			</form>
+
+			<br />
 			<hr />
 			<button id="text1" class="card_container"></button>
 			<button id="text2" class="card_container"></button>
@@ -103,6 +114,56 @@
 		</main>
 		<footer></footer>
 
+		<?php
+			$servername = "localhost";
+			$username = "Jesspeter";
+			$password = "Justinbiberanna0";
+			$dbname = "gacha_system";
+			
+			// Create connection
+			$conn = new mysqli($servername, $username, $password,$dbname);
+			// Check connection
+			if ($conn->connect_error) {
+			  die("Connection failed: " . $conn->connect_error);
+			}
+
+			
+
+			//collect the data from another form
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				$sql = "SELECT * FROM characters WHERE Character_name = 'Klee'";
+				$result = $conn->query($sql);
+
+				if($result->num_rows > 0) {
+					$saved_data = $conn->prepare("UPDATE characters SET Constellations=? WHERE Character_name = 'Klee'");
+					$saved_data->bind_param("i", $constellation);
+					$constellation = $_POST['upCharCount'];
+					$character_name = "klee";
+					$rarity = 5;
+					echo "Input data: <br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "Star<br><br><hr>";
+					$saved_data->execute();
+				}
+				else {
+					// add stuff into the database
+					// prepare and bind
+					$saved_data = $conn->prepare("INSERT INTO characters (Constellations,Character_name, Rarity) VALUES (?, ?, ?)");
+					$saved_data->bind_param("sss", $constellation, $character_name, $rarity);
+
+					// collect value of input field
+					$constellation = $_POST['upCharCount'];
+					$character_name = "klee";
+					$rarity = 5;
+					echo "Input data: <br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "Star<br><br><hr>";
+					$saved_data->execute();
+				}
+			}
+
+			$conn->close();
+		?>
+
+
 		<!-- Bootstrap JavaScript Libraries -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -115,5 +176,9 @@
 			crossorigin="anonymous"></script>
 
 		<script src="Gacha.js"></script>
+
+		<script>
+			
+		</script>
 	</body>
 </html>

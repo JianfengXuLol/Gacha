@@ -162,6 +162,8 @@ function one_pull() {
 			_50_50_pitty_4_star = 0;
 		}
 	}
+
+	document.getElementById("upCharCount").value = upCharCount;
 	document.getElementById("debug").innerHTML =
 		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 }
@@ -222,6 +224,7 @@ function ten_pull() {
 		}
 	}
 
+	document.getElementById("upCharCount").value = upCharCount;
 	document.getElementById("debug").innerHTML =
 		"Total wish count：" + wishCount + " | " + "Constellations: " + upCharCount;
 }
