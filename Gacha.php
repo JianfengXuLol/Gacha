@@ -148,27 +148,29 @@
 						  $database_constellations = $row['Constellations'];
 						}
 					}
-					$saved_data = $conn->prepare("UPDATE characters SET Constellations=? WHERE Character_name = 'Klee'");
-					$saved_data->bind_param("i", $constellation);
+					$saved_data = $conn->prepare("UPDATE characters SET Constellations=? WHERE Character_name = ?");
+					$saved_data->bind_param("i", $constellation,$character_name,$rarity);
 					$constellation = $_POST['Limited_5_star_constellations'];
-					$character_name = "klee";
-					$rarity = 5;
+					$character_name = $_POST['character'];
+					$rarity = "jk";
 					echo "Input data: <br><hr>";
-					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "Star<br><br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "<br><br><hr>";
 					$saved_data->execute();
 				}
 				else {
 					// add stuff into the database
 					// prepare and bind
-					$saved_data = $conn->prepare("INSERT INTO characters (Constellations,Character_name, Rarity) VALUES (?, ?, ?)");
-					$saved_data->bind_param("sss", $constellation, $character_name, $rarity);
+					$saved_data = $conn->prepare("INSERT INTO characters (Constellations,Character_name, Rarity,Refinement) VALUES (?, ?, ?, ?)");
+					$saved_data->bind_param("ssss", $constellation, $character_name, $rarity,$refinement);
 
 					// collect value of input field
 					$constellation = $_POST['Limited_5_star_constellations'];
-					$character_name = "klee";
-					$rarity = 5;
+					$character_name = $_POST['character'];
+					$rarity = "jk";
+					$refinement = null;
+
 					echo "Input data: <br><hr>";
-					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . " Star<br><br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "<br><br><hr>";
 					$saved_data->execute();
 				}
 			}
