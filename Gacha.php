@@ -17,57 +17,6 @@
 	</head>
 
 	<body>
-		
-
-		<header>
-			<div class="container ms-3">
-				<div class="col-12">
-					<div class="row">
-						<h2 class="page_title">Gemshin Impact</h2>
-					</div>
-					<div class="row">
-						<ul class="nav nav-tabs border-bottom-0">
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">CHARACTERS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="#">4 Star</a></li>
-									<li>
-										<a class="dropdown-item" href="#">Standard Banner 5 Star</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">THE WORLD</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Mondstadt</a></li>
-									<li><a class="dropdown-item" href="#">Liyue</a></li>
-									<li><a class="dropdown-item" href="#">Inazuma</a></li>
-									<li><a class="dropdown-item" href="#">Sumeru</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">ITEMS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">5 Star Weapon</a></li>
-									<li><a class="dropdown-item" href="#">4 Star Weapon</a></li>
-									<li><a class="dropdown-item" href="#">3 Star Weapon</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">OTHER</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Artifacts</a></li>
-									<li><a class="dropdown-item" href="#">Tutorials</a></li>
-									<li><a class="dropdown-item" href="#">Stories</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-6"></div>
-			</div>
-		</header>
 
 		<main class="container ms-3">
 			<hr />
@@ -81,8 +30,8 @@
 			<button id="pull_10">10 pull</button>
 			<button id="restart">Restart</button>
 
-			<!-- transfer javascript variables -->
-			<form id="myForm"  method="post" action="Gacha.php">
+			<!----------------------- transfer javascript variables -------------------------------------->
+			<form id="myForm"  method="post" action="Gacha.php" autocomplete="off">
 				<input type="hidden" name="Limited_5_star_constellations" id="Limited_5_star_constellations" value="" /> <!--constellations-->
 				<input type="hidden" name="character" id="character" value="" /> <!--character's name-->
 				<input type="hidden" name="color" id="color" value="" /> <!--character's name-->
@@ -133,28 +82,28 @@
 
 			//collect the data from another form
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				$sql = "SELECT Character_name FROM characters WHERE Character_name = 'Klee'";
+				$sql = "SELECT Character_name FROM characters WHERE Character_name = 'Yelan'";
 				$result = $conn->query($sql);
 
 				$database_constellations = "";
 
 				if($result->num_rows > 0) {
-					$sql = "SELECT Constellations FROM characters";
-					$result = $conn->query($sql);
-					if ($result->num_rows > 0) {
+					// $sql = "SELECT Constellations FROM characters WHERE Character_name = 'Yelan'";
+					// $result = $conn->query($sql);
+					// if ($result->num_rows > 0) {
 
-						// Loop through each row and retrieve the id value
-						while ($row = $result->fetch_assoc()) {
-						  $database_constellations = $row['Constellations'];
-						}
-					}
+					// 	// Loop through each row and retrieve the id value
+					// 	while ($row = $result->fetch_assoc()) {
+					// 	  $database_constellations = $row['Constellations'];
+					// 	}
+					// }
 					$saved_data = $conn->prepare("UPDATE characters SET Constellations=? WHERE Character_name = ?");
-					$saved_data->bind_param("i", $constellation,$character_name,$rarity);
+					$saved_data->bind_param("is", $constellation,$character_name);
 					$constellation = $_POST['Limited_5_star_constellations'];
 					$character_name = $_POST['character'];
-					$rarity = "jk";
+
 					echo "Input data: <br><hr>";
-					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "<br><br><hr>";
+					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " ."<br><br><hr>";
 					$saved_data->execute();
 				}
 				else {
@@ -167,7 +116,7 @@
 					$constellation = $_POST['Limited_5_star_constellations'];
 					$character_name = $_POST['character'];
 					$rarity = "jk";
-					$refinement = null;
+					$refinement = "N/A";
 
 					echo "Input data: <br><hr>";
 					echo "Character Name: " .$character_name . "<br>Constellations: " . $constellation . "<br>Rarity: " . $rarity . "<br><br><hr>";
@@ -193,7 +142,9 @@
 		<script src="Gacha.js"></script>
 
 		<script>
-			
+			if ( window.history.replaceState ) {
+  			window.history.replaceState( null, null, window.location.href );
+			}
 		</script>
 	</body>
 </html>

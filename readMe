@@ -22,8 +22,10 @@ Step#7: Using the function from Step#5 to display the wishing result using a for
 
 2.
 
-==============================================
+===========================================================================================
 plans:
+!look at chatGPT's code and solve the "Duplicate entry '1' for key 'PRIMARY'" bug first!
+
 Storing character's name into the database and get the count of constellation right.
 
 ideas:
@@ -32,5 +34,31 @@ ideas:
 2.The core idea of this game will be using the gacha system to hire employees in order to help the restaurant. The income of the restaurant can be used to pull characters.
 3.I want to come up with more features that are related to Gemshin impact, inspirations may come from mobs, element reactions, storyline, characters and etc...
 
-===============================================
+===========================================================================================
 on-going problem:
+
+# -Within a 10-pull, only the last character card will be saved into the database, other cards get overwriten by the last character card on the screen(check the chatGPT code)
+
+# -when we have same cards on the screen, then we get "Duplicate entry for PRIMARY" bug
+
+(adding "AUTO INCREMENT" solves some of the problem, but there are still some weird issues:
+1.the error is gone when $constellation=0, but it still exists otherwise(ex: when $constellation=-1,1,2,3,so on...)
+2.when $constellation=0, the number goes from -1 to 14,15, which is super weird.
+)
+
+===========================================================================================
+
+solved problems & solutions:
+
+# -preventing form being submitted when refreshing the page
+
+solution: put the code at the bottom of the php file(html tag)
+
+        <script>
+    		if ( window.history.replaceState ) {
+
+window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
+===========================================================================================

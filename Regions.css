@@ -1,0 +1,47 @@
+:root {
+	--size-1: 5rem;
+	--size-2: 10rem;
+	--size-3: 15rem;
+	--size-4: 20rem;
+	--size-5: 25rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(43, 49, 56);
+}
+
+.theme_card {
+	position: relative;
+	margin-right: 25rem;
+}
+
+.card {
+	background-color: rgb(43, 49, 56);
+}
+
+.card-header {
+	text-align: center;
+	background-color: goldenrod;
+	color: black;
+}
+
+.card-text {
+	font-size: 0.7em;
+}
+
+@media screen and (max-width: 1890px) {
+	.theme_card {
+		position: relative;
+		margin-right: 30rem;
+	}
+}
+/* @media screen and (max-width: 1850px) {
+	.theme_card {
+		position: relative;
+		margin-right: 40rem;
+	}
+} */
