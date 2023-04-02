@@ -139,6 +139,7 @@
 			integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
 			crossorigin="anonymous"></script>
 
+		<script src="CountDownTimer.js"></script>
 		<script src="Gacha.js"></script>
 
 		<script>
