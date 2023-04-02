@@ -1,4 +1,5 @@
-//Connect to the checkbox
+//keeps checkboxes remain checked after reload/close the page
+//save the checkbox stage to the local storage.
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 // Attach event listener to each checkbox
@@ -16,12 +17,34 @@ checkboxes.forEach(function (checkbox) {
 	}
 });
 
+// click reset button to reset to intial time
+let initialTime = new Date(); //the initial date
+console.log(initialTime);
+let resetTime = new Date(initialTime);
+
+resetTime.setHours(resetTime.getHours() + 24);
+console.log(resetTime);
+
+const artifacts = document.getElementById("checkbox4");
+let targetDate = localStorage.getItem("targetDate") || resetTime; //current artifacts respawn time:04/2/2023 10:25:00
+
+let newTime = new Date(targetDate);
+
+function updateTargetDate() {
+	console.log(newTime);
+	// Check if the checkbox was already checked previously
+
+	if (artifacts.checked) {
+		newTime.setHours(newTime.getHours());
+		targetDate = newTime.toLocaleString();
+		localStorage.setItem("targetDate", targetDate);
+	}
+}
+
+artifacts.addEventListener("change", updateTargetDate);
+
 //Countdown Timer
 const timeLeft = document.getElementById("time-left");
-
-//set the data for the countdown timer here:
-let targetDate = "04/2/2023 10:25:00"; //current artifacts respawn time:04/2/2023 10:25:00
-const newTime = new Date(targetDate);
 
 const second = 1000;
 const minute = second * 60;
@@ -34,14 +57,8 @@ function countDown() {
 	const timeSpan = newTime - today;
 	//milliseconds
 
-	if (timeSpan <= -day) {
-		timeLeft.innerHTML = "Hope you had a nice Birthday!!";
-		clearInterval(timerId);
-		return;
-	}
-
 	if (timeSpan <= 0) {
-		timeLeft.innerHTML = "Happy Birthday!!";
+		timeLeft.innerHTML = "Artifacts just respawned!";
 		clearInterval(timerId);
 		return;
 	}
@@ -56,3 +73,11 @@ function countDown() {
 }
 
 timerId = setInterval(countDown, second);
+
+//reset stuff
+const resetButton = document.getElementById("reset-button");
+
+function resetTargetDate() {
+	localStorage.clear();
+}
+resetButton.addEventListener("click", resetTargetDate);
