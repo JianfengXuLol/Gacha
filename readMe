@@ -35,6 +35,8 @@ ideas:
 3.I want to come up with more features that are related to Gemshin impact, inspirations may come from mobs, element reactions, storyline, characters and etc...
 
 ===========================================================================================
+(Gacha System)
+
 on-going problem:
 
 # -Within a 10-pull, only the last character card will be saved into the database, other cards get overwriten by the last character card on the screen(check the chatGPT code)
@@ -45,6 +47,14 @@ on-going problem:
 1.the error is gone when $constellation=0, but it still exists otherwise(ex: when $constellation=-1,1,2,3,so on...)
 2.when $constellation=0, the number goes from -1 to 14,15, which is super weird.
 )
+
+_-------------------------------------------------------------------------------------_
+
+(Daily Routine)
+
+on-going problem:
+
+# -Resin counter stops whenever I reloading or closing the page
 
 ===========================================================================================
 

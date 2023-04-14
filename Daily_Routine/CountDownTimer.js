@@ -51,7 +51,6 @@ function updateZhibianyiTargetDate() {
 		localStorage.setItem("ZhibianyiTimeDate", ZhibianyiTimeDate);
 	}
 }
-
 artifacts.addEventListener("change", updateTargetDate);
 Zhibianyi.addEventListener("change", updateZhibianyiTargetDate);
 
@@ -108,8 +107,16 @@ timerId = setInterval(countDown, second);
 
 //reset stuff
 const resetButton = document.getElementById("reset-button");
+const resetButton3 = document.getElementById("reset-button3");
 
 function resetTargetDate() {
-	localStorage.clear();
+	localStorage.removeItem("targetDate");
+	localStorage.removeItem("checkbox4");
 }
 resetButton.addEventListener("click", resetTargetDate);
+
+function resetZhibianyiTime() {
+	localStorage.removeItem("ZhibianyiTimeDate");
+	localStorage.removeItem("checkbox10");
+}
+resetButton3.addEventListener("click", resetZhibianyiTime);
