@@ -19,21 +19,24 @@ checkboxes.forEach(function (checkbox) {
 
 // click reset button to reset to intial time
 let initialTime = new Date(); //the initial date
-console.log(initialTime);
-let resetTime = new Date(initialTime);
 
-resetTime.setHours(resetTime.getHours() + 24);
-console.log(resetTime);
+let ArtifactResetTime = new Date(initialTime);
+ArtifactResetTime.setHours(ArtifactResetTime.getHours() + 24);
 
+let ZhibianyiTime = new Date(initialTime); //质变仪
+ZhibianyiTime.setHours(ZhibianyiTime.getHours() + 24 * 7);
+
+//using localstorage to store the time
 const artifacts = document.getElementById("checkbox4");
-let targetDate = localStorage.getItem("targetDate") || resetTime; //current artifacts respawn time:04/2/2023 10:25:00
+const Zhibianyi = document.getElementById("checkbox10");
+let targetDate = localStorage.getItem("targetDate") || ArtifactResetTime; //current artifacts respawn time:04/2/2023 10:25:00
+let ZhibianyiTimeDate =
+	localStorage.getItem("ZhibianyiTimeDate") || ZhibianyiTime; //current artifacts respawn time:04/2/2023 10:25:00
 
 let newTime = new Date(targetDate);
+let zhibianyiNewTime = new Date(ZhibianyiTimeDate);
 
 function updateTargetDate() {
-	console.log(newTime);
-	// Check if the checkbox was already checked previously
-
 	if (artifacts.checked) {
 		newTime.setHours(newTime.getHours());
 		targetDate = newTime.toLocaleString();
@@ -41,10 +44,20 @@ function updateTargetDate() {
 	}
 }
 
+function updateZhibianyiTargetDate() {
+	if (Zhibianyi.checked) {
+		zhibianyiNewTime.setHours(zhibianyiNewTime.getHours());
+		ZhibianyiTimeDate = zhibianyiNewTime.toLocaleString();
+		localStorage.setItem("ZhibianyiTimeDate", ZhibianyiTimeDate);
+	}
+}
+
 artifacts.addEventListener("change", updateTargetDate);
+Zhibianyi.addEventListener("change", updateZhibianyiTargetDate);
 
 //Countdown Timer
 const timeLeft = document.getElementById("time-left");
+const timeLeft1 = document.getElementById("time-left1");
 
 const second = 1000;
 const minute = second * 60;
@@ -54,6 +67,8 @@ let timerId;
 
 function countDown() {
 	const today = new Date();
+
+	//Artifacts
 	const timeSpan = newTime - today;
 	//milliseconds
 
@@ -70,6 +85,23 @@ function countDown() {
 
 	timeLeft.innerHTML =
 		days + "days " + hours + "hrs " + minutes + "mins " + seconds + "secs";
+
+	//质变仪
+	const timeSpan1 = zhibianyiNewTime - today;
+	//milliseconds
+
+	if (timeSpan1 <= 0) {
+		timeLeft.innerHTML = "Refreshed!";
+		clearInterval(timerId);
+		return;
+	}
+
+	const days1 = Math.floor(timeSpan1 / day);
+	const hours1 = Math.floor((timeSpan1 % day) / hour);
+	const minutes1 = Math.floor((timeSpan1 % hour) / minute);
+	const seconds1 = Math.floor((timeSpan1 % minute) / second);
+	timeLeft1.innerHTML =
+		days1 + "days " + hours1 + "hrs " + minutes1 + "mins " + seconds1 + "secs";
 }
 
 timerId = setInterval(countDown, second);
