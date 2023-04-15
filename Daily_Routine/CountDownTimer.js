@@ -69,6 +69,7 @@ function countDown() {
 
 	//Artifacts
 	const timeSpan = newTime - today;
+
 	//milliseconds
 
 	if (timeSpan <= 0) {
