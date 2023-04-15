@@ -6,13 +6,14 @@
     <meta name="description" content="This a daily routine in Gemshin Impact" />
     <title>Daily Routine</title>
     <link rel="stylesheet" href="../CountDownTimer.css" type="text/css" />
+    <link rel="stylesheet" href="DailyRoutine.css" type="text/css" />
     <h1>Daily Routine</h1>
 
   </head>
 
   <body>
   <legend>亚服大号</legend>
-    <form action="http://127.0.0.1:5500/Dailly%20Routine.html" method="post">
+    <form action="" method="post">
       <fieldset><!--圣遗物-->
         
         <p>
@@ -24,7 +25,7 @@
       </fieldset>
     </form>
 
-    <form action="http://127.0.0.1:5500/Dailly%20Routine.html" method="post">
+    <form action="" method="post">
       <fieldset><!--质变仪-->
         <p>
           <input type="checkbox" name="pets" id="checkbox10" value="otherPet" />
@@ -35,16 +36,19 @@
       </fieldset>
     </form>
 
-    <form action="http://127.0.0.1:5500/Dailly%20Routine.html" method="post">
-      <fieldset><!--体力-->
-        <p>     
-          <span id="resin"></span>
+    <form action="" method="post">
+      <fieldset><!--Resin(树脂)-->
+        <p> Set initial resins here: 
+        <input type="text" name="Resin" id="userInputResin" value="" /> 
+        <span><button id="userInputResinSubmit">Submit</button></span>
+        <span id="textbox1"></span>
+          <p id="resin"></p>
         </p>
         <button id="reset-button1" type="reset">Reset</button>       
       </fieldset>
     </form>
 
-    <form action="http://127.0.0.1:5500/Dailly%20Routine.html" method="post">
+    <form action="" method="post">
       <fieldset><!--壶子-->
       <p>
           <label for="otherPet">壶子</label>

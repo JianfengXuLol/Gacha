@@ -1,3 +1,6 @@
+const userInputResin = document.getElementById("userInputResin");
+const userInputResinSubmit = document.getElementById("userInputResinSubmit");
+const textbox1 = document.getElementById("textbox1");
 const resin = document.getElementById("resin");
 const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
@@ -41,7 +44,7 @@ function generateResin() {
 let counterId = setInterval(generateResin, generateRate); //runs the counter
 
 const resetButton1 = document.getElementById("reset-button1");
-let resinLeft = 37; //set the amount of resin left here
+let resinLeft = 35; //set the amount of resin left here
 
 function resetResin() {
 	//when the value reachs the cap, the reset button will keeps the counter running by adding a new intervel
@@ -55,3 +58,13 @@ function resetResin() {
 }
 
 resetButton1.addEventListener("click", resetResin);
+
+userInputResinSubmit.addEventListener("click", function (event) {
+	event.preventDefault(); //prevent console log disappear when using form submit event, this solve the conflict that causing the user input not working properly to set a new value for Resin
+	if (userInputResin.value) {
+		resinLeft = userInputResin.value;
+		textbox1.innerHTML = "Value Successfully Reseted!";
+	} else {
+		textbox1.innerHTML = "Empty Input!";
+	}
+});
