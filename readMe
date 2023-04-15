@@ -54,11 +54,14 @@ _-------------------------------------------------------------------------------
 
 on-going problem:
 
-# -Resin counter stops whenever I reloading or closing the page
+When the artifacts timer is done, 质变仪 timer dissappears.
+It seems like that the code stops at if (timeSpan <= 0){}, i need to look into this tomorrow.
 
 ===========================================================================================
 
 solved problems & solutions:
+
+(Gacha System)
 
 # -preventing form being submitted when refreshing the page
 
@@ -70,5 +73,11 @@ solution: put the code at the bottom of the php file(html tag)
 window.history.replaceState( null, null, window.location.href );
 }
 </script>
+
+(Daily Routine)
+
+# -Resin counter stops whenever I reloading or closing the page
+
+using localstorage to save and retrieve, calculate then save and update values
 
 ===========================================================================================

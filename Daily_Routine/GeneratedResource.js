@@ -55,6 +55,7 @@ function resetResin() {
 	localStorage.setItem("savedTime", new Date().getTime());
 	initialResin = resinLeft;
 	resin.innerHTML = "Resin(树脂): " + initialResin + "/160";
+	textbox1.innerHTML = "";
 }
 
 resetButton1.addEventListener("click", resetResin);
