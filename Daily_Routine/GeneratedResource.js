@@ -4,7 +4,7 @@ const textbox1 = document.getElementById("textbox1");
 const resin = document.getElementById("resin");
 const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
-const generateRate = 8 * minutes; //generating rate: 1 resin/8mins
+const generateRate = 100; //generating rate: 1 resin/8mins://8 * minutes
 
 //retrieve both saved values from the localstorage
 let initialResin = parseInt(localStorage.getItem("resin")) || 0;
@@ -28,6 +28,9 @@ if (savedTime > 0) {
 }
 resin.innerHTML = "Resin(树脂): " + initialResin + "/160";
 
+let counterId = setInterval(generateResin, generateRate); //runs the counter
+let hidden = false;
+
 function generateResin() {
 	//generating resin before the 160 cap
 	if (initialResin < 160) {
@@ -41,7 +44,17 @@ function generateResin() {
 	resin.innerHTML = "Resin(树脂): " + initialResin + "/160";
 }
 
-let counterId = setInterval(generateResin, generateRate); //runs the counter
+//solve the problem of resin counter heavily slows down when the page is hidden
+function handleVisibilityChange() {
+	if (document.hidden) {
+		counterId = setInterval(generateResin, generateRate);
+		hidden = true;
+	} else {
+		counterId = setInterval(generateResin, generateRate);
+		hidden = false;
+	}
+}
+document.addEventListener("visibilitychange", handleVisibilityChange);
 
 const resetButton1 = document.getElementById("reset-button1");
 let resinLeft = 35; //set the amount of resin left here
@@ -69,3 +82,10 @@ userInputResinSubmit.addEventListener("click", function (event) {
 		textbox1.innerHTML = "Empty Input!";
 	}
 });
+
+// document.addEventListener("visibilitychange", function () {
+// 	if (document.visibilityState === "hidden") {
+// 		localStorage.setItem("resin", initialResin);
+// 		localStorage.setItem("savedTime", new Date().getTime());
+// 	}
+// });
