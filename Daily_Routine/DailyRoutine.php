@@ -7,18 +7,20 @@
     <title>Daily Routine</title>
     <link rel="stylesheet" href="../CountDownTimer.css" type="text/css" />
     <link rel="stylesheet" href="DailyRoutine.css" type="text/css" />
-    <h1>Daily Routine</h1>
+    <h1>Resources Tracker</h1>
 
   </head>
 
+  
+
   <body>
-  <legend>亚服大号</legend>
+  <legend>亚服大号(Asia Account)</legend>
     <form action="" method="post">
       <fieldset><!--圣遗物-->
         
         <p>
           <input type="checkbox" name="artifacts" id="checkbox4" value="artifacts" />
-          <label for="artifacts">圣遗物</label>
+          <label for="artifacts">圣遗物(Artifacts)</label>
           <span id="time-left"></span>
         </p>
         <button id="reset-button" type="reset">Reset</button>
@@ -29,7 +31,7 @@
       <fieldset><!--质变仪-->
         <p>
           <input type="checkbox" name="pets" id="checkbox10" value="otherPet" />
-          <label for="otherPet">质变仪（7天CD）</label>
+          <label for="otherPet">质变仪(Transformer)（7天CD）</label>
           <span id="time-left1"></span>
         </p>
         <button id="reset-button3" type="reset">Reset</button>

@@ -12,7 +12,7 @@ const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
 const latency = 5 * seconds;
 const generateRate = 8 * minutes + latency; //generating rate: 8 * minutes + latency
-const generateRateCurrency = 2 * minutes; //generating rate: 2 * minutes
+const generateRateCurrency = 2 * minutes + latency; //generating rate: 2 * minutes
 //retrieve both saved values from the localstorage
 let initialResin = parseInt(localStorage.getItem("resin")) || 0;
 let initialCurrency = parseInt(localStorage.getItem("currency")) || 0; //尘歌壶
@@ -106,6 +106,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange);
 
 //this might be optional, the counter may still work without this
 window.addEventListener("beforeunload", function (event) {
+	event.preventDefault();
 	localStorage.setItem("resin", initialResin);
 	localStorage.setItem("currency", initialCurrency);
 	localStorage.setItem("savedTime", new Date().getTime());
