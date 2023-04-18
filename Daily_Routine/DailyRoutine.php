@@ -50,10 +50,14 @@
 
     <form action="" method="post">
       <fieldset><!--壶子-->
-      <p>
-          <label for="otherPet">壶子</label>
-        </p>
+      <p> Set initial resins here: 
+        <input type="text" name="Currency" id="userInputCurrency" value="" /> 
+        <span><button id="userInputCurrencySubmit">Submit</button></span>
+        <span id="textbox2"></span>    
+      </p>
+        <p id="currency"></p>
         <button id="reset-button2" type="reset">Reset</button>
+        <span id="textbox2"></span>
       </fieldset>
     </form>
     

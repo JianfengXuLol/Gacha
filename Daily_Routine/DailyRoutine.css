@@ -1,7 +1,9 @@
-#userInputResin {
+#userInputResin,
+#userInputCurrency {
 	width: 1rem;
 }
 
-#textbox1 {
+#textbox1,
+#textbox2 {
 	font-size: 0.5rem;
 }
