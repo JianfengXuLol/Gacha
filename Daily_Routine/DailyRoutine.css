@@ -1,9 +1,18 @@
 #userInputResin,
 #userInputCurrency {
-	width: 1rem;
+	width: 2rem;
 }
 
 #textbox1,
 #textbox2 {
 	font-size: 0.5rem;
+}
+
+#tracker {
+	margin-top: 6rem;
+}
+
+.dropdown-menu {
+	background-color: rgb(174, 201, 229);
+	opacity: 0.9;
 }

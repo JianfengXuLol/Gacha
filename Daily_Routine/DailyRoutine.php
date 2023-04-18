@@ -4,16 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Jess Peter" />
     <meta name="description" content="This a daily routine in Gemshin Impact" />
-    <title>Daily Routine</title>
-    <link rel="stylesheet" href="../CountDownTimer.css" type="text/css" />
+    <title>Resources Tracker</title>
+    <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous" />
+      <link rel="stylesheet" href="../Gacha.css" />
+    <link rel="stylesheet" href="CountDownTimer.css" type="text/css" />
     <link rel="stylesheet" href="DailyRoutine.css" type="text/css" />
-    <h1>Resources Tracker</h1>
-
   </head>
 
+  <header>
+			<div class="container ms-3">
+				<div class="col-12">
+					<div class="row">
+						<h2 class="page_title">Gemshin Impact</h2>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs border-bottom-0">
+            <li class="nav-item dropdown">
+								<a class="nav-link" href="http://localhost/Gacha/Main.php#">HOME</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">CHARACTERS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/4_star/4_star.php">4 Star</a></li>
+									<li>
+										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">THE WORLD</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Liyue/Liyue.php">Liyue</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php">Inazuma</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php">Sumeru</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">ITEMS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">5 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">4 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">3 Star Weapon</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">OTHER</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Artifacts</a></li>
+									<li><a class="dropdown-item" href="#">Tutorials</a></li>
+									<li><a class="dropdown-item" href="#">Stories</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-6"></div>
+			</div>
+		</header>
   
 
   <body>
+    <div class="container ms-3" id="tracker">
+    <h1>Resources Tracker</h1>
   <legend>亚服大号(Asia Account)</legend>
     <form action="" method="post">
       <fieldset><!--圣遗物-->
@@ -63,7 +123,20 @@
       </fieldset>
     </form>
     
+    <!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+			integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+			crossorigin="anonymous"></script>
+
     <script src="CountDownTimer.js"></script>
     <script src="GeneratedResource.js"></script>
+    </div>
+  
   </body>
 </html>

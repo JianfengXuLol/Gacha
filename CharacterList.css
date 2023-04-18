@@ -1,0 +1,44 @@
+.characterName {
+	background-color: black;
+	color: white;
+	border-top: none;
+	text-align: center;
+	height: 2.5rem;
+	margin-bottom: 0;
+}
+
+.card {
+	width: 100px;
+}
+
+.characterInfo {
+	background-color: #1d1d23;
+	width: 450px;
+	height: 150px;
+	overflow: auto;
+	opacity: 0.8;
+	padding: 1rem 2rem;
+}
+
+.characterInfo a:hover {
+	text-decoration: underline;
+}
+
+.characterList {
+	min-width: 850px;
+	margin-left: 5rem;
+	margin-top: 20rem;
+}
+
+.characterList li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+.headerName {
+	font-size: 2.5rem;
+}
+
+.imageContainer {
+	margin-top: 5rem;
+}

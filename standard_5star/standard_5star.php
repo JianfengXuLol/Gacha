@@ -13,96 +13,122 @@
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
 		<link rel="stylesheet" href="../Gacha.css" />
-		<link rel="stylesheet" href="../tableList.css" />
+		<link rel="stylesheet" href="../CharacterList.css" />
+
 		<title>Gemshin Impact Page</title>
 	</head>
 
+  <header>
+			<div class="container ms-3">
+				<div class="col-12">
+					<div class="row">
+						<h2 class="page_title">Gemshin Impact</h2>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs border-bottom-0">
+            <li class="nav-item dropdown">
+								<a class="nav-link" href="http://localhost/Gacha/Main.php#">HOME</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">CHARACTERS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/4_star/4_star.php">4 Star</a></li>
+									<li>
+										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">THE WORLD</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Liyue/Liyue.php">Liyue</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php">Inazuma</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php">Sumeru</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">ITEMS</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">5 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">4 Star Weapon</a></li>
+									<li><a class="dropdown-item" href="#">3 Star Weapon</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">OTHER</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Artifacts</a></li>
+									<li><a class="dropdown-item" href="#">Tutorials</a></li>
+									<li><a class="dropdown-item" href="#">Stories</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-6"></div>
+			</div>
+		</header>
+
 	<body>
-	<div class="container mt-3">
-  
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Icon</th>
-          <th>Name</th>
-          <th>Element</th>
-          <th>Weapon</th>
-          <th>Model Type</th>
-          <th>Region</th>
+    <div class="imageContainer ms-5">
+              <h1 class="headerName">JEAN</h1>
+              <div class="characterInfo" id="JeanInfo">
+                    <p>Element: <img src="../Element_Icon/Element_Anemo.png" alt=""></p>
+                    <p>Weapon: Bow</p>
+                    <p>Model Type: Tall Female</p>
+                    <p>Region: <span style="display:inline-block;"><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></span></p>
+                    <p>Intro: The older sister of Barbara, and a descendant of the prestigious Gunnhildr Clan, Jean is the Acting Grand Master of the Knights of Favonius. She is always busy handling unrest across Mondstadt and tirelessly working to maintain the City of Freedom.</p>
+              </div>
+    </div>
+	</body>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><img src="Dehya_Icon.webp" alt=""></td>
-          <td>Dehya</td>
-          <td><img src="../Element_Icon/Element_Pyro.png" alt=""></td>
-          <td>Greater Sword</td>
-          <td>Tall Female</td>
-          <td>Sumeru</td>
-        </tr>
-        <tr>
-          <td><img src="Diluc_Icon.webp" alt=""></td>
-          <td>Diluc</td>
-          <td><img src="../Element_Icon/Element_Pyro.png" alt=""></td>
-          <td>Greater Sword</td>
-          <td>Tall Male</td>
-          <td>Mondstadt</td>
-        </tr>
-        <tr>
-          <td><img src="Jean_Icon.webp" alt=""></td>
-          <td>Jean</td>
-          <td><img src="../Element_Icon/Element_Anemo.png" alt=""></td>
-          <td>Sword</td>
-          <td>Tall Female</td>
-          <td>Mondstadt</td>
-        </tr>
-        <tr>
-          <td><img src="Keqing_Icon.webp" alt=""></td>
-          <td>Keqing</td>
-          <td><img src="../Element_Icon/Element_Electro.png" alt=""></td>
-          <td>Sword</td>
-          <td>Medium Female</td>
-          <td>Mondstadt</td>
-        </tr>
-        <tr>
-          <td><img src="Mona_Icon.webp" alt=""></td>
-          <td>Mona</td>
-          <td><img src="../Element_Icon/Element_Hydro.png" alt=""></td>
-          <td>Catalyst</td>
-          <td>Medium Male</td>
-          <td>Mondstadt</td>
-        </tr>
-        <tr>
-          <td><img src="Qiqi_Icon.webp" alt=""></td>
-          <td>Qiqi</td>
-          <td><img src="../Element_Icon/Element_Cryo.png" alt=""></td>
-          <td>Sword</td>
-          <td>Short Female</td>
-          <td>Mondstadt</td>
-        </tr>
-        <tr>
-          <td><img src="Tighnari_Icon.webp" alt=""></td>
-          <td>Tighnari</td>
-          <td><img src="../Element_Icon/Element_Dendro.png" alt=""></td>
-          <td>Bow</td>
-          <td>Medium Male</td>
-          <td>Sumeru</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+  <footer>
+        <ul class="characterList">
+          <li>
+              <div class="card" id="JeanIcon">  
+                  <img class="card-img-top" src="Jean_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Jean</p>      
+              </div>     
+          </li>
+          <li>
+              <div class="card" id="MonaIcon">  
+                  <img class="card-img-top" src="Mona_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Mona</p>      
+              </div>     
+          </li>
+          <li>
+              <div class="card" id="DehyaIcon">  
+                  <img class="card-img-top" src="Dehya_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Dehya</p>      
+              </div>     
+          </li>
+          <li>
+              <div class="card" id="DilucIcon">  
+                  <img class="card-img-top" src="Diluc_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Diluc</p>      
+              </div>     
+          </li>
+          <li>
+              <div class="card" id="KeqingIcon">  
+                  <img class="card-img-top" src="Keqing_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Keqing</p>      
+              </div>     
+          </li>
+          <li>
+              <div class="card" id="QiqiIcon">  
+                  <img class="card-img-top" src="Qiqi_Icon.webp" style="width:100%">
+                  <p class="card-footer characterName">Qiqi</p>      
+              </div>     
+          </li>
+        </ul>
+  </footer>
 
-		
-
-
-		<footer></footer>
-
-
-		<!-- Bootstrap JavaScript Libraries -->
-		<script
+  <!-- Bootstrap JavaScript Libraries -->
+  <script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
 			crossorigin="anonymous"></script>
@@ -117,5 +143,4 @@
 		<script>
 			
 		</script>
-	</body>
 </html>

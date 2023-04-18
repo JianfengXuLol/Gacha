@@ -10,7 +10,7 @@ const resin = document.getElementById("resin");
 const currency = document.getElementById("currency"); //尘歌壶
 const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
-const latency = 5 * seconds;
+const latency = 0 * seconds;
 const generateRate = 8 * minutes + latency; //generating rate: 8 * minutes + latency
 const generateRateCurrency = 2 * minutes + latency; //generating rate: 2 * minutes
 //retrieve both saved values from the localstorage
