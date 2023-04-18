@@ -62,9 +62,10 @@ const second = 1000;
 const minute = second * 60;
 const hour = minute * 60;
 const day = hour * 24;
-let timerId;
+let timerId1;
+let timerId2;
 
-function countDown() {
+function countDownArtifacts() {
 	const today = new Date();
 
 	//Artifacts
@@ -73,8 +74,8 @@ function countDown() {
 	//milliseconds
 
 	if (timeSpan <= 0) {
-		timeLeft.innerHTML = "Artifacts just respawned!";
-		clearInterval(timerId);
+		timeLeft.innerHTML = "Artifacts respawned!";
+		clearInterval(timerId1);
 		return;
 	}
 
@@ -85,6 +86,10 @@ function countDown() {
 
 	timeLeft.innerHTML =
 		days + "days " + hours + "hrs " + minutes + "mins " + seconds + "secs";
+}
+
+function countDownZhibianyi() {
+	const today = new Date();
 
 	//质变仪
 	const timeSpan1 = zhibianyiNewTime - today;
@@ -92,7 +97,7 @@ function countDown() {
 
 	if (timeSpan1 <= 0) {
 		timeLeft.innerHTML = "Refreshed!";
-		clearInterval(timerId);
+		clearInterval(timerId2);
 		return;
 	}
 
@@ -104,7 +109,8 @@ function countDown() {
 		days1 + "days " + hours1 + "hrs " + minutes1 + "mins " + seconds1 + "secs";
 }
 
-timerId = setInterval(countDown, second);
+timerId1 = setInterval(countDownArtifacts, second);
+timerId2 = setInterval(countDownZhibianyi, second);
 
 //reset stuff
 const resetButton = document.getElementById("reset-button");
