@@ -12,6 +12,7 @@
 			rel="stylesheet"
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="../Gacha.css" />
 		<link rel="stylesheet" href="../CharacterList.css" />
 
@@ -88,6 +89,7 @@
 
   <footer>
         <ul class="characterList">
+          <li><a href="#"><i class="bi bi-arrow-left-square" style="font-size: 3rem; color:white"></i></a></li>
           <li>
               <div class="card" id="JeanIcon">  
                   <img class="card-img-top" src="Jean_Icon.webp" style="width:100%">
@@ -124,7 +126,10 @@
                   <p class="card-footer characterName">Qiqi</p>      
               </div>     
           </li>
+          <li><a href="#"><i class="bi bi-arrow-right-square" style="font-size: 3rem; color:white"></i></a></li>
         </ul>
+        
+
   </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
