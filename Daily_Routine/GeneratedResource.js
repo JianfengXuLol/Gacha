@@ -10,9 +10,10 @@ const resin = document.getElementById("resin");
 const currency = document.getElementById("currency"); //尘歌壶
 const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
-const latency = 0 * seconds;
-const generateRate = 8 * minutes + latency; //generating rate: 8 * minutes + latency
-const generateRateCurrency = 2 * minutes + latency; //generating rate: 2 * minutes
+const latency1 = 4 * seconds - 500;
+const latency2 = 1 * seconds;
+const generateRate = 8 * minutes - latency1; //generating rate: 8 * minutes + latency
+const generateRateCurrency = 2 * minutes + latency2; //generating rate: 2 * minutes
 //retrieve both saved values from the localstorage
 let initialResin = parseInt(localStorage.getItem("resin")) || 0;
 let initialCurrency = parseInt(localStorage.getItem("currency")) || 0; //尘歌壶

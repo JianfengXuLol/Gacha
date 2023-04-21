@@ -19,6 +19,7 @@
 		<title>Gemshin Impact Page</title>
 	</head>
 
+  <!--Navigation-->
   <header>
 			<div class="container ms-3">
 				<div class="col-12">
@@ -75,58 +76,62 @@
 		</header>
 
 	<body>
+    <!--Character Info and Big Portrait images here-->
     <div class="imageContainer ms-5">
-              <h1 class="headerName">JEAN</h1>
-              <div class="characterInfo" id="JeanInfo">
-                    <p>Element: <img src="../Element_Icon/Element_Anemo.png" alt=""></p>
-                    <p>Weapon: Bow</p>
-                    <p>Model Type: Tall Female</p>
-                    <p>Region: <span style="display:inline-block;"><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></span></p>
-                    <p>Intro: The older sister of Barbara, and a descendant of the prestigious Gunnhildr Clan, Jean is the Acting Grand Master of the Knights of Favonius. She is always busy handling unrest across Mondstadt and tirelessly working to maintain the City of Freedom.</p>
+              <div id="JeanInfo">
+                    <h1 class="headerName">JEAN</h1>
+                    <div class="characterInfo">
+                          <p>Element: <img src="../Element_Icon/Element_Anemo.png" alt=""></p>
+                          <p>Weapon: Sword</p>
+                          <p>Model Type: Tall Female</p>
+                          <p>Region: <span style="display:inline-block;"><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php"><span style="color:aquamarine">Mondstadt</span></a></span></p>
+                          <p>Intro: The older sister of Barbara, and a descendant of the prestigious Gunnhildr Clan, Jean is the Acting Grand Master of the Knights of Favonius. She is always busy handling unrest across Mondstadt and tirelessly working to maintain the City of Freedom.</p>
+                    </div>
               </div>
     </div>
 	</body>
 
   <footer>
+        <!--Character Selection List-->
         <ul class="characterList">
-          <li><a href="#"><i class="bi bi-arrow-left-square" style="font-size: 3rem; color:white"></i></a></li>
-          <li>
-              <div class="card" id="JeanIcon">  
-                  <img class="card-img-top" src="Jean_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Jean</p>      
-              </div>     
-          </li>
-          <li>
-              <div class="card" id="MonaIcon">  
-                  <img class="card-img-top" src="Mona_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Mona</p>      
-              </div>     
-          </li>
-          <li>
-              <div class="card" id="DehyaIcon">  
-                  <img class="card-img-top" src="Dehya_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Dehya</p>      
-              </div>     
-          </li>
-          <li>
-              <div class="card" id="DilucIcon">  
-                  <img class="card-img-top" src="Diluc_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Diluc</p>      
-              </div>     
-          </li>
-          <li>
-              <div class="card" id="KeqingIcon">  
-                  <img class="card-img-top" src="Keqing_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Keqing</p>      
-              </div>     
-          </li>
-          <li>
-              <div class="card" id="QiqiIcon">  
-                  <img class="card-img-top" src="Qiqi_Icon.webp" style="width:100%">
-                  <p class="card-footer characterName">Qiqi</p>      
-              </div>     
-          </li>
-          <li><a href="#"><i class="bi bi-arrow-right-square" style="font-size: 3rem; color:white"></i></a></li>
+              <li><a href="#" id="toLeft"><i class="bi bi-arrow-left-square" style="font-size: 3rem;"></i></a></li>
+              <li>
+                  <div class="card" id="Icon1">  
+                      <img class="card-img-top" id="imageContainer1"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName1"></p>      
+                  </div>     
+              </li>
+              <li>
+                  <div class="card" id="Icon2">  
+                      <img class="card-img-top" id="imageContainer2"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName2"></p>      
+                  </div>     
+              </li>
+              <li>
+                  <div class="card" id="Icon3">  
+                      <img class="card-img-top" id="imageContainer3"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName3"></p>      
+                  </div>     
+              </li>
+              <li>
+                  <div class="card" id="Icon4">  
+                      <img class="card-img-top" id="imageContainer4"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName4"></p>      
+                  </div>     
+              </li>
+              <li>
+                  <div class="card" id="Icon5">  
+                      <img class="card-img-top" id="imageContainer5"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName5"></p>      
+                  </div>     
+              </li>
+              <li>
+                  <div class="card" id="Icon6">  
+                      <img class="card-img-top" id="imageContainer6"  style="width:100%">
+                      <p class="card-footer characterName" id="characterName6"></p>      
+                  </div>     
+              </li>
+              <li><a href="#" id="toRight"><i class="bi bi-arrow-right-square" style="font-size: 3rem; "></i></a></li>
         </ul>
         
 
@@ -145,7 +150,5 @@
 
 		<script src="Gacha.js"></script>
 
-		<script>
-			
-		</script>
+		<script src="standard_5star.js"></script>
 </html>
