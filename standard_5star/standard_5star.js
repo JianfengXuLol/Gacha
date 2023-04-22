@@ -3,40 +3,48 @@ const nameplateList = [];
 const rightButton = document.getElementById("toRight");
 const leftButton = document.getElementById("toLeft");
 const characterIcon1 = document.querySelector("#Icon1");
+const characterPortraitImage = document.querySelector(".characterPortrait");
 
 //standard banner
-var Diluc = {
-	name: "Diluc",
-	image: "Diluc_Icon.webp",
-};
 var Jean = {
 	name: "Jean",
 	image: "Jean_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Jean_XL.png",
+};
+var Diluc = {
+	name: "Diluc",
+	image: "Diluc_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Diluc_XL.png",
 };
 var Keqing = {
 	name: "Keqing",
 	image: "Keqing_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Keqing_XL.png",
 };
 var Mona = {
 	name: "Mona",
 	image: "Mona_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Mona_XL.png",
 };
 var Qiqi = {
 	name: "Qiqi",
 	image: "Qiqi_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Qiqi_XL.png",
 };
 
 var Dehya = {
 	name: "Dehya",
 	image: "Dehya_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Dehya_XL.png",
 };
 
 var Tighnari = {
 	name: "Tighnari",
 	image: "Tighnari_Icon.webp",
+	portraitImage: "Portrait/charPortrait_Tighnari_XL.png",
 };
 
-const characterList = [Diluc, Jean, Keqing, Mona, Qiqi, Dehya, Tighnari];
+const characterList = [Jean, Diluc, Keqing, Mona, Qiqi, Dehya, Tighnari];
 
 //for images
 var imageContainerArray = [
@@ -58,6 +66,17 @@ var NameplateContainer = [
 	document.getElementById("characterName6"),
 ];
 
+//for character Info
+var CharacterInfo = [
+	document.getElementById("Jean"),
+	document.getElementById("Diluc"),
+	document.getElementById("Keqing"),
+	document.getElementById("Mona"),
+	document.getElementById("Qiqi"),
+	document.getElementById("Dehya"),
+	document.getElementById("Tighnari"),
+];
+
 let startPositon = 0; //counting the startPositon
 
 //storing html tags
@@ -72,7 +91,6 @@ for (let i = 0; i < NameplateContainer.length; i++) {
 }
 
 //selectedEffects
-
 function selectByClick(i) {
 	nameplateList[i].style.backgroundColor = "white";
 	nameplateList[i].style.color = "black";
@@ -84,7 +102,11 @@ function isSelected(order) {
 	nameplateList[order].style.color = "black";
 	imageSelectionList[order].style.backgroundColor = "black";
 }
-isSelected(0); //default selection
+
+/*default selection********************************************************/
+isSelected(0);
+characterPortraitImage.src = characterList[0].portraitImage;
+/****************************************************************************/
 
 function unSelected(order) {
 	nameplateList[order].style.backgroundColor = "";
@@ -97,6 +119,8 @@ leftButton.addEventListener("click", moveLeft);
 
 //click ramdom image to select***********************************************************/
 nameplateList[0].addEventListener("click", function () {
+	//clear everthing else except the image got clicked
+
 	nameplateList.forEach((i) => {
 		i.style.backgroundColor = "";
 		i.style.color = "";
@@ -107,7 +131,18 @@ nameplateList[0].addEventListener("click", function () {
 	});
 	selectByClick(0);
 	startPositon = 0;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
+
 imageSelectionList[0].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
 		i.style.backgroundColor = "";
@@ -119,6 +154,16 @@ imageSelectionList[0].addEventListener("click", function () {
 	});
 	selectByClick(0);
 	startPositon = 0;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 nameplateList[1].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -129,16 +174,19 @@ nameplateList[1].addEventListener("click", function () {
 		i.style.backgroundColor = "";
 		i.style.color = "";
 	});
-	nameplateList.forEach((i) => {
-		i.style.backgroundColor = "";
-		i.style.color = "";
-	});
-	imageSelectionList.forEach((i) => {
-		i.style.backgroundColor = "";
-		i.style.color = "";
-	});
+
 	selectByClick(1);
 	startPositon = 1;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 imageSelectionList[1].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -151,10 +199,39 @@ imageSelectionList[1].addEventListener("click", function () {
 	});
 	selectByClick(1);
 	startPositon = 1;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 nameplateList[2].addEventListener("click", function () {
+	nameplateList.forEach((i) => {
+		i.style.backgroundColor = "";
+		i.style.color = "";
+	});
+	imageSelectionList.forEach((i) => {
+		i.style.backgroundColor = "";
+		i.style.color = "";
+	});
+
 	selectByClick(2);
 	startPositon = 2;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 imageSelectionList[2].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -167,6 +244,16 @@ imageSelectionList[2].addEventListener("click", function () {
 	});
 	selectByClick(2);
 	startPositon = 2;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 nameplateList[3].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -179,6 +266,16 @@ nameplateList[3].addEventListener("click", function () {
 	});
 	selectByClick(3);
 	startPositon = 3;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 imageSelectionList[3].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -191,6 +288,16 @@ imageSelectionList[3].addEventListener("click", function () {
 	});
 	selectByClick(3);
 	startPositon = 3;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 nameplateList[4].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -203,6 +310,16 @@ nameplateList[4].addEventListener("click", function () {
 	});
 	selectByClick(4);
 	startPositon = 4;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 imageSelectionList[4].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -215,6 +332,16 @@ imageSelectionList[4].addEventListener("click", function () {
 	});
 	selectByClick(4);
 	startPositon = 4;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 nameplateList[5].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -227,6 +354,16 @@ nameplateList[5].addEventListener("click", function () {
 	});
 	selectByClick(5);
 	startPositon = 5;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 imageSelectionList[5].addEventListener("click", function () {
 	nameplateList.forEach((i) => {
@@ -239,6 +376,16 @@ imageSelectionList[5].addEventListener("click", function () {
 	});
 	selectByClick(5);
 	startPositon = 5;
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 });
 /*****************************************************************************************/
 
@@ -246,6 +393,9 @@ function moveRight() {
 	if (startPositon == 5) {
 		let prev1 = characterList.shift();
 		characterList.push(prev1);
+		//update Character info page
+		let prev2 = CharacterInfo.shift();
+		CharacterInfo.push(prev2);
 		startPositon--;
 		isSelected(startPositon);
 		unSelected(startPositon + 1);
@@ -253,11 +403,15 @@ function moveRight() {
 	startPositon++;
 	isSelected(startPositon);
 	unSelected(startPositon - 1);
-	console.log("index: " + startPositon);
+
 	if (startPositon > 2) {
 		let offset = characterList.length - imageSelectionList.length;
 		let prev = characterList.shift();
 		characterList.push(prev);
+		//update Character info page
+		let prev1 = CharacterInfo.shift();
+		CharacterInfo.push(prev1);
+
 		console.log("shift() triggered!");
 		startPositon--;
 		isSelected(startPositon);
@@ -268,6 +422,16 @@ function moveRight() {
 		imageSelectionList[i].src = characterList[i].image;
 		nameplateList[i].innerHTML = characterList[i].name;
 	}
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 }
 
 function moveLeft() {
@@ -275,6 +439,9 @@ function moveLeft() {
 		let offset = characterList.length - imageSelectionList.length;
 		let last = characterList.pop();
 		characterList.unshift(last);
+		//update Character info page
+		let last1 = CharacterInfo.pop();
+		CharacterInfo.unshift(last1);
 		console.log("shift() triggered!");
 		startPositon++;
 		isSelected(startPositon - 1);
@@ -289,4 +456,16 @@ function moveLeft() {
 
 	isSelected(startPositon);
 	unSelected(startPositon + 1);
+
+	//update Character info page
+	for (let i = 0; i < CharacterInfo.length; i++) {
+		if (nameplateList[i].style.backgroundColor != "white") {
+			CharacterInfo[i].style.display = "none";
+		} else {
+			CharacterInfo[i].style.display = "block";
+			characterPortraitImage.src = characterList[i].portraitImage;
+		}
+	}
 }
+
+function portraitAnimation() {}
