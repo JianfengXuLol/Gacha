@@ -106,6 +106,7 @@ function isSelected(order) {
 /*default selection********************************************************/
 isSelected(0);
 characterPortraitImage.src = characterList[0].portraitImage;
+portraitAnimation();
 /****************************************************************************/
 
 function unSelected(order) {
@@ -482,6 +483,7 @@ function moveLeft() {
 	}
 }
 
+//animations for portrait image
 function portraitAnimation() {
 	let initialPos = 0;
 	let portraitId = setInterval(move, 1);

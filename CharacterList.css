@@ -1,5 +1,5 @@
 .mainContent {
-	margin-top: 7rem;
+	margin-top: 10rem;
 }
 
 .Character {
@@ -77,4 +77,8 @@
 
 .bi:hover {
 	color: #97beeb;
+}
+
+.dropdown-menu {
+	opacity: 0.9;
 }
