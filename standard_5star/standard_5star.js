@@ -114,8 +114,10 @@ function unSelected(order) {
 	imageSelectionList[order].style.backgroundColor = "";
 }
 
+/*Add Events Here*************************************************************************/
 rightButton.addEventListener("click", moveRight);
 leftButton.addEventListener("click", moveLeft);
+/*****************************************************************************************/
 
 //click ramdom image to select***********************************************************/
 nameplateList[0].addEventListener("click", function () {
@@ -139,6 +141,7 @@ nameplateList[0].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -162,6 +165,7 @@ imageSelectionList[0].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -185,6 +189,7 @@ nameplateList[1].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -207,6 +212,7 @@ imageSelectionList[1].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -230,6 +236,7 @@ nameplateList[2].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -252,6 +259,7 @@ imageSelectionList[2].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -274,6 +282,7 @@ nameplateList[3].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -296,6 +305,7 @@ imageSelectionList[3].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -318,6 +328,7 @@ nameplateList[4].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -340,6 +351,7 @@ imageSelectionList[4].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -362,6 +374,7 @@ nameplateList[5].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -384,6 +397,7 @@ imageSelectionList[5].addEventListener("click", function () {
 		} else {
 			CharacterInfo[i].style.display = "block";
 			characterPortraitImage.src = characterList[i].portraitImage;
+			portraitAnimation();
 		}
 	}
 });
@@ -417,7 +431,7 @@ function moveRight() {
 		isSelected(startPositon);
 		unSelected(startPositon + 1);
 	}
-
+	portraitAnimation();
 	for (let i = 0; i < NameplateContainer.length; i++) {
 		imageSelectionList[i].src = characterList[i].image;
 		nameplateList[i].innerHTML = characterList[i].name;
@@ -447,7 +461,7 @@ function moveLeft() {
 		isSelected(startPositon - 1);
 		unSelected(startPositon + 1);
 	}
-
+	portraitAnimation();
 	for (let i = 0; i < NameplateContainer.length; i++) {
 		imageSelectionList[i].src = characterList[i].image;
 		nameplateList[i].innerHTML = characterList[i].name;
@@ -468,4 +482,15 @@ function moveLeft() {
 	}
 }
 
-function portraitAnimation() {}
+function portraitAnimation() {
+	let initialPos = 0;
+	let portraitId = setInterval(move, 1);
+	function move() {
+		if (initialPos == 160) {
+			clearInterval(portraitId);
+		} else {
+			initialPos += 5;
+			characterPortraitImage.style.right = initialPos + "px";
+		}
+	}
+}

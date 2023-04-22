@@ -4,13 +4,14 @@
 
 .Character {
 	display: none;
-	margin-right: -20rem;
 }
 
 .characterPortrait {
 	/* display: none; */
 	width: 50rem;
 	margin-top: -10rem;
+	margin-left: -8rem; /*initial position*/
+	position: relative;
 }
 
 /* default oprion */
@@ -44,10 +45,12 @@
 .characterInfo {
 	background-color: #1d1d23;
 	width: 450px;
-	height: 150px;
+	height: 250px;
 	overflow: auto;
 	opacity: 0.8;
 	padding: 1rem 2rem;
+	position: relative;
+	z-index: 1;
 }
 
 .characterInfo a:hover {
