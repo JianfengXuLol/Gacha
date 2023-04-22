@@ -8,39 +8,39 @@ const characterPortraitImage = document.querySelector(".characterPortrait");
 //standard banner
 var Jean = {
 	name: "Jean",
-	image: "Jean_Icon.webp",
+	image: "Jean_Icon.png",
 	portraitImage: "Portrait/charPortrait_Jean_XL.png",
 };
 var Diluc = {
 	name: "Diluc",
-	image: "Diluc_Icon.webp",
+	image: "Diluc_Icon.png",
 	portraitImage: "Portrait/charPortrait_Diluc_XL.png",
 };
 var Keqing = {
 	name: "Keqing",
-	image: "Keqing_Icon.webp",
+	image: "Keqing_Icon.png",
 	portraitImage: "Portrait/charPortrait_Keqing_XL.png",
 };
 var Mona = {
 	name: "Mona",
-	image: "Mona_Icon.webp",
+	image: "Mona_Icon.png",
 	portraitImage: "Portrait/charPortrait_Mona_XL.png",
 };
 var Qiqi = {
 	name: "Qiqi",
-	image: "Qiqi_Icon.webp",
+	image: "Qiqi_Icon.png",
 	portraitImage: "Portrait/charPortrait_Qiqi_XL.png",
 };
 
 var Dehya = {
 	name: "Dehya",
-	image: "Dehya_Icon.webp",
+	image: "Dehya_Icon.png",
 	portraitImage: "Portrait/charPortrait_Dehya_XL.png",
 };
 
 var Tighnari = {
 	name: "Tighnari",
-	image: "Tighnari_Icon.webp",
+	image: "Tighnari_Icon.png",
 	portraitImage: "Portrait/charPortrait_Tighnari_XL.png",
 };
 
