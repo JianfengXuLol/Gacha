@@ -151,7 +151,7 @@
               </div>
           </div>
           <div class="imageContainer">
-              <img class="characterPortrait"  id="JeanPortrait" alt="">
+              <img class="characterPortrait" alt="">
           </div>
     </div>
 	</body>

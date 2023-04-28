@@ -1,5 +1,5 @@
 .mainContent {
-	margin-top: 10rem;
+	margin-top: 15rem;
 }
 
 .Character {
@@ -9,20 +9,18 @@
 .characterPortrait {
 	/* display: none; */
 	width: 50rem;
-	margin-top: -10rem;
+	height: 35rem;
+	margin-top: -15rem;
 	margin-left: -8rem; /*initial position*/
 	position: relative;
 }
 
 /* default oprion */
 
-#Jean {
+#Jean,
+#Albedo {
 	display: block;
 }
-
-/* #JeanPortrait {
-	display: block;
-} */
 
 .characterName {
 	background-color: black;
@@ -31,6 +29,7 @@
 	text-align: center;
 	height: 2.5rem;
 	margin-bottom: 0;
+	font-size: 0.9rem;
 }
 
 .characterName:hover,
@@ -60,6 +59,7 @@
 .characterList {
 	min-width: 1250px;
 	margin-left: 1rem;
+	margin-top: 0rem;
 }
 
 .characterList li {

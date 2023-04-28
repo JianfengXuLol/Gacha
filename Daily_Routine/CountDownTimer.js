@@ -24,7 +24,7 @@ let ArtifactResetTime = new Date(initialTime);
 ArtifactResetTime.setHours(ArtifactResetTime.getHours() + 24);
 
 let ZhibianyiTime = new Date(initialTime); //质变仪
-ZhibianyiTime.setHours(ZhibianyiTime.getHours() + 24 * 7);
+ZhibianyiTime.setHours(ZhibianyiTime.getHours() + 24 * 6);
 
 //using localstorage to store the time
 const artifacts = document.getElementById("checkbox4");

@@ -10,8 +10,15 @@ const resin = document.getElementById("resin");
 const currency = document.getElementById("currency"); //尘歌壶
 const seconds = 1000; //1 second = 1000 milliseconds
 const minutes = seconds * 60;
-const latency1 = 4 * seconds - 400;
-const latency2 = 5 * seconds;
+
+//adjusting the accuracy of resin and currency generator here:
+
+const latency1 = 4 * seconds - 480; //when the second number(480) gets smaller, generateRate gets faster;
+//when the second number(480) gets bigger, generateRate gets slower
+
+const latency2 = 5 * seconds - 150; //when the second number(220) gets smaller, generateRate gets faster;
+//when the second number(220) gets bigger, generateRate gets slower
+
 const generateRate = 8 * minutes - latency1; //Resin:generating rate: 8 * minutes + latency
 const generateRateCurrency = 2 * minutes - latency2; //generating rate: 2 * minutes
 //retrieve both saved values from the localstorage

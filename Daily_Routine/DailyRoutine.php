@@ -91,7 +91,7 @@
       <fieldset><!--质变仪-->
         <p>
           <input type="checkbox" name="pets" id="checkbox10" value="otherPet" />
-          <label for="otherPet">质变仪(Transformer)（7天CD）</label>
+          <label for="otherPet">质变仪(Transformer)（6天CD）</label>
           <span id="time-left1"></span>
         </p>
         <button id="reset-button3" type="reset">Reset</button>
