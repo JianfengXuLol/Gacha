@@ -30,7 +30,7 @@
 								<a class="nav-link dropdown-toggle">CHARACTERS</a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/4_star/4_star.php">4 Star</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/4_star/4_star.php">4 Star Characters</a></li>
 									<li>
 										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
 									</li>
@@ -46,19 +46,9 @@
 								</ul>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">ITEMS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">5 Star Weapon</a></li>
-									<li><a class="dropdown-item" href="#">4 Star Weapon</a></li>
-									<li><a class="dropdown-item" href="#">3 Star Weapon</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle">OTHER</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Artifacts</a></li>
 									<li><a class="dropdown-item" href="#">Tutorials</a></li>
-									<li><a class="dropdown-item" href="#">Stories</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
 								</ul>

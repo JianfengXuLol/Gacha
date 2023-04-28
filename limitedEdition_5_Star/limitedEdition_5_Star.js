@@ -539,6 +539,7 @@ imageSelectionList[5].addEventListener("click", function () {
 	}
 });
 /*****************************************************************************************/
+// let offset = characterList.length - imageSelectionList.length;
 
 function moveRight() {
 	if (startPositon == 5) {
@@ -556,7 +557,6 @@ function moveRight() {
 	unSelected(startPositon - 1);
 
 	if (startPositon > 2) {
-		let offset = characterList.length - imageSelectionList.length;
 		let prev = characterList.shift();
 		characterList.push(prev);
 		//update Character info page
@@ -587,7 +587,6 @@ function moveRight() {
 
 function moveLeft() {
 	if (startPositon <= 2) {
-		let offset = characterList.length - imageSelectionList.length;
 		let last = characterList.pop();
 		characterList.unshift(last);
 		//update Character info page
