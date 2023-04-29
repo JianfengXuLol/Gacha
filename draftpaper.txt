@@ -1,0 +1,25 @@
+const output = document.querySelector(".output");
+const imageHolder = document.querySelector(".imageContainer");
+
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Open a new HTTP request and specify the URL of the JSON file
+xhr.open("GET", "testing.json", true);
+
+// Set the response type to JSON
+xhr.responseType = "json";
+
+// Define a callback function to handle the response
+xhr.onload = function () {
+	if (xhr.status === 200) {
+		const jsonResponse = xhr.response;
+		output.innerHTML = jsonResponse.employees[0].name;
+		// imageHolder.src = jsonResponse.employees[0].image;
+	} else {
+		console.error("Error fetching JSON file");
+	}
+};
+
+// Send the HTTP request
+xhr.send();

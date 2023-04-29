@@ -194,7 +194,6 @@ var CharacterInfo = [
 	document.getElementById("Eula"),
 	document.getElementById("Ganyu"),
 	document.getElementById("HuTao"),
-
 	document.getElementById("Itto"),
 	document.getElementById("Kazuha"),
 	document.getElementById("Klee"),
