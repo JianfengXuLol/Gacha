@@ -1,0 +1,160 @@
+{
+	"characters": [
+		{
+			"name": "Aloy",
+			"image": "icons/Aloy.png",
+			"portraitImage": "Portrait/charPortrait_Aloy.png"
+		},
+
+		{
+			"name": "Amber",
+			"image": "icons/Amber.png",
+			"portraitImage": "Portrait/charPortrait_Amber_XL.png"
+		},
+		{
+			"name": "Barbara",
+			"image": "icons/Barbara.png",
+			"portraitImage": "Portrait/charPortrait_Barbara_XL.png"
+		},
+		{
+			"name": "Beidou",
+			"image": "icons/Beidou.png",
+			"portraitImage": "Portrait/charPortrait_Beidou_XL.png"
+		},
+		{
+			"name": "Bennett",
+			"image": "icons/Bennett.png",
+			"portraitImage": "Portrait/charPortrait_Bennett_XL.png"
+		},
+		{
+			"name": "Candace",
+			"image": "icons/Candace.png",
+			"portraitImage": "Portrait/charPortrait_candace.png"
+		},
+		{
+			"name": "Chongyun",
+			"image": "icons/Chongyun.png",
+			"portraitImage": "Portrait/charPortrait_Chongyun_XL.png"
+		},
+		{
+			"name": "Collei",
+			"image": "icons/Collei.png",
+			"portraitImage": "Portrait/charPortrait_Collei_XL.png"
+		},
+		{
+			"name": "Diona",
+			"image": "icons/Diona.png",
+			"portraitImage": "Portrait/charPortrait_Diona_XL.png"
+		},
+		{
+			"name": "Faruzan",
+			"image": "icons/Faruzan.png",
+			"portraitImage": "Portrait/charPortrait_faruzan.png"
+		},
+		{
+			"name": "Fischl",
+			"image": "icons/Fischl.png",
+			"portraitImage": "Portrait/charPortrait_Fischl_XL.png"
+		},
+		{
+			"name": "Gorou",
+			"image": "icons/Gorou.png",
+			"portraitImage": "Portrait/charPortrait_Gorou_XL.png"
+		},
+		{
+			"name": "Heizou",
+			"image": "icons/Heizou.png",
+			"portraitImage": "Portrait/charPortrait_heizou.png"
+		},
+		{
+			"name": "Kaeya",
+			"image": "icons/Kaeya.png",
+			"portraitImage": "Portrait/charPortrait_Kaeya_XL.png"
+		},
+		{
+			"name": "KujouSara",
+			"image": "icons/KujouSara.png",
+			"portraitImage": "Portrait/charPortrait_KujouSara.png"
+		},
+		{
+			"name": "Shinobu",
+			"image": "icons/Shinobu.png",
+			"portraitImage": "Portrait/charPortrait_Shinobu.png"
+		},
+		{
+			"name": "Layla",
+			"image": "icons/Layla.png",
+			"portraitImage": "Portrait/charPortrait_layla.png"
+		},
+		{
+			"name": "Lisa",
+			"image": "icons/Lisa.png",
+			"portraitImage": "Portrait/charPortrait_Lisa_XL.png"
+		},
+		{
+			"name": "Ningguang",
+			"image": "icons/Ningguang.png",
+			"portraitImage": "Portrait/charPortrait_Ningguang_XL.png"
+		},
+		{
+			"name": "Noelle",
+			"image": "icons/Noelle.png",
+			"portraitImage": "Portrait/charPortrait_Noelle_XL.png"
+		},
+		{
+			"name": "Razor",
+			"image": "icons/Razor.png",
+			"portraitImage": "Portrait/charPortrait_Razor_XL.png"
+		},
+		{
+			"name": "Rosaria",
+			"image": "icons/Rosaria.png",
+			"portraitImage": "Portrait/charPortrait_Rosaria.png"
+		},
+		{
+			"name": "Sayu",
+			"image": "icons/Sayu.png",
+			"portraitImage": "Portrait/charPortrait_Sayu.png"
+		},
+		{
+			"name": "Sucrose",
+			"image": "icons/Sucrose.png",
+			"portraitImage": "Portrait/charPortrait_Sucrose_XL.png"
+		},
+		{
+			"name": "Thoma",
+			"image": "icons/Thoma.png",
+			"portraitImage": "Portrait/charPortrait_thoma.png"
+		},
+		{
+			"name": "Xiangling",
+			"image": "icons/Xiangling.png",
+			"portraitImage": "Portrait/charPortrait_Xiangling_XL.png"
+		},
+		{
+			"name": "Xingqiu",
+			"image": "icons/Xingqiu.png",
+			"portraitImage": "Portrait/charPortrait_Xingqiu_XL.png"
+		},
+		{
+			"name": "Xinyan",
+			"image": "icons/Xinyan.png",
+			"portraitImage": "Portrait/charPortrait_Xinyan_XL.png"
+		},
+		{
+			"name": "Yanfei",
+			"image": "icons/Yanfei.png",
+			"portraitImage": "Portrait/charPortrait_Yanfei_XL.png"
+		},
+		{
+			"name": "Yaoyao",
+			"image": "icons/Yaoyao.png",
+			"portraitImage": "Portrait/charPortrait_yaoyao.png"
+		},
+		{
+			"name": "YunJin",
+			"image": "icons/YunJin.png",
+			"portraitImage": "Portrait/charPortrait_yunJin.png"
+		}
+	]
+}

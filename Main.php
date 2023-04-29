@@ -29,7 +29,7 @@
 								<a class="nav-link dropdown-toggle">CHARACTERS</a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/4_star/4_star.php">4 Star Characters</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/standard_4_star/standard_4_star.php">4 Star Characters</a></li>
 									<li>
 										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
 									</li>
