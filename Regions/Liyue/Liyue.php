@@ -39,7 +39,7 @@
                             <img class="card-img-bottom" src="ThemeImage/Liyue.webp" alt="Theme image" style="width:100%">
                             <div class="card-body">
                             <p class="card-text">Archon: Morax</p>
-                            <p class="card-text">Main City: CLiyue Harbor</p>
+                            <p class="card-text">Main City: Liyue Harbor</p>
                             <p class="card-text">Control­ling En­ti­ty: Liyue Qixing</p>                      
                             </div>
                         </div>

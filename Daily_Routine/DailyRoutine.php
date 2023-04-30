@@ -48,7 +48,7 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle">OTHER</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Tutorials</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
 								</ul>

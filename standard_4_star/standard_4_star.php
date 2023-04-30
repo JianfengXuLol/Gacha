@@ -53,7 +53,7 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle">OTHER</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Tutorials</a></li>
+									<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
 									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
 								</ul>
@@ -76,7 +76,7 @@
                           <p>Element: <img src="../Element_Icon/Element_Cryo.png" alt=""></p>
                           <p>Weapon: Bow</p>
                           <p>Model Type: Medium Female</p>
-                          <p>Region: <span style="display:inline-block;"><a class="dropdown-item" href="https://www.playstation.com/en-ca/games/horizon-zero-dawn/"><span style="color:aquamarine">Horizon Zero Dawn</span></a></span></p>
+                          <p>Region: <span style="display:inline-block;"><a class="dropdown-item" href="https://www.playstation.com/en-ca/games/horizon-zero-dawn/"><span style="color:deepskyblue">Horizon Zero Dawn</span></a></span></p>
                           <p>Intro: She is the heroine from Horizon Zero Dawn and is introduced as a collaboration and crossover character between Guerrilla Games and HoYoverse.</p>
                     </div>
               </div>
