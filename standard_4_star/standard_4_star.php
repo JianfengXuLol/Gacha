@@ -28,6 +28,9 @@
 			<div class="navigationMenu">
 				<div class="row">
 					<ul class="nav nav-tabs border-bottom-0">
+                              <li class="nav-item dropdown">
+								<a class="nav-link" href="http://localhost/Gacha/Main.php#"><span style="color:white">HOME</span></a>
+							</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle">CHARACTERS</a>
 							<ul class="dropdown-menu">

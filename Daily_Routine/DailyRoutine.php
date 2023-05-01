@@ -10,59 +10,114 @@
 			rel="stylesheet"
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
-      <link rel="stylesheet" href="../Gacha.css" />
-    <link rel="stylesheet" href="CountDownTimer.css" type="text/css" />
+      <!-- <link rel="stylesheet" href="../Gacha.css" /> -->
     <link rel="stylesheet" href="DailyRoutine.css" type="text/css" />
   </head>
 
   <header>
-			<div class="container ms-3">
-				<div class="col-12">
-					<div class="row">
-						<h2 class="page_title">Gemshin Impact</h2>
-					</div>
-					<div class="row">
-						<ul class="nav nav-tabs border-bottom-0">
-            <li class="nav-item dropdown">
-								<a class="nav-link" href="http://localhost/Gacha/Main.php#">HOME</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">CHARACTERS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/standard_4_star/standard_4_star.php">4 Star Characters</a></li>
-									<li>
-										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">THE WORLD</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Liyue/Liyue.php">Liyue</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php">Inazuma</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php">Sumeru</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">OTHER</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-6"></div>
-			</div>
+  <img src="../Logo/logo3.png" id="logo" alt="" />
 		</header>
   
 
   <body>
-    <div class="container ms-3" id="tracker">
+    <div class="MainContent | container-fluid">
+			<div class="navigationMenu">
+				<div class="row">
+					<ul class="nav nav-tabs border-bottom-0">
+					<li class="nav-item dropdown">
+								<a class="nav-link" href="http://localhost/Gacha/Main.php#"><span style="color:white">HOME</span></a>
+							</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">CHARACTERS</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php"
+										>Limited 5 Star</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_4_star/standard_4_star.php"
+										>4 Star Characters</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_5star/standard_5star.php"
+										>Standard Banner 5 Star</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">THE WORLD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php"
+										>Mondstadt</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Liyue/Liyue.php"
+										>Liyue</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php"
+										>Inazuma</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php"
+										>Sumeru</a
+									>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">OTHER</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Tutorials/Tutorials.php"
+										>Tutorials</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php"
+										>Resources Tracker</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Gacha.php#"
+										>Wishing Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row d-flex| contents">
+      <div class="container ms-3" id="tracker">
     <h1>Resources Tracker</h1>
   <legend>亚服大号(Asia Account)</legend>
     <form action="" method="post">
@@ -94,7 +149,10 @@
         <input type="text" name="Resin" id="userInputResin" value="" /> 
         <span><button id="userInputResinSubmit">Submit</button></span>
         <span id="textbox1"></span>
-          <p id="resin"></p>
+		<div class="d-flex">
+			<img src="../otherIcons/Resin.webp" alt="" style="width: 50px" class="resourceIcon">
+		<p id="resin"></p>
+		</div>
         </p>
         <button id="reset-button1" type="reset">Reset</button>       
       </fieldset>
@@ -107,12 +165,18 @@
         <span><button id="userInputCurrencySubmit">Submit</button></span>
         <span id="textbox2"></span>    
       </p>
-        <p id="currency"></p>
+        
+		<div class="d-flex">
+			<img src="../otherIcons/Item_Realm_Currency.webp" alt="" style="width: 50px" class="resourceIcon">
+			<p id="currency"></p>
+		</div>
         <button id="reset-button2" type="reset">Reset</button>
         <span id="textbox2"></span>
       </fieldset>
     </form>
-    
+                    
+		</div>
+
     <!-- Bootstrap JavaScript Libraries -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

@@ -5,6 +5,8 @@
 	--title-hover-color: white;
 	--image-hover-color: #ad9090;
 	--portal-text-color: #a35c0f;
+	--cardWidth: 80px;
+	--cardHeight: 130px;
 }
 
 body {
@@ -55,11 +57,6 @@ header {
 	color: var(--text-color);
 }
 
-.summary,
-.recommended {
-	border: #2c2722 solid 2px;
-}
-
 .dropdown-toggle:hover {
 	cursor: pointer;
 }
@@ -76,27 +73,15 @@ header {
 	color: var(--title-color);
 }
 
-.aritcleTitle,
-.articleImage:hover {
-	cursor: pointer;
+.card_container {
+	display: none;
 }
 
-.articleImage:hover {
-	border: var(--image-hover-color) 1px solid;
-}
-
-.aritcleTitle a,
-.portalLinks ul li a {
-	text-decoration: none;
-}
-
-.aritcleTitle a:hover {
-	color: var(--title-hover-color);
-}
-
-.portalLinks {
-	position: relative;
-	right: -100px;
-	bottom: 550px;
-	color: var(--portal-text-color);
+.image_container {
+	max-height: var(--cardHeight);
+	min-height: var(--cardHeight);
+	min-width: var(--cardWidth);
+	max-width: var(--cardWidth);
+	width: 10%;
+	display: none;
 }

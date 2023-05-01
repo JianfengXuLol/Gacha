@@ -331,6 +331,9 @@ function bonusRate(i) {
 		"%";
 }
 
+document.getElementById("debug1").innerHTML =
+	"Pitty level: " + fiveStar_pity_count + " | increase rate：" + bonusUp + "%";
+
 /************************Characters Section*********************/
 
 //5-stars
