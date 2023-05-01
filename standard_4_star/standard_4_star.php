@@ -13,64 +13,115 @@
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="../Gacha.css" />
 		<link rel="stylesheet" href="../CharacterList.css" />
 
 		<title>Gemshin Impact Page</title>
 	</head>
 
   <!--Navigation-->
-  <header>
-			<div class="container ms-3">
-				<div class="col-12">
-					<div class="row">
-						<h2 class="page_title">Gemshin Impact</h2>
-					</div>
-					<div class="row">
-						<ul class="nav nav-tabs border-bottom-0">
-            <li class="nav-item dropdown">
-								<a class="nav-link" href="http://localhost/Gacha/Main.php#">HOME</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">CHARACTERS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/standard_4_star/standard_4_star.php">4 Star Characters</a></li>
-									<li>
-										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">THE WORLD</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Liyue/Liyue.php">Liyue</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php">Inazuma</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php">Sumeru</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">OTHER</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-6"></div>
-			</div>
-            <p class="output"></p>
-		</header>
+	<header>
+		<img src="../Logo/logo3.png" id="logo" alt="" />
+	</header>
 
 	<body>
-    <!--Character Info and Big Portrait images here-->
-    <div class="mainContent ms-5 d-flex">
-          <div class="CharacterSection">
-              <div class="Character" id="Aloy">
+		<div class="MainContent | container-fluid">
+			<div class="navigationMenu">
+				<div class="row">
+					<ul class="nav nav-tabs border-bottom-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">CHARACTERS</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php"
+										>Limited 5 Star</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_4_star/standard_4_star.php"
+										>4 Star Characters</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_5star/standard_5star.php"
+										>Standard Banner 5 Star</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">THE WORLD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php"
+										>Mondstadt</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Liyue/Liyue.php"
+										>Liyue</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php"
+										>Inazuma</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php"
+										>Sumeru</a
+									>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">OTHER</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Tutorials/Tutorials.php"
+										>Tutorials</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php"
+										>Resources Tracker</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Gacha.php#"
+										>Wishing Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row d-flex| contents">
+				<!--Character Info and Big Portrait images here-->
+				<div class="mainContent ms-5 d-flex">
+					<div class="CharacterSection">
+					<div class="Character" id="Aloy">
                     <h1 class="headerName">Aloy</h1>
                     <div class="characterInfo">
                           <p>Element: <img src="../Element_Icon/Element_Cryo.png" alt=""></p>
@@ -383,58 +434,81 @@
                           <p>Intro: A famous figure in Liyue Harbor's opera scene, Yun Jin is the director of the Yun-Han Opera Troupe, and performs at Heyu Tea House from time to time. She is also a playwright, having written all the plays the Yun-Han Opera Troupe has performed in recent years, including a new ending for "The Divine Damsel of Devastation."</p>
                     </div>
               </div>
-          </div>
-          <div class="imageContainer">
-              <img class="characterPortrait" alt="">
-          </div>
-    </div>
+					</div>
+					<div class="imageContainer">
+						<img class="characterPortrait" alt="" />
+					</div>
+				</div>
+				<!--Character Selection List-->
+				<ul class="characterList">
+					<li>
+						<a href="#" id="toLeft"
+							><i class="bi bi-arrow-left-square" style="font-size: 3rem"></i
+						></a>
+					</li>
+					<li>
+						<div class="card" id="Icon1">
+							<img
+								class="card-img-top"
+								id="imageContainer1"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName1"></p>
+						</div>
+					</li>
+					<li>
+						<div class="card" id="Icon2">
+							<img
+								class="card-img-top"
+								id="imageContainer2"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName2"></p>
+						</div>
+					</li>
+					<li>
+						<div class="card" id="Icon3">
+							<img
+								class="card-img-top"
+								id="imageContainer3"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName3"></p>
+						</div>
+					</li>
+					<li>
+						<div class="card" id="Icon4">
+							<img
+								class="card-img-top"
+								id="imageContainer4"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName4"></p>
+						</div>
+					</li>
+					<li>
+						<div class="card" id="Icon5">
+							<img
+								class="card-img-top"
+								id="imageContainer5"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName5"></p>
+						</div>
+					</li>
+					<li>
+						<div class="card" id="Icon6">
+							<img
+								class="card-img-top"
+								id="imageContainer6"
+								style="width: 100%" />
+							<p class="card-footer characterName" id="characterName6"></p>
+						</div>
+					</li>
+					<li>
+						<a href="#" id="toRight"
+							><i class="bi bi-arrow-right-square" style="font-size: 3rem"></i
+						></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</body>
-
-  <footer>
-        <!--Character Selection List-->
-        <ul class="characterList">
-              <li><a href="#" id="toLeft"><i class="bi bi-arrow-left-square" style="font-size: 3rem;"></i></a></li>
-              <li>
-                  <div class="card" id="Icon1">  
-                      <img class="card-img-top" id="imageContainer1"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName1"></p>      
-                  </div>     
-              </li>
-              <li>
-                  <div class="card" id="Icon2">  
-                      <img class="card-img-top" id="imageContainer2"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName2"></p>      
-                  </div>     
-              </li>
-              <li>
-                  <div class="card" id="Icon3">  
-                      <img class="card-img-top" id="imageContainer3"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName3"></p>      
-                  </div>     
-              </li>
-              <li>
-                  <div class="card" id="Icon4">  
-                      <img class="card-img-top" id="imageContainer4"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName4"></p>      
-                  </div>     
-              </li>
-              <li>
-                  <div class="card" id="Icon5">  
-                      <img class="card-img-top" id="imageContainer5"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName5"></p>      
-                  </div>     
-              </li>
-              <li>
-                  <div class="card" id="Icon6">  
-                      <img class="card-img-top" id="imageContainer6"  style="width:100%">
-                      <p class="card-footer characterName" id="characterName6"></p>      
-                  </div>     
-              </li>
-              <li><a href="#" id="toRight"><i class="bi bi-arrow-right-square" style="font-size: 3rem; "></i></a></li>
-        </ul>
-        
-
-  </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script

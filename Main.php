@@ -12,53 +12,107 @@
 			rel="stylesheet"
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
-		<link rel="stylesheet" href="Gacha.css" />
+		<link rel="stylesheet" href="Main.css" />
 		<title>Gemshin Impact Page</title>
 	</head>
 
 	<body>
-		<header>
-			<div class="container ms-3">
-				<div class="col-12">
-					<div class="row">
-						<h2 class="page_title">Gemshin Impact</h2>
-					</div>
-					<div class="row">
-						<ul class="nav nav-tabs border-bottom-0">
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">CHARACTERS</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php">Limited 5 Star</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/standard_4_star/standard_4_star.php">4 Star Characters</a></li>
-									<li>
-										<a class="dropdown-item" href="http://localhost/Gacha/standard_5star/standard_5star.php">Standard Banner 5 Star</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">THE WORLD</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php">Mondstadt</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Liyue/Liyue.php">Liyue</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php">Inazuma</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php">Sumeru</a></li>
-								</ul>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle">OTHER</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php">Resources Tracker</a></li>
-									<li><a class="dropdown-item" href="http://localhost/Gacha/Gacha.php#">Wishing Pool</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-6"></div>
-			</div>
+	<header>
+			<img src="Logo/logo3.png" id="logo" alt="" />
 		</header>
+
+		<div class="MainContent | container-fluid">
+			<div class="navigationMenu">
+				<div class="row">
+					<ul class="nav nav-tabs border-bottom-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">CHARACTERS</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/limitedEdition_5_Star/Limited_5_star.php"
+										>Limited 5 Star</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_4_star/standard_4_star.php"
+										>4 Star Characters</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/standard_5star/standard_5star.php"
+										>Standard Banner 5 Star</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">THE WORLD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Mondstadt/Mondstadt.php"
+										>Mondstadt</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Liyue/Liyue.php"
+										>Liyue</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Inazuma/Inazuma.php"
+										>Inazuma</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Regions/Sumeru/Sumeru.php"
+										>Sumeru</a
+									>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">OTHER</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Daily_Routine/DailyRoutine.php"
+										>Resources Tracker</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Gacha.php#"
+										>Wishing Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row d-flex| contents">
+				
+				
+			</div>
+		</div>
 
 
 		<footer></footer>

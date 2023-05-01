@@ -404,7 +404,8 @@ imageSelectionList[5].addEventListener("click", function () {
 });
 /*****************************************************************************************/
 
-function moveRight() {
+function moveRight(event) {
+	event.preventDefault();
 	if (startPositon == 5) {
 		let prev1 = characterList.shift();
 		characterList.push(prev1);
@@ -449,7 +450,8 @@ function moveRight() {
 	}
 }
 
-function moveLeft() {
+function moveLeft(event) {
+	event.preventDefault();
 	if (startPositon <= 2) {
 		let offset = characterList.length - imageSelectionList.length;
 		let last = characterList.pop();

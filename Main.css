@@ -23,7 +23,11 @@ header {
 }
 
 .MainContent {
+	margin-top: 10rem;
 	min-width: 1450px;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	width: 80%;
 }
 
 #logo {
@@ -44,20 +48,9 @@ header {
 	text-align: center;
 }
 
-.MainContent {
-	margin-left: 10rem;
-	margin-right: 10rem;
-	width: 80%;
-}
-
 .contents {
 	background-color: var(--articleBackGroundColor);
 	color: var(--text-color);
-}
-
-.summary,
-.recommended {
-	border: #2c2722 solid 2px;
 }
 
 .dropdown-toggle:hover {
@@ -72,31 +65,7 @@ header {
 	background-color: #acc8e5;
 }
 
+/* customize class */
 .titleColor {
 	color: var(--title-color);
-}
-
-.aritcleTitle,
-.articleImage:hover {
-	cursor: pointer;
-}
-
-.articleImage:hover {
-	border: var(--image-hover-color) 1px solid;
-}
-
-.aritcleTitle a,
-.portalLinks ul li a {
-	text-decoration: none;
-}
-
-.aritcleTitle a:hover {
-	color: var(--title-hover-color);
-}
-
-.portalLinks {
-	position: relative;
-	right: -100px;
-	bottom: 550px;
-	color: var(--portal-text-color);
 }

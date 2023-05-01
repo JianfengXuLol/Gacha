@@ -1,5 +1,67 @@
-.mainContent {
+:root {
+	--articleBackGroundColor: #12110f;
+	--title-color: #9cc5d0;
+	--text-color: #a99877;
+	--title-hover-color: white;
+	--image-hover-color: #ad9090;
+	--portal-text-color: #a35c0f;
+}
+
+body {
+	background-color: black;
+}
+
+header {
+	background-image: url("backgroundImage/backgroundImage5.jpg");
+	width: 1910px;
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+}
+
+.MainContent {
+	background-color: rgb(31, 23, 23);
+	min-width: 1450px;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	width: 80%;
+}
+
+.contents {
 	margin-top: 15rem;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	max-width: 400px;
+	min-width: 200px;
+	height: auto;
+	position: relative;
+	top: 2rem;
+	z-index: 2;
+}
+
+.nav-tabs {
+	background-color: #2c2722;
+	text-align: center;
+}
+
+.dropdown-toggle:hover {
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu {
+	background-color: #acc8e5;
 }
 
 .Character {
@@ -43,7 +105,8 @@
 }
 
 .characterInfo {
-	background-color: #1d1d23;
+	background-color: var(--articleBackGroundColor);
+	color: var(--text-color);
 	width: 450px;
 	height: 250px;
 	overflow: auto;
@@ -53,13 +116,22 @@
 	z-index: 1;
 }
 
+/* customize class */
+.titleColor {
+	color: var(--title-color);
+}
+
+.headerName {
+	color: var(--title-color);
+}
+
 .characterInfo a:hover {
 	text-decoration: underline;
 }
 
 .characterList {
 	min-width: 1250px;
-	margin-left: 1rem;
+	margin-left: 15rem;
 	margin-top: 0rem;
 }
 
