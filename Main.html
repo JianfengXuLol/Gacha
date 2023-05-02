@@ -17,7 +17,7 @@
 	</head>
 
 	<body>
-	<header>
+		<header>
 			<img src="Logo/logo3.png" id="logo" alt="" />
 		</header>
 
@@ -88,7 +88,13 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle">OTHER</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="http://localhost/Gacha/Tutorials/Tutorials.php">Tutorials</a></li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="http://localhost/Gacha/Tutorials/Tutorials.php"
+										>Tutorials</a
+									>
+								</li>
 								<li>
 									<a
 										class="dropdown-item"
@@ -108,38 +114,10 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row d-flex| contents">
-				
-				
-			</div>
+			<div class="row d-flex| contents"></div>
 		</div>
 
-
 		<footer></footer>
-
-		<?php
-			$servername = "localhost";
-			$username = "Jesspeter";
-			$password = "Justinbiberanna0";
-			$dbname = "gacha_system";
-			
-			// Create connection
-			$conn = new mysqli($servername, $username, $password,$dbname);
-			// Check connection
-			if ($conn->connect_error) {
-			  die("Connection failed: " . $conn->connect_error);
-			}
-
-			
-
-			//collect the data from another form
-			if ($_SERVER["REQUEST_METHOD"] == "POST") {
-				
-
-			$conn->close();
-            }
-		?>
-
 
 		<!-- Bootstrap JavaScript Libraries -->
 		<script
@@ -154,8 +132,6 @@
 
 		<script src="Gacha.js"></script>
 
-		<script>
-			
-		</script>
+		<script></script>
 	</body>
 </html>
