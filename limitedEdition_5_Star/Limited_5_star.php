@@ -16,6 +16,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="../CharacterList.css" />
+		<link rel="stylesheet" href="limitedEdition_5_Star.css" />
 
 		<title>Gemshin Impact Page</title>
 	</head>

@@ -1,0 +1,41 @@
+.MainContent {
+	--bg-image1: url("../backgroundImage/backgroundImage7.webp");
+	--bg-image2: url("../backgroundImage/backgroundImage11.jpg");
+	--bg-image-opacity: 0.5;
+	place-content: center;
+	position: relative;
+	isolation: isolate;
+}
+
+.MainContent::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	opacity: var(--bg-image-opacity);
+	background-image: var(--bg-image1);
+	background-size: cover;
+	background-position: center;
+	animation-name: example;
+	animation-delay: 2s;
+	animation-duration: 32s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes example {
+	0% {
+		background-image: var(--bg-image1);
+	}
+	25% {
+		background-image: var(--bg-image2);
+	}
+	50% {
+		background-image: var(--bg-image1);
+	}
+	75% {
+		background-image: var(--bg-image2);
+	}
+	100% {
+		background-image: var(--bg-image1);
+	}
+}
