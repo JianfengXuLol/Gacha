@@ -117,7 +117,7 @@
 						src="../backgroundImage/summaryImage1.jpg"
 						style="width: 100%"
 						alt="" />
-					<h2 class="titleColor">Tips&&Tricks</h2>
+					<h2 class="titleColor">Tips&&Tricks(Chinese Websites)</h2>
 					<hr />
 					<div class="d-flex">
 						<a href="https://bbs.nga.cn/read.php?tid=30132482"
@@ -132,7 +132,7 @@
 								<a
 									href="https://bbs.nga.cn/read.php?tid=30132482"
 									class="titleColor"
-									>新手保姆攻略</a
+									>新手保姆攻略(Guides for new players)</a
 								>
 							</h4>
 							<p>
@@ -159,7 +159,7 @@
 								<a
 									href="https://ngabbs.com/read.php?tid=25413168"
 									class="titleColor"
-									>锄大地刷精英怪狗粮摩拉路线</a
+									>锄大地刷精英怪狗粮摩拉路线(Elites farming route)</a
 								>
 							</h4>
 							<p>
@@ -182,7 +182,7 @@
 								<a
 									href="https://ngabbs.com/read.php?tid=24469014"
 									class="titleColor">
-									萌新向原神全角色圣遗物选择、武器推荐 精简一表流</a
+									萌新向原神全角色圣遗物选择、武器推荐 精简一表流(Artifacts&&Weapons recommends)</a
 								>
 							</h4>
 							<p>
@@ -206,7 +206,7 @@
 								<a
 									href="https://ngabbs.com/read.php?tid=23622520"
 									class="titleColor">
-									懒人食材点分享</a
+									懒人食材点分享(quick share of food recipes)</a
 								>
 							</h4>
 							<p>
@@ -231,7 +231,7 @@
 								<a
 									href="https://ngabbs.com/read.php?tid=23403809"
 									class="titleColor">
-									挖矿相关和精英怪图鉴</a
+									挖矿相关和精英怪图鉴(mining locations)</a
 								>
 							</h4>
 							<p>
