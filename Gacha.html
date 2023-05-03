@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="learning project" />
+		<meta name="author" content="Jess" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Bootstrap CSS v5.2.1 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="Gacha.css" />
+		<title>Gemshin Impact Page</title>
+	</head>
+
+	<!--Navigation-->
+	<header>
+		<img src="Logo/logo3.png" id="logo" alt="" />
+	</header>
+
+	<body>
+		<div class="MainContent | container-fluid">
+			<div class="navigationMenu">
+				<div class="row">
+					<ul class="nav nav-tabs border-bottom-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="./Gacha/index.html"
+								><span style="color: white">HOME</span></a
+							>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">CHARACTERS</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/limitedEdition_5_Star/Limited_5_star.html"
+										>Limited 5 Star</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/standard_4_star/standard_4_star.html"
+										>4 Star Characters</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/standard_5star/standard_5star.html"
+										>Standard Banner 5 Star</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">THE WORLD</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Regions/Mondstadt/Mondstadt.html"
+										>Mondstadt</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Regions/Liyue/Liyue.html"
+										>Liyue</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Regions/Inazuma/Inazuma.html"
+										>Inazuma</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Regions/Sumeru/Sumeru.html"
+										>Sumeru</a
+									>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle">OTHER</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Tutorials/Tutorials.html"
+										>Tutorials</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="./Gacha/Daily_Routine/DailyRoutine.html"
+										>Resources Tracker</a
+									>
+								</li>
+								<li>
+									<a class="dropdown-item" href="./Gacha/Gacha.html"
+										>Wishing Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row d-flex| contents">
+				<!--Character Info and Big Portrait images here-->
+				<div class="mainContent ms-5 d-flex">
+					<main class="container ms-3">
+						<hr />
+						<h4 class="wish_info">Wishing Info:</h4>
+						<p id="debug">Total wish count：0 | Constellations: -1</p>
+						<p id="debug1">Pitty level: 10 | increase rate：0%</p>
+						<p id="debug2"></p>
+						<hr />
+
+						<button id="pull_1">1 pull</button>
+						<button id="pull_10">10 pull</button>
+						<button id="restart">Restart</button>
+
+						<!----------------------- transfer javascript variables -------------------------------------->
+						<form
+							id="myForm"
+							method="post"
+							action="Gacha.html"
+							autocomplete="off">
+							<input
+								type="hidden"
+								name="Limited_5_star_constellations"
+								id="Limited_5_star_constellations"
+								value="" />
+							<!--constellations-->
+							<input type="hidden" name="character" id="character" value="" />
+							<!--character's name-->
+							<input type="hidden" name="color" id="color" value="" />
+							<!--character's name-->
+							<input type="submit" value="save" />
+						</form>
+
+						<br />
+						<hr />
+						<button id="text1" class="card_container"></button>
+						<button id="text2" class="card_container"></button>
+						<button id="text3" class="card_container"></button>
+						<button id="text4" class="card_container"></button>
+						<button id="text5" class="card_container"></button>
+						<button id="text6" class="card_container"></button>
+						<button id="text7" class="card_container"></button>
+						<button id="text8" class="card_container"></button>
+						<button id="text9" class="card_container"></button>
+						<button id="text10" class="card_container"></button>
+						<div class="wishingPool">
+							<img id="image1" class="image_container" />
+							<img id="image2" class="image_container" />
+							<img id="image3" class="image_container" />
+							<img id="image4" class="image_container" />
+							<img id="image5" class="image_container" />
+							<img id="image6" class="image_container" />
+							<img id="image7" class="image_container" />
+							<img id="image8" class="image_container" />
+							<img id="image9" class="image_container" />
+							<img id="image10" class="image_container" />
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+
+		<footer></footer>
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+			crossorigin="anonymous"></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+			integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+			crossorigin="anonymous"></script>
+
+		<script src="CountDownTimer.js"></script>
+		<script src="Gacha.js"></script>
+
+		<!-- <script>
+			if ( window.history.replaceState ) {
+  			window.history.replaceState( null, null, window.location.href );
+			}
+		</script> -->
+	</body>
+</html>
