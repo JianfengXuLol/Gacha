@@ -39,7 +39,7 @@ function displayWindowSize() {
 		});
 
 		character.forEach(function (li) {
-			li.style.minWidth = "350px";
+			li.style.minWidth = "250px";
 		});
 
 		for (let i = 3; i < cardList.length; i++) {
