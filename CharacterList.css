@@ -9,6 +9,8 @@
 
 body {
 	background-color: black;
+	width: 100%;
+	max-width: 1850px;
 }
 
 header {
@@ -45,6 +47,7 @@ header {
 
 .contents {
 	margin-top: 15rem;
+	min-width: 440px;
 }
 
 #logo {
@@ -148,7 +151,6 @@ header {
 }
 
 .characterList {
-	min-width: 1250px;
 	margin-left: 15rem;
 	margin-top: 0rem;
 }

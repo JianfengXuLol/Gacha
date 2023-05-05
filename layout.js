@@ -1,3 +1,4 @@
+var bodyElement = document.body;
 var collapseMenu = document.querySelector(".navbar-collapse");
 var characterlist = document.querySelector(".characterList");
 var characterPortrait = document.querySelector(".characterPortrait");
@@ -21,6 +22,8 @@ var cardList = [
 function displayWindowSize() {
 	// Get width and height of the window excluding scrollbars
 	screenSize = document.documentElement.clientWidth;
+	bodyElement.style.maxWidth = screenSize.toString() + "px";
+	console.log("body width: " + bodyElement.style.maxWidth);
 	console.log("Screen width: " + screenSize);
 	/*medium window size****************************************************************************/
 	if (screenSize <= 750) {
@@ -73,6 +76,15 @@ function displayWindowSize() {
 		MainContent.style.width = "80%";
 		MainContent.style.marginLeft = "10rem";
 	}
+
+	/*small window size****************************************************************************/
+	// if (screenSize <= 440) {
+	// 	MainContent.style.width = "100%";
+	// 	MainContent.style.marginLeft = "0rem";
+	// } else {
+	// 	MainContent.style.width = "80%";
+	// 	MainContent.style.marginLeft = "10rem";
+	// }
 }
 
 // Attaching the event listener function to window's resize event
