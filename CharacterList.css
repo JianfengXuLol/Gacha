@@ -13,7 +13,7 @@ body {
 
 header {
 	background-image: url("backgroundImage/backgroundImage5.jpg");
-	width: 1910px;
+	width: 100%;
 	height: 300px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -22,12 +22,25 @@ header {
 	z-index: 2;
 }
 
+.navigationMenu {
+	width: 100%;
+}
+
+.nav-link {
+	color: var(--text-color);
+}
+
+.navbar-collapse {
+	/* margin-left: 4.5rem; */
+	text-align: left;
+}
+
 .MainContent {
-	background-color: rgb(31, 23, 23);
-	min-width: 1450px;
+	background-color: var(--articleBackGroundColor);
+	width: 80%;
 	margin-left: 10rem;
 	margin-right: 10rem;
-	width: 80%;
+	margin-top: -8px;
 }
 
 .contents {
@@ -49,6 +62,7 @@ header {
 
 .nav-tabs {
 	background-color: #2c2722;
+	color: var(--text-color);
 	text-align: center;
 }
 
@@ -66,6 +80,8 @@ header {
 
 .Character {
 	display: none;
+	min-width: 450px;
+	max-width: 450px;
 }
 
 .characterPortrait {
@@ -75,6 +91,7 @@ header {
 	margin-top: -15rem;
 	margin-left: -8rem; /*initial position*/
 	position: relative;
+	z-index: 0;
 }
 
 /* default oprion */
@@ -107,7 +124,6 @@ header {
 .characterInfo {
 	background-color: var(--articleBackGroundColor);
 	color: var(--text-color);
-	width: 450px;
 	height: 250px;
 	overflow: auto;
 	opacity: 0.8;
@@ -123,6 +139,8 @@ header {
 
 .headerName {
 	color: var(--title-color);
+	position: relative;
+	z-index: 2;
 }
 
 .characterInfo a:hover {

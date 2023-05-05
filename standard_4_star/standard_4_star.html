@@ -28,93 +28,114 @@
 
 	<body>
 		<div class="MainContent | container-fluid">
-			<div class="navigationMenu">
-				<div class="row">
-					<ul class="nav nav-tabs border-bottom-0">
-						<li class="nav-item dropdown">
-							<a class="nav-link" href="../index.html"
-								><span style="color: white">HOME</span></a
-							>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle">CHARACTERS</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a
-										class="dropdown-item"
-										href="../limitedEdition_5_Star/Limited_5_star.html"
-										>Limited 5 Star</a
-									>
-								</li>
-								<li>
-									<a
-										class="dropdown-item"
-										href="../standard_4_star/standard_4_star.html"
-										>4 Star Characters</a
-									>
-								</li>
-								<li>
-									<a
-										class="dropdown-item"
-										href="../standard_5star/standard_5star.html"
-										>Standard Banner 5 Star</a
-									>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle">THE WORLD</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a
-										class="dropdown-item"
-										href="../Regions/Mondstadt/Mondstadt.html"
-										>Mondstadt</a
-									>
-								</li>
-								<li>
-									<a class="dropdown-item" href="../Regions/Liyue/Liyue.html"
-										>Liyue</a
-									>
-								</li>
-								<li>
-									<a
-										class="dropdown-item"
-										href="../Regions/Inazuma/Inazuma.html"
-										>Inazuma</a
-									>
-								</li>
-								<li>
-									<a class="dropdown-item" href="../Regions/Sumeru/Sumeru.html"
-										>Sumeru</a
-									>
-								</li>
-							</ul>
-						</li>
+			<nav class="navbar navbar-expand-md">
+				<div class="navigationMenu">
+					<div class="row">
+						<ul class="nav nav-tabs border-bottom-0">
+							<button
+								class="navbar-toggler"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#mynavbar">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<li class="nav-item dropdown">
+								<a class="nav-link" href="../index.html"
+									><span style="color: white">HOME</span></a
+								>
+							</li>
 
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle">OTHER</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a class="dropdown-item" href="../Tutorials/Tutorials.html"
-										>Tutorials</a
-									>
-								</li>
-								<li>
-									<a
-										class="dropdown-item"
-										href="../Daily_Routine/DailyRoutine.html"
-										>Resources Tracker</a
-									>
-								</li>
-								<li>
-									<a class="dropdown-item" href="../Gacha.html">Wishing Pool</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
+							<div class="collapse navbar-collapse" id="mynavbar">
+								<ul class="navbar-nav me-auto">
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle">CHARACTERS</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a
+													class="dropdown-item"
+													href="../limitedEdition_5_Star/Limited_5_star.html"
+													>Limited 5 Star</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../standard_4_star/standard_4_star.html"
+													>4 Star Characters</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../standard_5star/standard_5star.html"
+													>Standard Banner 5 Star</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle">THE WORLD</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Regions/Mondstadt/Mondstadt.html"
+													>Mondstadt</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Regions/Liyue/Liyue.html"
+													>Liyue</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Regions/Inazuma/Inazuma.html"
+													>Inazuma</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Regions/Sumeru/Sumeru.html"
+													>Sumeru</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle">OTHER</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Tutorials/Tutorials.html"
+													>Tutorials</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="../Daily_Routine/DailyRoutine.html"
+													>Resources Tracker</a
+												>
+											</li>
+											<li>
+												<a class="dropdown-item" href="../Gacha.html"
+													>Wishing Pool</a
+												>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</ul>
+					</div>
 				</div>
-			</div>
+			</nav>
 			<div class="row d-flex| contents">
 				<!--Character Info and Big Portrait images here-->
 				<div class="mainContent ms-5 d-flex">
@@ -1043,6 +1064,7 @@
 		crossorigin="anonymous"></script>
 
 	<script src="Gacha.js"></script>
+	<script src="../layout.js"></script>
 
 	<script src="standard_4_star.js"></script>
 </html>
