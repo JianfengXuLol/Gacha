@@ -6,6 +6,8 @@ var toRightButton = document.querySelector("#toRight");
 var MainContent = document.querySelector(".MainContent");
 var characterlistItem = document.querySelectorAll(".characterList li");
 var character = document.querySelectorAll(".Character");
+var toLeft = document.querySelector(".bi-arrow-left-square");
+var toRight = document.querySelector(".bi-arrow-right-square");
 var screenSize;
 
 /*icon selection list*/
@@ -28,10 +30,14 @@ function displayWindowSize() {
 	/*medium window size****************************************************************************/
 	if (screenSize <= 750) {
 		collapseMenu.style.marginLeft = "4.5rem";
-		characterlist.style.marginLeft = "0rem";
+		characterlist.style.marginLeft = "-0.5rem";
+		toLeft.style.fontSize = "2rem";
+		toRight.style.fontSize = "2rem";
+
 		characterlistItem.forEach(function (li) {
 			li.style.marginRight = "0rem";
 		});
+
 		character.forEach(function (li) {
 			li.style.minWidth = "350px";
 		});
@@ -50,6 +56,9 @@ function displayWindowSize() {
 	} else {
 		collapseMenu.style.marginLeft = "0rem";
 		characterlist.style.marginLeft = "15rem";
+		toLeft.style.fontSize = "3rem";
+		toRight.style.fontSize = "3rem";
+
 		characterlistItem.forEach(function (li) {
 			li.style.marginRight = "1rem";
 		});
