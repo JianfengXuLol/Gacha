@@ -57,9 +57,9 @@ header {
 	cursor: pointer;
 }
 
-.dropdown:hover .dropdown-menu {
+/* .dropdown:hover .dropdown-menu {
 	display: block;
-}
+} */
 
 .dropdown-menu {
 	background-color: #acc8e5;
