@@ -94,6 +94,24 @@ function displayWindowSize() {
 	// 	MainContent.style.width = "80%";
 	// 	MainContent.style.marginLeft = "10rem";
 	// }
+
+	/*change the size of the background image*/
+	// Get the .MainContent element
+	var mainContentElement = document.querySelector(".MainContent");
+
+	if (screenSize <= 750) {
+		// Set the --bg-image-size property to 50%
+		mainContentElement.style.setProperty("--bg-image-size", "640px 966px");
+	} else {
+		mainContentElement.style.setProperty("--bg-image-size", "cover");
+	}
+
+	// Get the computed styles for the ::after pseudo-element
+	var styles = window.getComputedStyle(mainContentElement, "::after");
+
+	// Get the updated value of the background-size property
+	var backgroundSizeValue = styles.getPropertyValue("--bg-image-size");
+	console.log(backgroundSizeValue); // Output: "50%"
 }
 
 // Attaching the event listener function to window's resize event

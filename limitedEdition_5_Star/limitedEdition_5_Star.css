@@ -2,6 +2,7 @@
 	--bg-image1: url("../backgroundImage/backgroundImage6.jpg");
 	--bg-image2: url("../backgroundImage/backgroundImage9.jpg");
 	--bg-image-opacity: 0.5;
+	--bg-image-size: cover; /* default value */
 	place-content: center;
 	position: relative;
 	isolation: isolate;
@@ -14,8 +15,9 @@
 	inset: 0;
 	opacity: var(--bg-image-opacity);
 	background-image: var(--bg-image1);
-	background-size: cover;
-	background-position: center;
+	background-size: var(--bg-image-size);
+	/* background-position: center; */
+	background-repeat: no-repeat;
 	animation-name: example;
 	animation-delay: 2s;
 	animation-duration: 32s;
