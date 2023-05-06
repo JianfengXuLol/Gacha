@@ -52,7 +52,7 @@ function displayWindowSize() {
 		characterPortrait.style.height = "18rem";
 		toRightButton.style.marginLeft = "-1rem";
 		MainContent.style.marginLeft = "0rem";
-		MainContent.style.width = "10%";
+		// MainContent.style.width = "100%";
 	} else {
 		collapseMenu.style.marginLeft = "0rem";
 		characterlist.style.marginLeft = "15rem";
