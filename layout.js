@@ -101,7 +101,7 @@ function displayWindowSize() {
 
 	if (screenSize <= 750) {
 		// Set the --bg-image-size property to 50%
-		mainContentElement.style.setProperty("--bg-image-size", "640px 966px");
+		mainContentElement.style.setProperty("--bg-image-size", "340px 966px");
 	} else {
 		mainContentElement.style.setProperty("--bg-image-size", "cover");
 	}
