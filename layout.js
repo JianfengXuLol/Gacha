@@ -99,12 +99,11 @@ function displayWindowSize() {
 	// Get the .MainContent element
 	var mainContentElement = document.querySelector(".MainContent");
 
-	if (screenSize <= 750) {
-		// Set the --bg-image-size property to 50%
-		mainContentElement.style.setProperty("--bg-image-size", "340px 466px");
-	} else {
-		mainContentElement.style.setProperty("--bg-image-size", "cover");
-	}
+	// if (screenSize <= 750) {
+	// 	mainContentElement.style.setProperty("--bg-image-size", "340px 466px");
+	// } else {
+	// 	mainContentElement.style.setProperty("--bg-image-size", "cover");
+	// }
 
 	// Get the computed styles for the ::after pseudo-element
 	var styles = window.getComputedStyle(mainContentElement, "::after");
