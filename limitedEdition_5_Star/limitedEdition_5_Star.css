@@ -15,8 +15,6 @@
 	inset: 0;
 	opacity: var(--bg-image-opacity);
 	background-image: var(--bg-image1);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background-size: var(--bg-image-size);
 	background-position: center;
 	/* background-repeat: no-repeat; */
