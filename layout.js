@@ -47,7 +47,7 @@ function displayWindowSize() {
 			// cardList[i].style.display = "block";
 		}
 
-		characterPortrait.style.marginLeft = "-15rem";
+		characterPortrait.style.marginLeft = "-11.5rem";
 		characterPortrait.style.width = "25rem";
 		characterPortrait.style.height = "18rem";
 		toRightButton.style.marginLeft = "-1rem";
