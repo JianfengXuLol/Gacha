@@ -59,6 +59,8 @@ _-------------------------------------------------------------------------------
 (Daily Routine)
 
 on-going problem:
+fix the issue that nav menu is not clickable on phone screen.
+possible fix: let's try adding 'href="#"' to <a>tag.
 
 ===========================================================================================
 
