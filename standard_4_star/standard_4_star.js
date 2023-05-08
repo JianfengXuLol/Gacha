@@ -67,6 +67,7 @@ var CharacterInfo = [
 	document.getElementById("Razor"),
 	document.getElementById("Rosaria"),
 	document.getElementById("Sayu"),
+	document.getElementById("Sucrose"),
 	document.getElementById("Thoma"),
 	document.getElementById("Xiangling"),
 	document.getElementById("Xingqiu"),
