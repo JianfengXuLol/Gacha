@@ -208,4 +208,7 @@ header {
 	.article {
 		width: 80%;
 	}
+	.contents {
+		margin-top: 2rem;
+	}
 }

@@ -38,6 +38,7 @@ function responsiveDisplay() {
 	if (screenSize <= 576) {
 		card.style.width = "400px";
 		card.style.marginBottom = "2rem";
+		imgDescription.style.marginTop = "2rem";
 
 		article.forEach(function (li) {
 			li.style.marginTop = "2rem";
