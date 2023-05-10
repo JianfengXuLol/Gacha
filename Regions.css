@@ -187,9 +187,6 @@ header {
 
 /*Small devices (desktops, 576px and down)*/
 @media (max-width: 576px) {
-	.card {
-		width: 350px;
-	}
 	.CityDescription {
 		width: 90%;
 	}
