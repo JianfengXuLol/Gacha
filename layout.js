@@ -1,3 +1,4 @@
+/***********************************************************character page layout********************************/
 var bodyElement = document.body;
 var collapseMenu = document.querySelector(".navbar-collapse");
 var characterlist = document.querySelector(".characterList");
@@ -51,8 +52,6 @@ function displayWindowSize() {
 		characterPortrait.style.width = "25rem";
 		characterPortrait.style.height = "18rem";
 		toRightButton.style.marginLeft = "-1rem";
-		MainContent.style.marginLeft = "0rem";
-		// MainContent.style.width = "100%";
 	} else {
 		collapseMenu.style.marginLeft = "0rem";
 		characterlist.style.marginLeft = "15rem";
@@ -73,8 +72,6 @@ function displayWindowSize() {
 		characterPortrait.style.width = "50rem";
 		characterPortrait.style.height = "35rem";
 		toRightButton.style.marginLeft = "0rem";
-		MainContent.style.marginLeft = "10rem";
-		MainContent.style.width = "80%";
 	}
 
 	/*large window size****************************************************************************/
