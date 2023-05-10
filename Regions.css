@@ -137,7 +137,6 @@ header {
 /*Large devices (desktops, 1798px and down)*/
 @media (max-width: 1798px) {
 	.card {
-		width: 40%;
 		margin-left: 12rem;
 	}
 	.CityDescription {
@@ -148,7 +147,6 @@ header {
 /*Medium devices (desktops, 1565px and down)*/
 @media (max-width: 1565px) {
 	.card {
-		width: 40%;
 		margin-left: 8rem;
 	}
 	.CityDescription {
@@ -163,7 +161,6 @@ header {
 /*Medium devices (desktops, 1156px and down)*/
 @media (max-width: 1156px) {
 	.card {
-		width: 40%;
 		margin-left: 3rem;
 	}
 	.CityDescription {
@@ -174,7 +171,6 @@ header {
 /*Medium devices (desktops, 950px and down)*/
 @media (max-width: 950px) {
 	.card {
-		width: 40%;
 		margin-left: 3rem;
 	}
 	.CityDescription {
@@ -185,19 +181,15 @@ header {
 /*Medium devices (desktops, 900px and down)*/
 @media (max-width: 900px) {
 	.card {
-		width: 40%;
 		margin-left: 0rem;
-	}
-	.CityDescription {
-		width: 60%;
 	}
 }
 
 /*Small devices (desktops, 576px and down)*/
 @media (max-width: 576px) {
-	/* .card {
-		width: 250px;
-	} */
+	.card {
+		width: 350px;
+	}
 	.CityDescription {
 		width: 90%;
 	}
