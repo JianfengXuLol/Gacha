@@ -36,7 +36,7 @@ function responsiveDisplay() {
 	}
 	/*small window size****************************************************************************/
 	if (screenSize <= 576) {
-		card.style.width = "400px";
+		card.style.width = "380px";
 		card.style.marginBottom = "2rem";
 		card.style.marginRight = "1rem";
 		imgDescription.style.marginTop = "2rem";
