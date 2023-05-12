@@ -121,7 +121,7 @@ header {
 .subArea {
 	border: var(--articleBackGroundColor) solid 1px;
 	display: flex;
-	overflow: auto;
+	/* overflow: auto; */
 }
 
 .card {
