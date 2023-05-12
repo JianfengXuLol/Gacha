@@ -38,18 +38,20 @@ function responsiveDisplay() {
 	if (screenSize <= 576) {
 		card.style.width = "400px";
 		card.style.marginBottom = "2rem";
+		card.style.marginRight = "1rem";
 		imgDescription.style.marginTop = "2rem";
+		imgDescription.style.width = "400px";
 
 		article.forEach(function (li) {
 			li.style.marginTop = "2rem";
 		});
 
 		articleImage.forEach(function (li) {
-			li.style.height = "24vh";
+			li.style.height = "23vh";
 		});
 	} else {
 		card.style.width = "250px";
-
+		card.style.marginRight = "0rem";
 		article.forEach(function (li) {
 			li.style.marginTop = "0rem";
 			li.style.height = "20vh";
