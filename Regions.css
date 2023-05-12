@@ -200,4 +200,7 @@ header {
 	.contents {
 		margin-top: 2rem;
 	}
+	.carousel-item img {
+		width: 1000px;
+	}
 }
