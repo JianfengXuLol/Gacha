@@ -121,6 +121,7 @@ header {
 .subArea {
 	border: var(--articleBackGroundColor) solid 1px;
 	display: flex;
+	overflow: auto;
 }
 
 .card {
@@ -155,6 +156,7 @@ header {
 	.subArea {
 		display: block;
 		width: 60%;
+		/* margin-bottom: 2rem; */
 	}
 }
 
@@ -193,9 +195,10 @@ header {
 	.subArea {
 		display: block;
 		width: 100%;
+		/* margin-bottom: 8rem; */
 	}
 	.article {
-		width: 80%;
+		width: 100%;
 	}
 	.contents {
 		margin-top: 2rem;
