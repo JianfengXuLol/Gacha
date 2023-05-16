@@ -1,3 +1,7 @@
+/***************************************************************************************************/
+html:
+/***************************************************************************************************/
+
 <!DOCTYPE html>
 
 <html>
@@ -12,21 +16,22 @@
 			rel="stylesheet"
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous" />
-		<link rel="stylesheet" href="../../Regions.css" />
+		<link rel="stylesheet" href="Tutorials.css" />
 		<title>Gemshin Impact Page</title>
 	</head>
 
 	<body>
 		<header>
-			<img src="../../Logo/logo3.png" id="logo" alt="" />
+			<img src="../Logo/logo3.png" id="logo" alt="" />
 		</header>
 
 		<div class="MainContent | container-fluid">
+			<div class="navbar navbar-expand-md"></div>
 			<div class="navigationMenu">
 				<div class="row">
 					<ul class="nav nav-tabs border-bottom-0">
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="../../index.html"
+							<a class="nav-link" href="../index.html"
 								><span style="color: white">HOME</span></a
 							>
 						</li>
@@ -41,21 +46,21 @@
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../limitedEdition_5_Star/Limited_5_star.html"
+										href="../limitedEdition_5_Star/Limited_5_star.html"
 										>Limited 5 Star</a
 									>
 								</li>
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../standard_4_star/standard_4_star.html"
+										href="../standard_4_star/standard_4_star.html"
 										>4 Star Characters</a
 									>
 								</li>
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../standard_5star/standard_5star.html"
+										href="../standard_5star/standard_5star.html"
 										>Standard Banner 5 Star</a
 									>
 								</li>
@@ -72,26 +77,24 @@
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../Regions/Mondstadt/Mondstadt.html"
+										href="../Regions/Mondstadt/Mondstadt.html"
 										>Mondstadt</a
 									>
 								</li>
 								<li>
-									<a class="dropdown-item" href="../../Regions/Liyue/Liyue.html"
+									<a class="dropdown-item" href="../Regions/Liyue/Liyue.html"
 										>Liyue</a
 									>
 								</li>
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../Regions/Inazuma/Inazuma.html"
+										href="../Regions/Inazuma/Inazuma.html"
 										>Inazuma</a
 									>
 								</li>
 								<li>
-									<a
-										class="dropdown-item"
-										href="../../Regions/Sumeru/Sumeru.html"
+									<a class="dropdown-item" href="../Regions/Sumeru/Sumeru.html"
 										>Sumeru</a
 									>
 								</li>
@@ -106,22 +109,16 @@
 								>OTHER</a
 							>
 							<ul class="dropdown-menu">
-								<li>
-									<a class="dropdown-item" href="../../Tutorials/Tutorials.html"
-										>Tutorials</a
-									>
-								</li>
+								<li><a class="dropdown-item" href="#">Tutorials</a></li>
 								<li>
 									<a
 										class="dropdown-item"
-										href="../../Daily_Routine/DailyRoutine.html"
+										href="../Daily_Routine/DailyRoutine.html"
 										>Resources Tracker</a
 									>
 								</li>
 								<li>
-									<a class="dropdown-item" href="../../Gacha.html"
-										>Wishing Pool</a
-									>
+									<a class="dropdown-item" href="../Gacha.html">Wishing Pool</a>
 								</li>
 							</ul>
 						</li>
@@ -129,292 +126,180 @@
 				</div>
 			</div>
 			<div class="row | contents">
-				<div class="col-10 | CityDescription">
-					<h1>Sumeru</h1>
-					<br />
-					<p>
-						Sumeru is one of the seven regions in Teyvat. It is the nation that
-						worships Lesser Lord Kusanali, the Dendro Archon.
-					</p>
-					<br />
-					<p>
-						It is renowned as the center of learning and houses the Sumeru
-						Akademiya.
-					</p>
-					<br />
-					<p>
-						Access to Sumeru is unlocked after completing the Archon Quest
-						Prologue: Act I - The Outlander Who Caught the Wind.
-					</p>
-					<p>
-						Archon Quest Chapter III: Truth Amongst the Pages of Purana takes
-						place in this region.
-					</p>
-					<p>
-						Sumeru's landscape features both deserts and forests.[4] In the
-						Teyvat Chapter Storyline Preview, Dainsleif likens it to a desert,
-						and Liben mentions that "Sumeru is all rainforest and desert."500
-						years ago, during the cataclysm, the previous Dendro Archon, Greater
-						Lord Rukkhadevata, was slain and the current God of Wisdom took her
-						place. Under the aegis of the God of Wisdom, the sages of Sumeru
-						drive themselves into hysterics and abandon all that is worldly in
-						their pursuit of esoteric wisdom.
-					</p>
-				</div>
-				<div class="col-2">
-					<div class="card" style="width: 250px">
-						<h2 class="card-header">Sumeru</h2>
-						<img
-							class="card-img-bottom"
-							src="ThemeImage/Sumeru.webp"
-							alt="Theme image"
-							style="width: 100%" />
-						<div class="card-body">
-							<p class="card-text">Archon: Buer</p>
-							<p class="card-text">Main City: Sumeru City</p>
-							<p class="card-text">Control­ling En­ti­ty: Sumeru Akademiya</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row | contents">
-				<div class="gallery col-7">
-					<div id="demo" class="carousel slide" data-bs-ride="carousel">
-						<!-- Indicators/dots -->
-						<div class="carousel-indicators">
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="0"
-								class="active"></button>
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="1"></button>
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="2"></button>
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="3"></button>
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="4"></button>
-							<button
-								type="button"
-								data-bs-target="#demo"
-								data-bs-slide-to="5"></button>
-						</div>
-
-						<!-- The slideshow/carousel -->
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img
-									src="City/city1.jpg"
-									alt="City#1"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-							<div class="carousel-item">
-								<img
-									src="City/city2.webp"
-									alt="City#2"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-							<div class="carousel-item">
-								<img
-									src="City/city3.webp"
-									alt="City#3"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-							<div class="carousel-item">
-								<img
-									src="City/city4.webp"
-									alt="City#4"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-							<div class="carousel-item">
-								<img
-									src="City/city5.webp"
-									alt="City#5"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-
-							<div class="carousel-item">
-								<img
-									src="City/city6.webp"
-									alt="City#6"
-									class="d-block"
-									style="width: 100%" />
-							</div>
-						</div>
-
-						<!-- Left and right controls/icons -->
-						<button
-							class="carousel-control-prev"
-							type="button"
-							data-bs-target="#demo"
-							data-bs-slide="prev">
-							<span class="carousel-control-prev-icon"></span>
-						</button>
-						<button
-							class="carousel-control-next"
-							type="button"
-							data-bs-target="#demo"
-							data-bs-slide="next">
-							<span class="carousel-control-next-icon"></span>
-						</button>
-					</div>
-				</div>
-
-				<div class="imgDescription col-5">
-					<h2 class="titleColor">Sumeru City</h2>
-					<br />
-					<p>
-						Sumeru City is known across Teyvat as the "City of Wisdom."[1] It is
-						under the jurisdiction of the Sumeru Akademiya and is built on top
-						of the Divine Tree. The city features many districts and points of
-						interest, such as the Grand Bazaar, Zubayr Theater, Treasures
-						Street, and more. Located in the middle to top half of the tree is
-						The Akademiya, which serves as the main base of the Sumeru
-						Akademiya. On top of The Akademiya rests the Sanctuary of
-						Surasthana, which is a treetop palace where Lesser Lord Kusanali
-						resides.
-					</p>
-				</div>
-				<hr />
-				<h4>Sub Areas</h4>
-				<hr />
-				<div class="d-flex">
-					<img src="SubAreas/Ardravi_Valley.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Ardravi Valley</h4>
-						<p>
-							Ardravi Valley has the biggest port in Sumeru, Port Ormos. Port
-							Ormos is the largest port in Sumeru and serves as a hub for
-							trading and travel. It is located beneath two giant trees, between
-							which a river runs from Sumeru City to the port. Though parts of
-							Port Ormos are under the supervision of the Akademiya, smuggling
-							and other illegal activity is more common at Port Ormos than in
-							Sumeru City. Prices also tend to be lower than in Sumeru City.
-							Most long-term residents in the port are traders and laborers who
-							grew up in the area, but a number of Eremite merceneries from
-							various factions can also be found there. Students often come to
-							the port when academic life gets too stressful, and it is even
-							considered good luck to some.
-						</p>
-					</div>
-				</div>
-				<hr />
-				<div class="d-flex">
-					<img src="SubAreas/Ashavan_Realm.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Ashavan Realm</h4>
-						<p>
-							There are two major areas are located in Ashavan Realm. Apam Woods
-							is a massive rainforest with trees that stretch towards the sky.
-							After completing the World Quest A Prayer for Rain on the Fecund
-							Land, the player will be able to operate the Varuna Contraption
-							and control the rain. Caravan Ribat is a fortified village at the
-							foot of a tall wall that blocks the sandstorms from destroying the
-							Sumeru rainforests. Located at the foot of the Wall of Samiel,
-							Caravan Ribat serves as a thoroughfare for those coming from the
-							forest going to Aaru Village, and vice versa.
-						</p>
-					</div>
-				</div>
-				<hr />
-				<div class="d-flex">
-					<img src="SubAreas/Avidya_Forest.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Avidya Forest</h4>
-						<p>
-							Avidya Forest is a lush, green forest located in eastern Sumeru.
-							It is the main area and most populous section of Sumeru apart from
-							Ardravi Valley. The forest is also home to Sumeru City which
-							houses The Akademiya, and Gandharva Ville, which is the base of
-							the Forest Watchers. The Forest Watchers have guarded the forest
-							for many years in order to ensure the forest's survival. Many
-							unique flora and fauna grow in the Avidya Forest, such as
-							Padisarahs, Nilopata Lotuses or Rukkhashava Mushrooms. Apart from
-							Flowers, there are also different species and breeds of animals
-							found, like Shroomboars. In the forest, you wil also find many,
-							many special breeds of Shroomkin out in the wild. The Avidya
-							Forest is also the first area in Sumeru that the Traveler enters.
-						</p>
-					</div>
-				</div>
-				<hr />
-				<div class="d-flex">
+				<div class="col-7 | summary">
 					<img
-						src="SubAreas/Lokapala_Jungle.webp"
-						alt=""
-						class="articleImage" />
+						src="../backgroundImage/summaryImage1.jpg"
+						style="width: 100%"
+						alt="" />
+					<h2 class="titleColor">Tips&&Tricks(Chinese Websites)</h2>
+					<hr />
+					<div class="d-flex">
+						<a href="https://bbs.nga.cn/read.php?tid=30132482"
+							><img
+								src="../backgroundImage/articleImage1.webp"
+								alt=""
+								class="articleImage"
+						/></a>
 
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Lokapala Jungle</h4>
-						<p>
-							Lokapala Jungle has three major places: Chatrakam Cave is best
-							known for containing a large number of Fungi, and humans typically
-							do not go inside; Mawtiyima Forest is a forest made of enormous
-							fluorescent mushrooms. Mawtiyima is described as "an energy form
-							created by the ancient dreams and memories of the forest." This
-							energy fights against The Withering to ensure the health of the
-							forest, and even seems to be able to communicate with the Aranara.
-							In an ancient tongue, the name once meant "human death."; The
-							Palace of Alcazarzaray is owned by Dori. It was designed by Kaveh
-							and is considered to be his magnum opus.
-						</p>
+						<div class="article">
+							<h4 class="aritcleTitle">
+								<a
+									href="https://bbs.nga.cn/read.php?tid=30132482"
+									class="titleColor"
+									>新手保姆攻略(Guides for new players)</a
+								>
+							</h4>
+							<p>
+								本帖写作的目的是为了让新人入坑时拥有更好的体验，写作的原因是原神并不友好的引导机制。
+								故本贴在此基础上会补足一些基础游戏说明，并附上一些进阶的帖子链接。
+								如本帖有任何错误、不清楚、不全面的地方，欢迎指出
+								点击即可查看→[角色具体培养攻略]
+								注意:须弥新反应让很多攻略作者都感到头大，一些一图流攻略尚未更新，本帖修改时间为草神上线，后续攻略会因草盾草奶等角色的上线继续调整.
+							</p>
+						</div>
+					</div>
+					<hr />
+
+					<div class="d-flex">
+						<a href="https://bbs.nga.cn/read.php?tid=25413168&_fp=3"
+							><img
+								src="../backgroundImage/backgroundImage3.jpg"
+								alt=""
+								class="articleImage"
+						/></a>
+
+						<div class="article">
+							<h4 class="aritcleTitle">
+								<a
+									href="https://bbs.nga.cn/read.php?tid=25413168&_fp=3"
+									class="titleColor"
+									>锄大地刷精英怪狗粮摩拉路线(Elites farming route)</a
+								>
+							</h4>
+							<p>
+								1.3版本更新了新怪物岩龙蜥，是丘丘王、遗迹重机和风核之后的第四种掉600摩拉的精英怪，作为每天摩拉不超过四位数的穷人非常激动，现在分享一下我在新版本加入新怪之后的刷怪路线.
+							</p>
+						</div>
+					</div>
+					<hr />
+
+					<div class="d-flex">
+						<a href="https://ngabbs.com/read.php?tid=24469014"
+							><img
+								src="../backgroundImage/articleImage2.webp"
+								alt=""
+								class="articleImage"
+						/></a>
+
+						<div class="article">
+							<h4 class="aritcleTitle">
+								<a
+									href="https://ngabbs.com/read.php?tid=24469014"
+									class="titleColor">
+									萌新向原神全角色圣遗物选择、武器推荐
+									精简一表流(Artifacts&&Weapons recommends)</a
+								>
+							</h4>
+							<p>
+								最新更新：12.8更新流浪者珐露珊 部分角色应用新套装
+								老角色使用新圣遗物会有遗漏 欢迎批评指出 会尽快修改.
+							</p>
+						</div>
+					</div>
+					<hr />
+
+					<div class="d-flex">
+						<a href="https://ngabbs.com/read.php?tid=23622520"
+							><img
+								src="../backgroundImage/articleImage3.jpg"
+								alt=""
+								class="articleImage"
+						/></a>
+
+						<div class="article">
+							<h4 class="aritcleTitle">
+								<a
+									href="https://ngabbs.com/read.php?tid=23622520"
+									class="titleColor">
+									懒人食材点分享(quick share of food recipes)</a
+								>
+							</h4>
+							<p>
+								琥牢山打琥珀十连+到亭子前的长耳狐 兽肉
+								天遒谷传送点左边到往北偏东路上，10兽肉，一长耳狐+两大两小野猪
+								清泉镇水池传送点，10+嘟嘟莲、若干鱼肉、2兽肉、鸭子、5青蛙
+							</p>
+						</div>
+					</div>
+					<hr />
+
+					<div class="d-flex">
+						<a href="https://ngabbs.com/read.php?tid=23403809"
+							><img
+								src="../backgroundImage/articleImage4.webp"
+								alt=""
+								class="articleImage"
+						/></a>
+
+						<div class="article">
+							<h4 class="aritcleTitle">
+								<a
+									href="https://ngabbs.com/read.php?tid=23403809"
+									class="titleColor">
+									挖矿相关和精英怪图鉴(mining locations)</a
+								>
+							</h4>
+							<p>
+								对于挖矿的机制，公测后每天挖矿没上限(或是上限很高)，但是每天在铁匠处通过不同途径打造获得的武器经验类素材，有共同的300000上限(折合120水晶矿、除打造武器外)，达到上限无法继续打造，也就是说铁矿、白铁矿和水晶矿共享上限。
+								另外，矿的刷新机制是72小时(3天)刷新，4人组队挖矿，每天轮替，也可一次性挖完4个人全部的矿，4天一轮回(但每天还是要去铁匠处打铁)。
+							</p>
+						</div>
+					</div>
+					<hr />
+				</div>
+				<div class="col-5" | recommended>
+					<h2 class="titleColor" style="text-align: center">Portals</h2>
+					<hr />
+					<div class="imageContainer">
+						<img
+							src="../otherImages/scroll1.png"
+							alt=""
+							style="width: 580.16px" />
+						<div class="portalLinks">
+							<h6>English websites(recommended:)</h6>
+							<ul>
+								<li>
+									<a
+										href="https://gamewith.net/genshin-impact/article/show/22375"
+										>Beginner's Guide & Tips</a
+									>
+								</li>
+								<li>
+									<a
+										href="https://mobalytics.gg/blog/genshin-impact/genshin-impact-beginner-guide/"
+										>Get to know Genshin Impact</a
+									>
+								</li>
+								<li>
+									<a href="https://genshin.honeyhunterworld.com/?lang=EN"
+										>Genshin Impact Wiki</a
+									>
+								</li>
+								<li>
+									<a
+										href="https://www.youtube.com/watch?v=ClJJJnA068o&ab_channel=AsianGuyStream"
+										>Genshin Impact New Player Walkthrough Guide</a
+									>
+								</li>
+								<li>
+									<a href="https://genshin-impact-map.appsample.com/"
+										>Genshin Impact Interactive Map</a
+									>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<hr />
-				<div class="d-flex">
-					<img src="SubAreas/Lost_Nursery.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Lost Nursery</h4>
-						<p>
-							Lost Nursery has the old home of the Aranara for hundreds of years
-							before the cataclysm. It is unlocked by completing the Aranyaka:
-							Part III - Nursery of Lost Dreams quest, For Fruits, Seeds, and
-							Trees.
-						</p>
-					</div>
-				</div>
-				<div class="d-flex">
-					<img src="SubAreas/Vanarana.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Vanarana</h4>
-						<p>
-							There are two different versions of Vanarana: the one that exists
-							in reality, and the dream version where the Aranara live (which is
-							called Mahavanaranapna).
-						</p>
-					</div>
-				</div>
-				<div class="d-flex">
-					<img src="SubAreas/Vissudha_Field.webp" alt="" class="articleImage" />
-
-					<div class="article">
-						<h4 class="aritcleTitle titleColor">Vissudha Field</h4>
-						<p>
-							It has the first Vasara Tree, and it acts as the seal for the
-							entrance to Old Vanarana.
-						</p>
-					</div>
-				</div>
-				<hr />
 			</div>
 		</div>
 
@@ -436,3 +321,123 @@
 		<script></script>
 	</body>
 </html>
+
+
+/***************************************************************************************************/
+css:
+/***************************************************************************************************/
+
+:root {
+	--articleBackGroundColor: #12110f;
+	--title-color: #9cc5d0;
+	--text-color: #a99877;
+	--title-hover-color: white;
+	--image-hover-color: #ad9090;
+	--portal-text-color: #a35c0f;
+}
+
+body {
+	background-color: black;
+}
+
+header {
+	background-image: url("../backgroundImage/backgroundImage5.jpg");
+	width: 1910px;
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+}
+
+.MainContent {
+	min-width: 1450px;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	max-width: 400px;
+	min-width: 200px;
+	height: auto;
+	position: relative;
+	top: 2rem;
+	z-index: 2;
+}
+
+.articleImage {
+	aspect-ratio: 16/9;
+	height: 10vh;
+	margin-right: 1rem;
+	border: #2c2722 1px solid;
+}
+
+.article {
+	font-size: 0.6rem;
+	min-width: 15rem;
+}
+
+.nav-tabs {
+	background-color: #2c2722;
+	text-align: center;
+}
+
+.MainContent {
+	margin-left: 10rem;
+	margin-right: 10rem;
+	width: 80%;
+}
+
+.contents {
+	background-color: var(--articleBackGroundColor);
+	color: var(--text-color);
+}
+
+.summary,
+.recommended {
+	border: #2c2722 solid 2px;
+}
+
+.dropdown-toggle:hover {
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu {
+	background-color: #acc8e5;
+}
+
+.titleColor {
+	color: var(--title-color);
+}
+
+.aritcleTitle,
+.articleImage:hover {
+	cursor: pointer;
+}
+
+.articleImage:hover {
+	border: var(--image-hover-color) 1px solid;
+}
+
+.aritcleTitle a,
+.portalLinks ul li a {
+	text-decoration: none;
+}
+
+.aritcleTitle a:hover {
+	color: var(--title-hover-color);
+}
+
+.portalLinks {
+	position: relative;
+	right: -100px;
+	bottom: 550px;
+	color: var(--portal-text-color);
+}

@@ -121,6 +121,7 @@ header {
 .subArea {
 	border: var(--articleBackGroundColor) solid 1px;
 	display: flex;
+
 	/* overflow: auto; */
 }
 
@@ -198,7 +199,7 @@ header {
 		/* margin-bottom: 8rem; */
 	}
 	.article {
-		width: 100%;
+		width: 90%;
 	}
 	.contents {
 		margin-top: 2rem;
